@@ -1,0 +1,1 @@
+set fuoptions=maxvert,maxhorz
