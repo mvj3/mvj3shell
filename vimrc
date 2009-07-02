@@ -557,6 +557,18 @@ command! R Fs
 " |                              JavaScript                                   |
 " -----------------------------------------------------------------------------
 " javascript folding
-let b:javascript_fold=1
+"let b:javascript_fold=1
 " dom, html, css
 let javascript_enable_domhtmlcss=1
+function! JavaScriptFold() 
+    setl foldmethod=syntax
+    setl foldlevelstart=1
+    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+    function! FoldText()
+        return substitute(getline(v:foldstart), '{.*', '{...}', '')
+    endfunction
+    setl foldtext=FoldText()
+endfunction
+au FileType javascript call JavaScriptFold()
+au FileType javascript setl fen
