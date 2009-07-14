@@ -97,13 +97,15 @@ set smartcase " Ignore case when searching lowercase
 "set background=dark 
 syntax on " syntax highlighting
 "colorscheme ir_black
-colorscheme wombat
+colorscheme vividchalk
 
 
 " Status Line *****************************************************************
 set showcmd
 set ruler " Show ruler
 set ch=2 " Make command line two lines high
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set laststatus=2
 
 
 " Line Wrapping ***************************************************************
@@ -328,6 +330,7 @@ endif
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set smarttab
  
 " Always display the status line
 set laststatus=2
@@ -572,3 +575,19 @@ function! JavaScriptFold()
 endfunction
 au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
+
+
+
+
+
+
+
+
+
+
+
+
+
+if has('gui_running')
+    set guifont=Manaco:h11
+endif

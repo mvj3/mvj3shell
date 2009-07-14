@@ -62,6 +62,9 @@ alias ....='cd ../../..'
 alias firefox="open -a firefox"
 alias safari="open -a safari"
 alias m="mvim"
+alias q="exit"
+alias o="open"
+alias i="curl -I"
 alias xulrunner="/Library/Frameworks/XUL.framework/xulrunner-bin "
 alias hibernateon='sudo pmset -a hibernatemode 1'
 alias hibernateoff='sudo pmset -a hibernatemode 0'
@@ -74,13 +77,13 @@ alias gemupdate="sudo gem update --rdoc --no-ri"
 alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The Internet Right now!'"
 alias dict='dict -d wn'
 alias info='info --vi-keys'
-alias q="exit"
 alias dock="killall Dock"
 
 # http server
 alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
 alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &"
 alias instiki_Documents="instiki -t='/Users/chenyuzai/Documents/instiki/storage'"
+alias gemserver="gem server >> /dev/null 2>&1 &"
 #
 #  automatically enter directories without cd
 setopt auto_cd
