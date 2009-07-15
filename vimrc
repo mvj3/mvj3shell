@@ -22,6 +22,10 @@
 " -----------------------------------------------------------------------------  
 
 set nocompatible
+"set pastetoggle=<F2>
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O><F2>
+set pastetoggle=<F2>
 
 " Tabs ************************************************************************
 "set sta " a <Tab> in an indent inserts 'shiftwidth' spaces
