@@ -108,7 +108,8 @@ colorscheme vividchalk
 set showcmd
 set ruler " Show ruler
 set ch=2 " Make command line two lines high
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F\ [%p%%]\ [LEN=%L]
 set laststatus=2
 
 
@@ -583,7 +584,9 @@ au FileType javascript setl fen
 
 
 
-
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
 
 
 

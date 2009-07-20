@@ -62,6 +62,7 @@ alias ....='cd ../../..'
 alias firefox="open -a firefox"
 alias safari="open -a safari"
 alias m="mvim"
+alias p="ping"
 alias q="exit"
 alias o="open"
 alias i="curl -I"

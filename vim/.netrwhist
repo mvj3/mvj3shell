@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/chenyuzai/dev/sinatra/bliki'
+let g:netrw_dirhist_2='/Users/chenyuzai/dev/MacRuby/gitnub'
+let g:netrw_dirhist_3='/Users/chenyuzai/dev/github/mailr'
