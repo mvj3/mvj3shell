@@ -84,6 +84,10 @@ set splitbelow splitright
 :noremap ,q :q<cr>
 :noremap ,w :w<cr>
 
+"imap <F1> :holi<CR>
+
+set showtabline=2               " File tabs allways visible
+
 " Cursor highlights ***********************************************************
 "set cursorline
 "set cursorcolumn

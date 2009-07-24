@@ -21,7 +21,7 @@ alias mysql=mysql5
 alias la="ls -a"
 alias ls="ls -pG"
 alias ll="ls -lh"
-alias l='ls -l'
+alias gwd="pwd | pbcopy"
 
 # git
 alias gl='git pull'
@@ -71,7 +71,7 @@ alias hibernateon='sudo pmset -a hibernatemode 1'
 alias hibernateoff='sudo pmset -a hibernatemode 0'
 alias quicktime='open -a QuickTime\ Player'
 alias scripteditor='open -a Script\ Editor'
-alias tellappsystemeventstosleep='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
+alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 alias js='java org.mozilla.javascript.tools.shell.Main'
 alias geminstall="sudo gem install --rdoc --no-ri"
 alias gemupdate="sudo gem update --rdoc --no-ri"
@@ -82,7 +82,7 @@ alias dock="killall Dock"
 
 # http server
 alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
-alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &"
+alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &" # port 8000
 alias instiki_Documents="instiki -t='/Users/chenyuzai/Documents/instiki/storage'"
 alias gemserver="gem server >> /dev/null 2>&1 &"
 #
