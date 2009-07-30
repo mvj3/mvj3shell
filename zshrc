@@ -15,13 +15,11 @@ compinit
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
-alias v="vim"
-alias ri=qri
-alias mysql=mysql5
 alias la="ls -a"
 alias ls="ls -pG"
 alias ll="ls -lh"
 alias gwd="pwd | pbcopy"
+alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
 
 # git
 alias gl='git pull'
@@ -45,7 +43,7 @@ alias gls='git svn rebase'
 alias t='autotest'
 alias rr='rake routes | grep'
 alias rs='touch tmp/restart.txt'
-alias ss='ruby script/server'
+alias ss="rake log:clear; clear; ruby script/server"
 alias sc='ruby script/console'
 alias taild='tail -fn100 log/development.log'
 alias tailt='tail -fn100 log/test.log'
@@ -79,6 +77,11 @@ alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The 
 alias dict='dict -d wn'
 alias info='info --vi-keys'
 alias dock="killall Dock"
+alias v='/Applications/MacPorts/MacVim.app/Contents/MacOS/Vim -p'
+alias ri=qri
+alias mysql=mysql5
+alias cmi="./configure && make && sudo make install"
+alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
 
 # http server
 alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
