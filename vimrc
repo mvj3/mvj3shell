@@ -235,9 +235,10 @@ let NERDTreeMouseMode=1
 
 
 " fuzzyfinder_textmate ********************************************************
-map ,f :FuzzyFinderTextMate<CR>
+"map ,f :FuzzyFinderTextMate<CR>
+map ,f :FuzzyFinderFile<CR>
 map ,b :FuzzyFinderBuffer<CR>
-"let g:fuzzy_ignore = '.o;.obj;.bak;.exe;.pyc;.pyo;.DS_Store;.db'
+let g:fuzzy_ignore = '.o;.obj;.bak;.exe;.pyc;.pyo;.DS_Store;.db'
 
 " autocomplpop ***************************************************************
 " complete option

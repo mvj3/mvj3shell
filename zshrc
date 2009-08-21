@@ -3,6 +3,33 @@ HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
 setopt appendhistory autocd  extendedglob nomatch notify
+setopt always_to_end
+setopt auto_list
+setopt auto_menu
+setopt auto_param_keys
+setopt auto_param_slash
+setopt auto_pushd
+setopt auto_remove_slash
+setopt no_beep
+setopt complete_in_word
+setopt dvorak
+setopt extended_history
+setopt glob_complete
+setopt glob_dots
+setopt hist_expire_dups_first
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_verify
+setopt inc_append_history
+setopt list_types
+setopt mark_dirs
+setopt no_flow_control
+setopt pushd_silent
+setopt rm_star_silent # do `rm *` without confirm
+setopt share_history
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/chenyuzai/.zshrc'
@@ -42,6 +69,7 @@ alias gls='git svn rebase'
 # rails
 alias t='autotest'
 alias rr='rake routes | grep'
+alias dcm='rake db:drop && rake db:create && rake db:migrate'
 alias rs='touch tmp/restart.txt'
 alias ss="rake log:clear; clear; ruby script/server"
 alias sc='ruby script/console'
@@ -88,12 +116,18 @@ alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
 alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &" # port 8000
 alias instiki_Documents="instiki -t='/Users/chenyuzai/Documents/instiki/storage'"
 alias gemserver="gem server >> /dev/null 2>&1 &"
-#
+
+# mysql
+alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
+alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
+alias restart_mysql="Library/StartupItems/MySQLCOM/MySQLCOM restart"
+
 #  automatically enter directories without cd
 setopt auto_cd
 
 # # use vim as an editor
-export EDITOR=vim
+#export EDITOR=vim
+export EDITOR=mvim
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
