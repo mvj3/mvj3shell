@@ -47,6 +47,7 @@ alias ls="ls -pG"
 alias ll="ls -lh"
 alias gwd="pwd | pbcopy"
 alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
+alias rm-Dot_svn="find . -name '.svn' -exec rm -rf '{}' \;"
 
 # git
 alias gl='git pull'
