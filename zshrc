@@ -67,11 +67,13 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gps='git svn dcommit'
 alias gls='git svn rebase'
 
+# svn
+alias svn-ignore="SVN_EDITOR='vim' svn propedit svn:ignore ."
+
 # rails
 alias t='autotest'
 alias rr='rake routes | grep'
 alias dcm='rake db:drop && rake db:create && rake db:migrate'
-alias rs='touch tmp/restart.txt'
 alias ss="rake log:clear; clear; ruby script/server"
 alias sc='ruby script/console'
 alias taild='tail -fn100 log/development.log'
@@ -79,6 +81,17 @@ alias tailt='tail -fn100 log/test.log'
 alias tailp='tail -fn100 log/production.log'
 alias taildg="tail -fn100 log/development.log | grep '###'"
 alias tailtg="tail -fn100 log/test.log | grep '###'"
+alias sg="./script/generate"
+alias sp="./script/plugin"
+ 
+#passenger
+alias tlog="tail -f log/development.log"
+alias rst="touch tmp/restart.txt"
+ 
+# rspec
+alias specc="spec -f s spec/controllers"
+alias specm="spec -f m spec/models"
+alias specmc="spec -f s spec/controllers; spec -f s spec/models"
 
 # cd
 alias ..='cd ..'
