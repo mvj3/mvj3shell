@@ -21,6 +21,10 @@
 " | :call Tabstyle_spaces = set tab to 2 spaces                               |
 " -----------------------------------------------------------------------------  
 
+" Encoding
+set fileencodings=utf-8,gbk,ucs-bom,cp936,gb2312,gb18030
+set encoding=utf-8
+
 set nocompatible
 "set pastetoggle=<F2>
 nnoremap <F2> :set invpaste paste?<CR>

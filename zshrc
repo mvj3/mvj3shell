@@ -74,6 +74,7 @@ alias svn-ignore="SVN_EDITOR='vim' svn propedit svn:ignore ."
 alias t='autotest'
 alias rr='rake routes | grep'
 alias dcm='rake db:drop && rake db:create && rake db:migrate'
+alias dcm_production="RAILS_ENV='production' rake db:drop && RAILS_ENV='production' rake db:create && RAILS_ENV='production' rake db:migrate"
 alias ss="rake log:clear; clear; ruby script/server"
 alias sc='ruby script/console'
 alias taild='tail -fn100 log/development.log'
@@ -191,3 +192,5 @@ PATH="$PATH:$RIPDIR/active/bin"
 export RIPDIR RUBYLIB PATH
 
 # vim:set ft=zsh:
+if [ -f ~/.rvm/bin/rvm ] ; then source ~/.rvm/bin/rvm ; fi
+if [ -f ~/.rvm/current ] ; then source ~/.rvm/current ; fi

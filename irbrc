@@ -13,7 +13,7 @@ Readline.vi_editing_mode
 module Readline
   module History
     LOG = "#{ENV['HOME']}/.irb_history"
-    
+
     def self.write_log(line)
       File.open(LOG, 'ab') {|f| f << "#{line}\n"}
     end
@@ -23,7 +23,7 @@ module Readline
       at_exit { write_log("\n# session stop: #{Time.now}\n") }
     end
   end
-  
+
   alias :old_readline :readline
   def readline(*args)
     ln = old_readline(*args)
@@ -60,6 +60,30 @@ class Object
   def local_methods
     self.methods.sort - self.class.superclass.methods
   end
+end
+
+# file utility
+# *stolen* from http://gist.github.com/90444
+def ls
+  %x{ls}.split("\n")
+end
+
+def cd(dir)
+  dir.nil? ? Dir.chdir(ENV['HOME']) : Dir.chdir(dir)
+  Dir.pwd
+end
+
+#def cd(*dir)
+  #Dir.chdir(ENV['HOME']) if *dir.length != 0
+  #Dir.chdir(dir) if *dir.length == 1
+#end
+
+def pwd
+  Dir.pwd
+end
+
+def method_missing(dir)
+  ls.include?(dir.to_s) ? dir.to_s : super
 end
 
 # Copious output helper
@@ -121,6 +145,7 @@ end
 
 ## Aliases
 alias q exit
+alias p pp
 
 # Log to STDOUT if in Rails
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
