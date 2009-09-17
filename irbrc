@@ -6,6 +6,10 @@ require 'wirble'
 require 'pp'
 require 'colored'
 
+improve irb’s default output
+require 'hirb'
+Hirb::View.enable
+
 # Tab completion, cross-session history, history file
 require 'irb/completion'
 IRB.conf[:USE_READLINE] = true
