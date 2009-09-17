@@ -30,6 +30,9 @@ setopt pushd_silent
 setopt rm_star_silent # do `rm *` without confirm
 setopt share_history
 
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/chenyuzai/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -43,6 +46,7 @@ alias la="ls -a"
 alias ls="ls -pG"
 alias ll="ls -lh"
 alias gwd="pwd | pbcopy"
+alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
 alias rm-Dot_svn="find . -name '.svn' -exec rm -rf '{}' \;"
 
 # git
@@ -96,22 +100,49 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # program launch
+alias firefox="open -a firefox"
+alias safari="open -a safari"
+alias m="mvim"
 alias p="ping"
 alias q="exit"
 alias o="open"
 alias i="curl -I"
+alias xulrunner="/Library/Frameworks/XUL.framework/xulrunner-bin "
+alias hibernateon='sudo pmset -a hibernatemode 1'
+alias hibernateoff='sudo pmset -a hibernatemode 0'
+alias quicktime='open -a QuickTime\ Player'
+alias scripteditor='open -a Script\ Editor'
+alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
+alias js='java org.mozilla.javascript.tools.shell.Main'
 alias geminstall="sudo gem install --rdoc --no-ri"
 alias gemupdate="sudo gem update --rdoc --no-ri"
 alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The Internet Right now!'"
 alias dict='dict -d wn'
 alias info='info --vi-keys'
 alias dock="killall Dock"
+alias v='/Applications/MacPorts/MacVim.app/Contents/MacOS/Vim -p'
 alias ri=qri
+alias mysql=mysql5
 alias cmi="./configure && make && sudo make install"
+alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
 
+# http server
+alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
+alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &" # port 8000
+alias instiki_Documents="instiki -t='/Users/chenyuzai/Documents/instiki/storage'"
+alias gemserver="gem server >> /dev/null 2>&1 &"
+
+# mysql
+alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
+alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
+alias restart_mysql="Library/StartupItems/MySQLCOM/MySQLCOM restart"
 
 #  automatically enter directories without cd
 setopt auto_cd
+
+# # use vim as an editor
+#export EDITOR=vim
+export EDITOR=mvim
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -149,3 +180,17 @@ export CLASSPATH="/opt/local/addedbymvj3:/opt/local/addedbymvj3/js.jar"
 
 fpath=($fpath $HOME/.zsh/func)
 typeset -U fpath
+
+title()   { print -Pn "\e]0;$*\a" }
+precmd()  { title "$0" }
+preexec() { title $1 }
+
+# Package Ruby Software
+RIPDIR="$HOME/.rip"
+RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
+PATH="$PATH:$RIPDIR/active/bin"
+export RIPDIR RUBYLIB PATH
+
+# vim:set ft=zsh:
+if [ -f ~/.rvm/bin/rvm ] ; then source ~/.rvm/bin/rvm ; fi
+if [ -f ~/.rvm/current ] ; then source ~/.rvm/current ; fi
