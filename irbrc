@@ -6,7 +6,7 @@ require 'wirble'
 require 'pp'
 require 'colored'
 
-improve irb’s default output
+# improve irb’s default output
 require 'hirb'
 Hirb::View.enable
 
