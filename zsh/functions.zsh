@@ -5,5 +5,8 @@ function grep_svn {
 
 # 过滤以#开头的行和空白行
 function grep_conf {
-  awk '{if(NF>0) print $0}' $1 | grep -v '^#'  | less
+  #awk '{if(NF>0) print $0}' $1 | grep -v '^#'  | less
+  #awk '!/^$/' $1 | grep -v '^#'  | less
+  #awk '!/./' $1 | grep -v '^#'  | less
+  awk 'NF' $1 | grep -v '^#'  | less
 }
