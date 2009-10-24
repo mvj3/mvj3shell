@@ -8,6 +8,12 @@ class Object
     self.methods.sort - self.class.superclass.methods
   end
   alias lm local_methods
+
+  def db
+    require 'rubygems'
+    require 'ruby-debug'
+    debugger
+  end
 end
 
 # file utility
