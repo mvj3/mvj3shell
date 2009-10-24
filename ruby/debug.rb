@@ -40,10 +40,6 @@ def clear
   system 'clear'
 end
 
-## Aliases
-alias q exit
-alias p pp
-
 # Vi editing mode
 IRB.conf[:USE_READLINE] = true
 Readline.vi_editing_mode
