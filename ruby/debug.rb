@@ -41,5 +41,6 @@ def clear
 end
 
 # Vi editing mode
+require 'irb'
 IRB.conf[:USE_READLINE] = true
 Readline.vi_editing_mode
