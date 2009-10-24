@@ -14,31 +14,23 @@ class Object
     require 'ruby-debug'
     debugger
   end
+
+  # file utility
+  # *stolen* from http://gist.github.com/90444
+  def cd(dir)
+    dir.nil? ? Dir.chdir(ENV['HOME']) : Dir.chdir(dir)
+    Dir.pwd
+  end
+
+  def pwd
+    Dir.pwd
+  end
+
+  def clear
+    system 'clear'
+  end
 end
 
-# file utility
-# *stolen* from http://gist.github.com/90444
-def ls
-  %x{ls}.split("\n")
-end
-
-def cd(dir)
-  dir.nil? ? Dir.chdir(ENV['HOME']) : Dir.chdir(dir)
-  Dir.pwd
-end
-
-#def cd(*dir)
-  #Dir.chdir(ENV['HOME']) if *dir.length != 0
-  #Dir.chdir(dir) if *dir.length == 1
-#end
-
-def pwd
-  Dir.pwd
-end
-
-def clear
-  system 'clear'
-end
 
 # Vi editing mode
 require 'irb'
