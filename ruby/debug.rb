@@ -10,9 +10,11 @@ class Object
   alias lm local_methods
 
   def db
-    require 'rubygems'
-    require 'ruby-debug'
-    debugger
+    if PLATFORM =~ /darwin/
+      require 'rubygems'
+      require 'ruby-debug'
+      debugger
+    end
   end
 
   # file utility

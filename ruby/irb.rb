@@ -161,3 +161,10 @@ end
 
 # add ~/.ruby to the library search path
 $LOAD_PATH << File.expand_path('~/.ruby')
+
+class String
+  # uncompleted, need to strip js tags and other html formatters
+  def strip_html
+    self.gsub(/<\/?[^>]*>/, "")
+  end
+end
