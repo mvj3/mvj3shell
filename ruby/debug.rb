@@ -19,6 +19,10 @@ class Object
 
   # file utility
   # *stolen* from http://gist.github.com/90444
+  def ls
+    %x{ls}.split("\n")
+  end
+
   def cd(dir)
     dir.nil? ? Dir.chdir(ENV['HOME']) : Dir.chdir(dir)
     Dir.pwd
