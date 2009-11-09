@@ -41,4 +41,6 @@ end
 # Vi editing mode
 require 'irb'
 IRB.conf[:USE_READLINE] = true
-Readline.vi_editing_mode
+def vimode; Readline.vi_editing_mode end
+def emmode; Readline.emacs_editing_mode end
+vimode

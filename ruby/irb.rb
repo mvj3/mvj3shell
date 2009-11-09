@@ -131,4 +131,4 @@ class String
 end
 
 # load file utility
-require './debug.rb'
+require ENV['HOME'] + '/utils/ruby/debug.rb'
