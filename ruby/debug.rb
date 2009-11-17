@@ -8,7 +8,9 @@ class Object
     self.methods.sort - self.class.superclass.methods
   end
   alias lm local_methods
+end
 
+module Kernel
   def db
     if PLATFORM =~ /darwin/
       require 'rubygems'
@@ -18,7 +20,7 @@ class Object
   end
 
   # file utility
-  # *stolen* from http://gist.github.com/90444
+  # stolen from http://gist.github.com/90444
   def ls
     %x{ls}.split("\n")
   end
@@ -43,4 +45,3 @@ require 'irb'
 IRB.conf[:USE_READLINE] = true
 def vimode; Readline.vi_editing_mode end
 def emmode; Readline.emacs_editing_mode end
-vimode
