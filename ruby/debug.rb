@@ -45,3 +45,6 @@ require 'irb'
 IRB.conf[:USE_READLINE] = true
 def vimode; Readline.vi_editing_mode end
 def emmode; Readline.emacs_editing_mode end
+
+# enable the vimode right now
+vimode
