@@ -55,7 +55,7 @@ function export_git_prompt() {
 function export_no_git_prompt() {
   export PROMPT='%{$fg_bold[red]%}世界的审美！ %{$fg[cyan]%}%~ %{$fg_bold[blue]%}% %{$reset_color%}%(!.#.$) '
 }
-export_git_prompt
+export_no_git_prompt
 
 #GIT_PROMPT_PREFIX="%{$fg[blue]%}["
 #GIT_PROMPT_SUFFIX="%{$reset_color%} "
