@@ -51,10 +51,11 @@ function! Tabstyle_spaces()
   set softtabstop=2
   set shiftwidth=2
   set tabstop=2
+" Convert tabs to spaces
   set expandtab
 endfunction
 
-if hostname() == "Macintosh.local"
+if hostname() == "mini-c2.local"
   call Tabstyle_spaces()
 else
   call Tabstyle_tabs() 
