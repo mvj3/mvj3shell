@@ -1,0 +1,273 @@
+<UserScriptConfig>
+	<Script filename="deviantplus_v3.user.js" name="deviantPLUS v3" namespace="deviantPLUS" description="Enhances deviantART by adding a toolbar to text fields" enabled="false" basedir="deviantplus_v3">
+		<Include>http://*.deviantart.com*</Include>
+	</Script>
+	<Script filename="videoembed.user.js" name="Videoembed" namespace="http://hergonan.blogspot.com/" description="Automatically adds embedded videos after links to video pages.." enabled="false" basedir="videoembed">
+		<Include>*</Include>
+		<Exclude>http://youtube.*</Exclude>
+		<Exclude>http://*.youtube.*</Exclude>
+		<Exclude>http://glumbert.*</Exclude>
+		<Exclude>http://*.glumbert.*</Exclude>
+		<Exclude>http://metacafe.*</Exclude>
+		<Exclude>http://*.metacafe.*</Exclude>
+		<Exclude>http://gamevee.*</Exclude>
+		<Exclude>http://*.gamevee.*</Exclude>
+		<Exclude>http://video.google.*</Exclude>
+		<Exclude>http://animeepisodes.*</Exclude>
+		<Exclude>http://*.animeepisodes.*</Exclude>
+		<Exclude>http://myvideo.*</Exclude>
+		<Exclude>http://*.myvideo.*</Exclude>
+		<Exclude>http://video.tinypic.*</Exclude>
+		<Exclude>http://video.yahoo.*</Exclude>
+		<Exclude>http://spike.*</Exclude>
+		<Exclude>http://*.spike.*</Exclude>
+		<Exclude>http://vids.myspace.*</Exclude>
+		<Exclude>http://liveleak.*</Exclude>
+		<Exclude>http://*.liveleak.*</Exclude>
+		<Exclude>http://revver.*</Exclude>
+		<Exclude>http://*.revver.*</Exclude>
+		<Exclude>http://vimeo.*</Exclude>
+		<Exclude>http://*.vimeo.*</Exclude>
+		<Exclude>http://veoh.*</Exclude>
+		<Exclude>http://*.veoh.*</Exclude>
+		<Exclude>http://guba.*</Exclude>
+		<Exclude>http://*.guba.*</Exclude>
+		<Exclude>http://gamevideos.1up.*</Exclude>
+		<Exclude>http://gametrailers.*</Exclude>
+		<Exclude>http://*.gametrailers.*</Exclude>
+		<Exclude>http://pikniktube.*</Exclude>
+		<Exclude>http://*.pikniktube.*</Exclude>
+		<Exclude>http://tudou.*</Exclude>
+		<Exclude>http://*.tudou.*</Exclude>
+		<Exclude>http://collegehumor.*</Exclude>
+		<Exclude>http://*.collegehumor.*</Exclude>
+		<Exclude>http://5min.*</Exclude>
+		<Exclude>http://*.5min.*</Exclude>
+		<Exclude>http://ustream.*</Exclude>
+		<Exclude>http://*.ustream.*</Exclude>
+		<Exclude>http://fliggo.*</Exclude>
+		<Exclude>http://*.fliggo.*</Exclude>
+		<Exclude>http://overlay.*</Exclude>
+		<Exclude>http://*.overlay.*</Exclude>
+		<Exclude>http://webshots.*</Exclude>
+		<Exclude>http://*.webshots.*</Exclude>
+		<Exclude>http://clipshack.*</Exclude>
+		<Exclude>http://*.clipshack.*</Exclude>
+		<Exclude>http://cnettv,cnet.*</Exclude>
+		<Exclude>http://crackle.*</Exclude>
+		<Exclude>http://*.crackle.*</Exclude>
+		<Exclude>http://current.*</Exclude>
+		<Exclude>http://*.current.*</Exclude>
+		<Exclude>http://expertvillage.*</Exclude>
+		<Exclude>http://*.expertvillage.*</Exclude>
+		<Exclude>http://funnyordie.*</Exclude>
+		<Exclude>http://*.funnyordie.*</Exclude>
+		<Exclude>http://godtube.*</Exclude>
+		<Exclude>http://*.godtube.*</Exclude>
+		<Exclude>http://justin.*</Exclude>
+		<Exclude>http://*.justin.*</Exclude>
+		<Exclude>http://livevideo.*</Exclude>
+		<Exclude>http://*.livevideo.*</Exclude>
+		<Exclude>http://putfile.*</Exclude>
+		<Exclude>http://*.putfile.*</Exclude>
+		<Exclude>http://12seconds.*</Exclude>
+		<Exclude>http://*.12seconds.*</Exclude>
+		<Exclude>http://selfcasttv.*</Exclude>
+		<Exclude>http://*.selfcasttv.*</Exclude>
+		<Exclude>http://sevenload.*</Exclude>
+		<Exclude>http://*.sevenload.*</Exclude>
+		<Exclude>http://spikedhumor.*</Exclude>
+		<Exclude>http://*.spikedhumor.*</Exclude>
+		<Exclude>http://jumpcut.*</Exclude>
+		<Exclude>http://*.jumpcut.*</Exclude>
+		<Exclude>http://*.gamecorner.*</Exclude>
+		<Exclude>http://gamecorner.*</Exclude>
+	</Script>
+	<Script filename="video_focus.user.js" name="Video Focus" namespace="VideoFocus" description="Watch online videos without any distractions like ads, chats, comments, etc.. Available options : Auto browser resize, custom background color, comments on/off, related videos on/off. Compatible Sites : More than 80 video sharing sites." enabled="false" basedir="video_focus">
+		<Include>*56.com/*</Include>
+		<Include>*5min.com/*</Include>
+		<Include>*aniboom.com/*</Include>
+		<Include>*atom.com/*</Include>
+		<Include>*avatarchapters.*</Include>
+		<Include>*blip.tv/*</Include>
+		<Include>*bofunk.com/*</Include>
+		<Include>*break.com/*</Include>
+		<Include>*brightCove.com/*</Include>
+		<Include>*brightcove.tv/*</Include>
+		<Include>*buzznet.com/*</Include>
+		<Include>*clipfish.*</Include>
+		<Include>*clipjunkie.com/*</Include>
+		<Include>*cliplife.*</Include>
+		<Include>*clipmoon.com/*</Include>
+		<Include>*clipshack.com/*</Include>
+		<Include>*collegehumor.com/*</Include>
+		<Include>*crackle.com/*</Include>
+		<Include>*crunchyroll.com/*</Include>
+		<Include>*current.com/*</Include>
+		<Include>*dailymotion.com/*</Include>
+		<Include>*dalealplay.com/*</Include>
+		<Include>*dave.tv/*</Include>
+		<Include>*deviantart.com/*</Include>
+		<Include>*dingtv.com/*</Include>
+		<Include>*doubleagent.com/*</Include>
+		<Include>*esnips.com/*</Include>
+		<Include>*expertvillage.com/*</Include>
+		<Include>*eyespot.com/*</Include>
+		<Include>*fancast.com/*</Include>
+		<Include>*flixya.com/*</Include>
+		<Include>*flurl.com/*</Include>
+		<Include>*funnyjunk.com/*</Include>
+		<Include>*funnyordie.com/*</Include>
+		<Include>*gamespot.com/*</Include>
+		<Include>*gametrailers.com/*</Include>
+		<Include>*glumbert.com/*</Include>
+		<Include>*gofish.com/*</Include>
+		<Include>*guba.com/*</Include>
+		<Include>*hallpass.com/*</Include>
+		<Include>*howcast.com/*</Include>
+		<Include>*hulu.com/*</Include>
+		<Include>*ifilm.com/*</Include>
+		<Include>*imeem.com/*</Include>
+		<Include>*indiafm.com/*</Include>
+		<Include>*ishare.rediff.com/*</Include>
+		<Include>*izlesene.com/*</Include>
+		<Include>*jokeroo.com/*</Include>
+		<Include>*jumpcut.com/*</Include>
+		<Include>*kewego.*</Include>
+		<Include>*liveleak.com/*</Include>
+		<Include>*livevideo.com/*</Include>
+		<Include>*lulu.tv/*</Include>
+		<Include>*mediabum.com/*</Include>
+		<Include>*megavideo.com/*</Include>
+		<Include>*metacafe.com/*</Include>
+		<Include>*myspace.*</Include>
+		<Include>*narutomagic.com/*</Include>
+		<Include>*photobucket.com/*</Include>
+		<Include>*pornotube.com/*</Include>
+		<Include>*putfile.com/*</Include>
+		<Include>*qubetv.tv/*</Include>
+		<Include>*revver.com/*</Include>
+		<Include>*snotr.com/*</Include>
+		<Include>*spankwire.com/*</Include>
+		<Include>*spike.com/* </Include>
+		<Include>*stupidvideos.com/*</Include>
+		<Include>*tinypic.com/*</Include>
+		<Include>*tubearoo.com/*</Include>
+		<Include>*veoh.com/*</Include>
+		<Include>*video.aol.com/*</Include>
+		<Include>*video.google.*</Include>
+		<Include>*video.yahoo.*</Include>
+		<Include>*vidiac.com/*</Include>
+		<Include>*vimeo.com/*</Include>
+		<Include>*vmix.com/*</Include>
+		<Include>*youare.tv/*</Include>
+		<Include>*youporn.com/*</Include>
+		<Include>*youtube.com/*</Include>
+		<Include>*zippyvideos.com/*</Include>
+		<Exclude>http://96.20.168.206:8080/*</Exclude>
+		<Exclude>http://psycadelik.dyndns.org:8080/*</Exclude>
+	</Script>
+	<Script filename="verycd_douban.user.js" name="VeryCD_Douban" namespace="VeryCD_Douban" description="get downloading information from VeryCD.com." enabled="false" basedir="verycd_douban">
+		<Include>http://www.douban.com/subject/*</Include>
+	</Script>
+	<Script filename="download_video_from_vime.user.js" name="Download video from vimeo.com" namespace="userscripts.org" description="Adds a download link to the flv video underneath videos on vimeo.com &amp; underneath any embeded vimeo videos." enabled="false" basedir="download_video_from_vime">
+		<Include>*</Include>
+	</Script>
+	<Script filename="butler.user.js" name="Butler" namespace="http://diveintomark.org/projects/butler/" description="Link to competitors from Google search results" enabled="false" basedir="butler">
+		<Include>http://*.google.*/*</Include>
+	</Script>
+	<Script filename="access_bar.user.js" name="Access Bar" namespace="http://diveintomark.org/projects/greasemonkey/" description="show accesskeys defined on page" enabled="false" basedir="access_bar">
+		<Include>*</Include>
+	</Script>
+	<Script filename="betterdir.user.js" name="BetterDir" namespace="http://diveintomark.org/projects/greasemonkey/" description="make Apache 1.3-style directory listings prettier" enabled="false" basedir="betterdir">
+		<Include>*</Include>
+	</Script>
+	<Script filename="aint_it_readable.user.js" name="Ain't It Readable" namespace="http://diveintomark.org/projects/greasemonkey/" description="change style on aint-it-cool-news.com" enabled="false" basedir="aint_it_readable">
+		<Include>http://aint-it-cool-news.com/*</Include>
+		<Include>http://*.aint-it-cool-news.com/*</Include>
+	</Script>
+	<Script filename="lip_link_integrity_prese.user.js" name="LIP (Link Integrity Preservation)" namespace="http://diveintomark.org/projects/greasemonkey/" description="Hides all content except links" enabled="false" basedir="lip_link_integrity_prese">
+		<Include>http://radio.weblogs.com/0001011/*</Include>
+		<Include>http://scoblecomments.scripting.com/*</Include>
+		<Include>http://scoble.weblogs.com/*</Include>
+		<Include>http://scobleizer.com/*</Include>
+		<Include>http://www.scobleizer.com/*</Include>
+		<Include>http://kunal.org/scoble/*</Include>
+		<Include>http://www.kunal.org/scoble/*</Include>
+		<Include>http://scobleizer.manilasites.com/*</Include>
+	</Script>
+	<Script filename="cdreadable.user.js" name="CDReadable" namespace="http://diveintomark.org/projects/greasemonkey/" description="increase font size on CDRinfo.com" enabled="false" basedir="cdreadable">
+		<Include>http://cdrinfo.com/*</Include>
+		<Include>http://*.cdrinfo.com/*</Include>
+	</Script>
+	<Script filename="zoom_textarea.user.js" name="Zoom Textarea" namespace="http://diveintomark.org/projects/greasemonkey/" description="add controls to zoom textareas" enabled="false" basedir="zoom_textarea">
+		<Include>*</Include>
+	</Script>
+	<Script filename="blogdex_display_title.user.js" name="Blogdex Display Title" namespace="http://diveintomark.org/projects/greasemonkey/" description="Display Blogdex link text inline" enabled="false" basedir="blogdex_display_title">
+		<Include>http://blogdex.net/*</Include>
+		<Include>http://www.blogdex.net/*</Include>
+	</Script>
+	<Script filename="forceget.user.js" name="ForceGet" namespace="http://diveintomark.org/projects/greasemonkey/" description="force all forms to use GET instead of POST" enabled="false" basedir="forceget">
+		<Include>*</Include>
+	</Script>
+	<Script filename="rottenreviews.user.js" name="RottenReviews" namespace="http://diveintomark.org/projects/greasemonkey/" description="default to viewing all reviews on Rotten Tomatoes.com" enabled="false" basedir="rottenreviews">
+		<Include>http://rottentomatoes.com/*</Include>
+		<Include>http://www.rottentomatoes.com/*</Include>
+	</Script>
+	<Script filename="stop_the_presses.user.js" name="Stop The Presses!" namespace="http://diveintomark.org/projects/greasemonkey/" description="make links point to printer-friendly versions whenever possible" enabled="false" basedir="stop_the_presses">
+		<Include>*</Include>
+	</Script>
+	<Script filename="librarylookup.user.js" name="LibraryLookup" namespace="http://weblog.infoworld.com/udell/2006/01/30.html" description="Check availability in Keene libraries" enabled="false" basedir="librarylookup">
+		<Include>http://*.amazon.*</Include>
+	</Script>
+	<Script filename="annotate_google.user.js" name="annotate google" namespace="http://ponderer.org" description="Add extra information to google search results" enabled="true" basedir="annotate_google">
+		<Include>http://google.com/*</Include>
+		<Include>http://www.google.com/*</Include>
+		<Exclude>http://mail.google.com/*</Exclude>
+	</Script>
+	<Script filename="bloglines_tweaks.user.js" name="Bloglines Tweaks" namespace="http://persistent.info/greasemonkey" description="Integrates Bloglines with del.icio.us, adds &quot;Expand&quot; links that convert snippet feeds into full content ones, and makes the &quot;Extras&quot; section toggleable (with more to come)." enabled="false" basedir="bloglines_tweaks">
+		<Include>http://bloglines.com/myblogs_subs*</Include>
+		<Include>http://www.bloglines.com/myblogs_subs*</Include>
+		<Include>http://www.bloglines.com/myblogs_display*</Include>
+		<Include>http://bloglines.com/myblogs_display*</Include>
+	</Script>
+	<Script filename="hide_google_redirects.user.js" name="Hide Google Redirects" namespace="http://www.cs.toronto.edu/~james/google" description="Hide the Google Redirects from view so you can see the true URL you're visiting. Fully compatible with Google Personal Search History." enabled="false" basedir="hide_google_redirects">
+		<Include>http://*.google.*/*</Include>
+	</Script>
+	<Script filename="msdn_language_filter.user.js" name="MSDN Language Filter" namespace="http://blog.monstuff.com/archives/cat_greasemonkey.html" description="Allows you to filter the samples on MSDN for certain languages" enabled="false" basedir="msdn_language_filter">
+		<Include>http://msdn.microsoft.com/*</Include>
+	</Script>
+	<Script filename="frownies.user.js" name="Frownies" namespace="http://diveintomark.org/projects/greasemonkey/" description="convert graphical smilies to their text equivalents" enabled="false" basedir="frownies">
+		<Include>*</Include>
+	</Script>
+	<Script filename="farmr.user.js" name="Farmr" namespace="http://selif.yhsif.com" description="Farm server proxy" enabled="false" basedir="farmr">
+		<Include>*</Include>
+	</Script>
+	<Script filename="scrub_google_redirect_li.user.js" name="Scrub Google Redirect Links" namespace="http://www.zooomr.com/photos/ping/" description="Removes the Google redirect in search result links." enabled="true" basedir="scrub_google_redirect_li">
+		<Include>http://www.google.com/search?*</Include>
+	</Script>
+	<Script filename="banliao.user.js" name="banliao" namespace="banlliao" description="banliao" enabled="false" basedir="banliao">
+		<Include>http://www.douban.com/group/*</Include>
+		<Exclude>http://www.douban.com/group/topic/*</Exclude>
+	</Script>
+	<Script filename="wikimapper.user.js" name="WikiMapper" namespace="http://code.pixelmachine.org" description="makes a graph of your Wikipedia Use" enabled="true" basedir="wikimapper">
+		<Include>http://en.wikipedia.org/wiki/*</Include>
+	</Script>
+	<Script filename="greader_favicon_alerts.user.js" name="GReader Favicon Alerts" namespace="http://peterwooley.com" description="Alerts you to the number of unread items in Google Reader." enabled="true" basedir="greader_favicon_alerts">
+		<Include>https://*.google.com/reader/view/*</Include>
+		<Include>http://*.google.com/reader/view/*</Include>
+		<Include>htt*://*.google.*/reader/view*</Include>
+	</Script>
+	<Script filename="gmail_favicon_alerts_3.user.js" name="Gmail Favicon Alerts 3" namespace="http://peterwooley.com" description="Alerts you to the status of your Gmail Inbox through distinct Favicons." enabled="true" basedir="gmail_favicon_alerts_3">
+		<Include>https://mail.google.com/mail*</Include>
+		<Include>http://mail.google.com/mail*</Include>
+		<Include>https://mail.google.com/mail*</Include>
+		<Include>http://mail.google.com/a*</Include>
+		<Include>https://mail.google.com/a*</Include>
+	</Script>
+	<Script filename="delicious_management.user.js" name="delicious_management" namespace="delicious_management" description="Bulk Bookmark Management Tools for Del.icio.us v0.3.2" enabled="true" basedir="delicious_management">
+		<Include>http://*.del.icio.us/*</Include>
+		<Include>http://del.icio.us/*</Include>
+		<Include>http://delicious.com/*</Include>
+	</Script>
+</UserScriptConfig>

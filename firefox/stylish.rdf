@@ -1,0 +1,3453 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:stylish="urn:stylish#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="http://userstyles.org/styles/2264"
+                   stylish:updateURL="http://userstyles.org/styles/2264.css"
+                   stylish:description="kill Ads on Live.com"
+                   stylish:enabled="true"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:global="false"
+                   stylish:namespace="http://www.w3.org/1999/xhtml">
+    <stylish:code>@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("live.com"){
+   #AdContainer, #RadAd_Banner, #RadAd_TodayPage_Banner{
+      display: none !important;
+   }
+   #header div.stroke {
+      display: none;
+   }
+}
+
+@-moz-document domain("spaces.live.com"){
+   div.SearchSection {
+      visibility: hidden;
+   }
+}</stylish:code>
+    <stylish:originalCode>@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("live.com"){
+   #AdContainer, #RadAd_Banner, #RadAd_TodayPage_Banner{
+      display: none !important;
+   }
+   #header div.stroke {
+      display: none;
+   }
+}
+
+@-moz-document domain("spaces.live.com"){
+   div.SearchSection {
+      visibility: hidden;
+   }
+}</stylish:originalCode>
+    <stylish:domain>live.com</stylish:domain>
+    <stylish:domain>spaces.live.com</stylish:domain>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/4498"
+                   stylish:updateURL="http://userstyles.org/styles/4498.css"
+                   stylish:global="false"
+                   stylish:namespace="http://www.w3.org/1999/xhtml"
+                   stylish:domain="douban.com"
+                   stylish:url="http://www.douban.com/"
+                   stylish:description="Douban Zilla"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:enabled="false">
+    <stylish:urlPrefix>http://www.douban.com/subject/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://www.douban.com/review/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://www.douban.com/book/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://www.douban.com/movie/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://www.douban.com/music/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://www.douban.com/people/</stylish:urlPrefix>
+    <stylish:code>/* --------------------------------------------------------------- */
+/*
+ * Unofficial douban.com skin
+ *
+ * Author      : furikuri
+ * Created     : Dec 18th, 2007
+ * Updated     : Dec 18th, 2007
+ * Version     : 1.0
+ * Website     : http://pouringthemilkshake.org,http://www.douban.com/people/flcl/
+ * Description : Modifies the home page for douban
+ * Usage       : Use with Stylish Firefox extension (http://userstyles.org/) or copy to your Firefox userContent.css file
+ */
+/* --------------------------------------------------------------- */
+
+
+/* BUGS  --------------------------------------------------------- */
+/* Please send me any bugs! Douyou is always best,or comment the topic*/
+/* --------------------------------------------------------------- */
+
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("douban.com") {
+body {
+color: #f26d7d !important;
+background: #0b060d url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/Fingers_purple_top.jpg) repeat-x top left !important;
+}
+body a ,#maxw #ssform #header #status span ,.rlnk {
+color:#ED145A !important;
+text-decoration:none !important;
+}
+body a:hover ,#maxw #ssform #header #status span:hover {
+text-decoration:underline !important;
+background:#0F0810 !important;
+}
+.fdiv:after {
+content:"Current skin:'Douban Zilla' by furikuri,-- send me a douyou or comment the topic if you find a bug or want something changed."!important;
+display: block !important;
+color: #ed145a !important;
+text-align:center !important;
+}
+#maxw {
+max-width:3000px !important;
+background:transparent url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/Fingers_bottom.jpg) repeat-x scroll  bottom !important;
+}
+#maxw #nav a:hover {
+background:#050305 url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;
+}
+#maxw #nav .now span {
+background:transparent !important;
+}
+#maxw #ssform #header #status ,#maxw #nav a {
+background:#050305 !important;
+}
+#maxw #ssform #header #status {
+-moz-border-radius:5px !important;
+margin-top:-5px !important;
+}
+
+#page_focus {
+border:1px solid #ED145A !important;
+-moz-border-radius:5px !important;
+width:200px !important;
+}
+
+.gact {color:#0B060D !important;border:#0B060D !important;}
+
+a.redbutt ,a.redbutt:hover {
+background:url(redbutt.gif) !important;
+border:1px solid #D51253 !important;
+-moz-border-radius:5px !important;
+}
+a.redbutt span {background:url(redbutt.gif) !important;}
+
+.tablelt ,.tablect ,.tablert ,.tablelc ,.tablecc ,.tablerc ,.tablelb ,.tablecb ,.tablerb ,.sbjtd ,.zbar ,.zbar div ,.zbar span.now ,.zbar span.now span
+{background:#170B1C !important;}
+#maxw #main #tablerb .mbt .mbtr {border-bottom:0 !important;}
+
+#maxw #main #tablerb .obs .gact a {
+border:0px solid #0B060D !important;
+}
+
+.mt {border-bottom:20px solid #0B060D !important;}
+.mmp {color:#E91357 !important;}
+.olt td ,.bs li ,.mbtr ,.ninetaps h1{
+border-bottom:1px solid #E26675 !important;
+}
+.mbdiv ,.usernav a ,.fdiv {
+border-top:1px solid #E26675 !important;
+}
+.ul ,.indent span {
+border-bottom:1px solid #0B060D !important;
+}
+.mt .indent .indent span {border-bottom:#0B060D !important;}
+
+
+#maxw .fdiv {
+border-top:0 !important;
+margin-bottom:110px !important;
+}
+#maxw .fdiv .fspl {
+color: #f26d7d !important;
+}
+#maxw .fdiv .fspr {
+color:#DD145A !important;
+}
+/*h*/
+h1 ,h2 ,.m ,.pl2 ,.mn{
+color:#64706D !important;
+}
+.pl {color:#ED145A !important;}
+h3 ,h4 ,.wrap ,.xbar div ,.paginator ,.xbar span.now ,.xbar span.now span{
+background:transparent url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/menu_strip.jpg) repeat-x scroll !important;
+width:105% !important;
+}
+h3 {
+-moz-border-radius:5px !important;
+margin:0px 0pt 0px -10px !important;
+width:105% !important;
+}
+/*h4 {margin:0px 0px 0px -30px !important;}*/
+/*textarea*/
+textarea {
+color:#E26675 !important;
+background:#2E1125 !important;
+border:3px solid #8E364B !important;
+}
+
+input[type=submit] {color:#E26675 !important;background:transparent !important;border:1px solid #8E364B !important;-moz-border-radius:6px !important;}
+input[type=title] {color:#E26675 !important;}
+input[type=text] ,input[type=password] {color:#E26675 !important;background:#2E1125 !important;border:1px solid #8E364B !important;-moz-border-radius:6px !important;width:300px !important;height:20px !important;}
+
+
+input:hover[type=button],
+input:hover[class=button],
+input:hover[type=submit] {background:#050305 url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;}
+
+
+/*9*/
+.gact a, a.gact {
+border-color:#ED145A !important;
+-moz-border-radius:6px !important;
+}
+.pl span {color:#D61F5A !important;}
+
+
+
+/*img*/
+img[src="/pics/logosmall.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/doubanlogo.png) !important;
+width:0 !important;
+padding:17px 82px !important;
+}
+img[src="/pics/douban9.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/deviantART%3EZilla/douban9.png) !important;
+width:0 !important;
+height:0 !important;
+padding:25px 45px !important;
+}
+img[src="/pics/down.gif"]{
+background:url(nsts.gif) !important;
+width:0 !important;
+}
+img[src="/pics/new1.gif"]{
+background:url(nsts.gif) !important;
+width:0 !important;
+}
+#searbar span.submit {background:url(/search.gif) !important;background:#2E1125 !important;border:1px solid #ED145A !important;-moz-border-radius:6px !important;}
+#searbar span.submit:hover ,#searbar span.submit .butt:hover {background:transparent url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;}
+
+
+h3 img {
+border:1px solid #ED145A !important;
+-moz-border-radius:5px !important;
+}
+img[src="/pics/arrow0.gif"],img[src="/pics/arrow1.gif"],img[src="/pics/arrow2.gif"],img[src="/pics/arrow3.gif"]{
+width:0px !important;
+padding:11px 30px 11px 30px !important;
+}
+img[src="/pics/arrow0.gif"]:hover,img[src="/pics/arrow1.gif"]:hover,img[src="/pics/arrow2.gif"]:hover,img[src="/pics/arrow3.gif"]:hover {background:#050305 url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;}
+}
+
+
+
+
+
+@-moz-document url-prefix(http://www.douban.com/subject/){
+.rbar {color:#0B060D !important;}
+.ract {border:2px solid #0B060D !important;}
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix(http://www.douban.com/review/){
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url("http://www.douban.com/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/book/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/movie/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/music/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/people/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}</stylish:code>
+    <stylish:originalCode>/* --------------------------------------------------------------- */
+/*
+ * Unofficial douban.com skin
+ *
+ * Author      : furikuri
+ * Created     : Dec 18th, 2007
+ * Updated     : Dec 18th, 2007
+ * Version     : 1.0
+ * Website     : http://pouringthemilkshake.org,http://www.douban.com/people/flcl/
+ * Description : Modifies the home page for douban
+ * Usage       : Use with Stylish Firefox extension (http://userstyles.org/) or copy to your Firefox userContent.css file
+ */
+/* --------------------------------------------------------------- */
+
+
+/* BUGS  --------------------------------------------------------- */
+/* Please send me any bugs! Douyou is always best,or comment the topic*/
+/* --------------------------------------------------------------- */
+
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("douban.com") {
+body {
+color: #f26d7d !important;
+background: #0b060d url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/Fingers_purple_top.jpg) repeat-x top left !important;
+}
+body a ,#maxw #ssform #header #status span ,.rlnk {
+color:#ED145A !important;
+text-decoration:none !important;
+}
+body a:hover ,#maxw #ssform #header #status span:hover {
+text-decoration:underline !important;
+background:#0F0810 !important;
+}
+.fdiv:after {
+content:"Current skin:'Douban Zilla' by furikuri,-- send me a douyou or comment the topic if you find a bug or want something changed."!important;
+display: block !important;
+color: #ed145a !important;
+text-align:center !important;
+}
+#maxw {
+max-width:3000px !important;
+background:transparent url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/Fingers_bottom.jpg) repeat-x scroll  bottom !important;
+}
+#maxw #nav a:hover {
+background:#050305 url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;
+}
+#maxw #nav .now span {
+background:transparent !important;
+}
+#maxw #ssform #header #status ,#maxw #nav a {
+background:#050305 !important;
+}
+#maxw #ssform #header #status {
+-moz-border-radius:5px !important;
+margin-top:-5px !important;
+}
+
+#page_focus {
+border:1px solid #ED145A !important;
+-moz-border-radius:5px !important;
+width:200px !important;
+}
+
+.gact {color:#0B060D !important;border:#0B060D !important;}
+
+a.redbutt ,a.redbutt:hover {
+background:url(redbutt.gif) !important;
+border:1px solid #D51253 !important;
+-moz-border-radius:5px !important;
+}
+a.redbutt span {background:url(redbutt.gif) !important;}
+
+.tablelt ,.tablect ,.tablert ,.tablelc ,.tablecc ,.tablerc ,.tablelb ,.tablecb ,.tablerb ,.sbjtd ,.zbar ,.zbar div ,.zbar span.now ,.zbar span.now span
+{background:#170B1C !important;}
+#maxw #main #tablerb .mbt .mbtr {border-bottom:0 !important;}
+
+#maxw #main #tablerb .obs .gact a {
+border:0px solid #0B060D !important;
+}
+
+.mt {border-bottom:20px solid #0B060D !important;}
+.mmp {color:#E91357 !important;}
+.olt td ,.bs li ,.mbtr ,.ninetaps h1{
+border-bottom:1px solid #E26675 !important;
+}
+.mbdiv ,.usernav a ,.fdiv {
+border-top:1px solid #E26675 !important;
+}
+.ul ,.indent span {
+border-bottom:1px solid #0B060D !important;
+}
+.mt .indent .indent span {border-bottom:#0B060D !important;}
+
+
+#maxw .fdiv {
+border-top:0 !important;
+margin-bottom:110px !important;
+}
+#maxw .fdiv .fspl {
+color: #f26d7d !important;
+}
+#maxw .fdiv .fspr {
+color:#DD145A !important;
+}
+/*h*/
+h1 ,h2 ,.m ,.pl2 ,.mn{
+color:#64706D !important;
+}
+.pl {color:#ED145A !important;}
+h3 ,h4 ,.wrap ,.xbar div ,.paginator ,.xbar span.now ,.xbar span.now span{
+background:transparent url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/menu_strip.jpg) repeat-x scroll !important;
+width:105% !important;
+}
+h3 {
+-moz-border-radius:5px !important;
+margin:0px 0pt 0px -10px !important;
+width:105% !important;
+}
+/*h4 {margin:0px 0px 0px -30px !important;}*/
+/*textarea*/
+textarea {
+color:#E26675 !important;
+background:#2E1125 !important;
+border:3px solid #8E364B !important;
+}
+
+input[type=submit] {color:#E26675 !important;background:transparent !important;border:1px solid #8E364B !important;-moz-border-radius:6px !important;}
+input[type=title] {color:#E26675 !important;}
+input[type=text] ,input[type=password] {color:#E26675 !important;background:#2E1125 !important;border:1px solid #8E364B !important;-moz-border-radius:6px !important;width:300px !important;height:20px !important;}
+
+
+input:hover[type=button],
+input:hover[class=button],
+input:hover[type=submit] {background:#050305 url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;}
+
+
+/*9*/
+.gact a, a.gact {
+border-color:#ED145A !important;
+-moz-border-radius:6px !important;
+}
+.pl span {color:#D61F5A !important;}
+
+
+
+/*img*/
+img[src="/pics/logosmall.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/doubanlogo.png) !important;
+width:0 !important;
+padding:17px 82px !important;
+}
+img[src="/pics/douban9.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/deviantART%3EZilla/douban9.png) !important;
+width:0 !important;
+height:0 !important;
+padding:25px 45px !important;
+}
+img[src="/pics/down.gif"]{
+background:url(nsts.gif) !important;
+width:0 !important;
+}
+img[src="/pics/new1.gif"]{
+background:url(nsts.gif) !important;
+width:0 !important;
+}
+#searbar span.submit {background:url(/search.gif) !important;background:#2E1125 !important;border:1px solid #ED145A !important;-moz-border-radius:6px !important;}
+#searbar span.submit:hover ,#searbar span.submit .butt:hover {background:transparent url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;}
+
+
+h3 img {
+border:1px solid #ED145A !important;
+-moz-border-radius:5px !important;
+}
+img[src="/pics/arrow0.gif"],img[src="/pics/arrow1.gif"],img[src="/pics/arrow2.gif"],img[src="/pics/arrow3.gif"]{
+width:0px !important;
+padding:11px 30px 11px 30px !important;
+}
+img[src="/pics/arrow0.gif"]:hover,img[src="/pics/arrow1.gif"]:hover,img[src="/pics/arrow2.gif"]:hover,img[src="/pics/arrow3.gif"]:hover {background:#050305 url(http:///pouringthemilkshake.org/images/douban/deviantART&gt;Zilla/flame_block_z.gif) repeat scroll left bottom !important;}
+}
+
+
+
+
+
+@-moz-document url-prefix(http://www.douban.com/subject/){
+.rbar {color:#0B060D !important;}
+.ract {border:2px solid #0B060D !important;}
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix(http://www.douban.com/review/){
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url("http://www.douban.com/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/book/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/movie/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/music/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}
+@-moz-document url-prefix("http://www.douban.com/people/") {
+img[src="/pics/sts.gif"],img[src="/pics/st.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/sts.gif) !important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+img[src="/pics/nsts.gif"],img[src="/pics/nst.gif"]{
+background:url(http://pouringthemilkshake.org/images/douban/pics/nsts.gif) !important;
+width:0 !important;
+}
+}</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/9425"
+                   stylish:updateURL="http://userstyles.org/styles/9425.css"
+                   stylish:global="true"
+                   stylish:description="Remove Scrollbar"
+                   stylish:code="body {overflow-y: hidden !important;}"
+                   stylish:neverUpdate="false"
+                   stylish:originalCode="body {overflow-y: hidden !important;}"
+                   stylish:customized="false"
+                   stylish:enabled="false" />
+  <RDF:Description RDF:about="http://userstyles.org/styles/6476"
+                   stylish:updateURL="http://userstyles.org/styles/6476.css"
+                   stylish:description="Autohide Menubar"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:global="true"
+                   stylish:namespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+                   stylish:enabled="false">
+    <stylish:code>@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+Autohide Menubar
+
+menu {
+  display: none !important;
+}
+
+#toolbar-menubar {
+  height: 1px !important;
+  min-height: 1px !important;
+  overflow: hidden !important;
+}
+
+#toolbar-menubar:hover,
+#toolbar-menubar:focus,
+#toolbar-menubar:active {
+  height: auto !important;
+}
+
+#navigator-toolbox &gt; #toolbar-menubar {
+  border-style: none !important;
+}
+
+#navigator-toolbox &gt; #nav-bar {
+  border-top: 0px !important;
+}</stylish:code>
+    <stylish:originalCode>@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+Autohide Menubar
+
+menu {
+  display: none !important;
+}
+
+#toolbar-menubar {
+  height: 1px !important;
+  min-height: 1px !important;
+  overflow: hidden !important;
+}
+
+#toolbar-menubar:hover,
+#toolbar-menubar:focus,
+#toolbar-menubar:active {
+  height: auto !important;
+}
+
+#navigator-toolbox &gt; #toolbar-menubar {
+  border-style: none !important;
+}
+
+#navigator-toolbox &gt; #nav-bar {
+  border-top: 0px !important;
+}</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/9738"
+                   stylish:updateURL="http://userstyles.org/styles/9738.css"
+                   stylish:global="false"
+                   stylish:namespace="http://www.w3.org/1999/xhtml"
+                   stylish:domain="deviantart.com"
+                   stylish:description="deviantART compact header"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:enabled="true">
+    <stylish:code>@namespace url(http://www.w3.org/1999/xhtml);
+
+/* This file is licensed under Creative Commons Attribution License
+ * http://creativecommons.org/licenses/by/3.0/
+ *
+ * Initial Developer:
+ * Andreas Jung (sd-daken.deviantart.com)
+ *
+ * Contributor(s):
+ *
+ */
+
+@-moz-document domain("deviantart.com") {
+
+/* removes the join link */
+   #activeArea a[href="http://www.deviantart.com/join"], #form-login A[href="https://www.deviantart.com/join/"] {
+      display: none !important;
+   }
+/* always the same background image (if you want the small background image remove "_tall" */
+   body {
+      background: #728776 url(http://st.deviantart.com/minish/main/gradient.gif) repeat-x scroll !important;
+   }
+/* hide banner on top of some pages */
+   #ad-blocking-makes-fella-sad, .ad-blocking-makes-fella-confused {
+      display:none !important;
+   }
+/* remove empty space */
+   #midSection {
+      top: 0px !important;
+   }
+/* make login area smaller */
+   #top-55, #top-collect {
+      top : 0px !important;
+      left: 15% !important;
+      width: 85% !important;
+      position: absolute !important;
+   }
+/* move other content up */
+   #headerTop {
+      height: 75px !important; 
+   }
+   #top &gt; h1 {
+      position: absolute !important;
+      top: 0px;
+   }
+   #searchForm, #moremenu-h{
+      top: 0px !important;
+      float: left !important;
+      position: absolute !important;
+      margin-top: 42px !important;
+   }
+   #moremenu-h {
+      left: 50% !important;
+      position: absolute !important;
+   }
+   #moremenu-h li{
+      background-color: transparent !important;
+   }
+   #lub {
+      left: -16% !important;
+   }
+   #output {
+      top: 75px !important;
+      position: absolute !important;
+      width: 100% !important;
+   }
+   .bubbletop {
+      -moz-border-radius-topright: 10px !important;
+   }
+   .bubbleprefix {
+      top: 75px !important;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      position: absolute !important;
+   }
+   .bubbleprefix .tr {
+      right: 0px !important;
+      position: absolute !important;
+   }
+   #headerTop i.tr, #headerTop i.tl {
+      top: 76px !important; 
+   }
+   #noTouch #searchDropdownOverlay {
+   top: 43px !important; 
+      }
+   #noTouch #searchDropdownMenu {
+      top: 64px !important; 
+   }
+   #appFolderShadow {
+      top: 37px !important; 
+   }
+   #appFolder {
+      top: 37px !important; 
+   } 
+/* avoid "jumping" on some pages */
+   #viewPort {
+      top: -1px !important;
+   }
+   #searchArea {
+      top: 42px !important;
+   }
+/* avoid blank boxes */
+   DIV[style="position: absolute; top: 0pt; right: 0pt;"] IFRAME,  
+    DIV[style="position: absolute; top: 0pt; right: 0pt; z-index: 30;"] IFRAME {
+      height: 0px !important;
+      width: 0px !important;
+   }
+/* replace images to avoid color differences */
+#topLeft-55, #topRight-55 {
+      background-color: transparent !important;
+      background-image: url(data:image/gif;base64,R0lGODlh8ABYAsZ+AK/IHFRqXoqbklljFzpJRGV0bUNVTd6LAU5jWGyAdio3N05iV1NpXV91ZzVDPrKyslduYe7u7pm0FUxZVMzMzKrKE01hVsfhITQ+PLKRZJOgknCEEbfLVE9kWf70q9vb21VsXwUEBNPj1wCmAFBnXvT19e/kxLvWHEBNSMPXWcOJboukFebm5qrGG6G8GJOtFHmLgaKsp0lVUFBlWkZZUcjVjJNyTCwxB3+WErjAutDV0tfIolxuZcumdMbXy6XBGlJmW9bpWVFoXKPBEx8pKu2xRZavMLLOGNF8AFljW6izrY5YAOHatiIsLaJrA5pjAk9bV77FwTxFDNPY1pynoejJkL/Ne1FiWvnYVndaOFA+IkVRTa+3s1BlWafGFFtmYlRfWywzMazBQ1ZoX1JkW1FnW1BhWFBmWlFmWlFmW1BmW1FnWlFoYE5lXUpfVtfkj2FraVBnW7BiPlBnWt3h3yv/Menr54efErusjMubQVJoXDE/OkBTSvLy8v///////yH5BAEKAH8ALAAAAADwAFgCAAf+gH+Cg4SFhoeIiYqLjI2Oj5CRkpOUfwl8mJmaCZWdnp+goaKjpIOXmqicpausra6vrKeomaqwtre4ubCys3y1usDBwsOKvLO/xMnKy67GqczQ0dKdzpvT19jZhtW02t7f0NyYyODl5rbivufr7K3p5O3x8pLv8/b3j/X4+/yF+v0A8f0LSDDewIIIzR1MyFDbwoYQpT2MSFHZxIoYg13MyPHWxo4g3fXqFrKkx5HjTKp89XGlS0otX8rMh1LdzJvUasLDyZNRzJ5ATY3cGbSov6FGkxY7prQpogSnoDqdekgq1atYswpKsKer169Etbrk+rVsWLEqyZb1ehZtSbX+a/e0dQsS7tq5dDnaNZv35l6wfWf+ZRtY5uCueAtHPCxX8di4hB2nhYxY8mTKiS0jZJxZM0HOnkOCDt1xNOmMpk9XTK16MeXGrVe/7hzbHuvaCW/jLqh7d8DevvsBD75vOPF7xo/PS65c3mDazRVChh693F7q1a2TtZo9N/bu4MOLH0++vPnz6NOrX8++vfv38OPLn0+/vv37+PPr38+/v///AAYo4IAEFmjggQgmqOCCDDbo4IMQRijhhBRWaOGFGGao4YYcdujhhyCGKOKIJJZo4okopqjiiiy26OKLMMYo44w01mjjjTjmqOOOPPbo449ABinkkEQWaeSRSCb+qeSSTDbp5JNQRinllFRWaeWVWGap5ZZcdunll2CGKeaYZJZp5plopqnmmmy26eabcMYp55x01mnnnXjmqeeefPbp55+ABirooIQWauihiCaq6KKMNuroo5BGKumklFZq6aWYZqrpppx26umnoIYq6qiklmrqqaimquqqrLbq6quwxirrrLTWauutuOaq66689urrr8AGK+ywxBZr7LHIJqvsssw26+yz0EYr7bTUVmvttdhmq+223Hbr7bfghivuuOSWa+656Kar7rrstuvuu/DGK++89NZr77345qvvvvz26++/AAcs8MAEF2zwwQgnrPDCDDfs8MMQRyzxxBRTV2zxxRhnrPHGHHfs8ccghyzyyCSXbPLJKKes8sost+zyyzDHLPPMNNds880456zzzjz37PPPQAct9NBEF2300UgnrfTSTDft9NNQRy311FRrHAgAOw==) !important
+      }
+#moremenu .i1 { background-position:-0px 80px !important;}
+#moremenu .i2 { background-position:-40px 80px !important;}
+#moremenu .i3 { background-position:-80px 80px !important;}
+#moremenu .i4 { background-position:-120px 80px !important;}
+#moremenu .i5 { background-position:-160px 80px !important;}
+#moremenu .i6 { background-position:-200px 80px !important;}
+#moremenu .i7 { background-position:-240px 80px !important;}
+#moremenu .i8 { background-position:-280px 80px !important;}
+#moremenu .i9 { background-position:-320px 80px !important;}
+#moremenu .i10 { background-position:-360px 80px !important;}
+#moremenu .i11 { background-position:-400px 80px !important;}
+#moremenu .i12 { background-position:-440px 80px !important;}
+#moremenu .i13 { background-position:-480px 80px !important;}
+#moremenu .i14 { background-position:-520px 80px !important;}
+#moremenu .i15 { background-position:-560px 80px !important;}
+#moremenu .i16 { background-position:-600px 80px !important;}
+#moremenu .i17 { background-position:-640px 80px !important;}
+#moremenu .i18 { background-position:-680px 80px !important;}
+#moremenu .i19 { background-position:-720px 80px !important;}
+#moremenu .i20 { background-position:-760px 80px !important;}
+#moremenu .i21 { background-position:-800px 80px !important;}
+#moremenu .i22 { background-position:-840px 80px !important;}
+#moremenu .i23 { background-position:-880px 80px !important;}
+#moremenu .i24 { background-position:-920px 80px !important;}
+#moremenu .i25 { background-position:-960px 80px !important;}
+#moremenu .i26 { background-position:-1000px 80px !important;}
+#moremenu .i27 { background-position:-1040px 80px !important;}
+#moremenu .i28 { background-position:-1080px 80px !important;}
+#moremenu .i29 { background-position:-1120px 80px !important;}
+#moremenu .i30 { background-position:-1160px 80px !important;}
+#moremenu .i31 { background-position:-1200px 80px !important;}
+#moremenu .i32 { background-position:-1240px 80px !important;}
+#moremenu .i33 { background-position:-1280px 80px !important;}
+#moremenu .i34 { background-position:-1320px 80px !important;}
+#moremenu .i35 { background-position:-1360px 80px !important;}
+#moremenu .i36 { background-position:-1400px 80px !important;}
+#moremenu .i37 { background-position:-1440px 80px !important;}
+#moremenu .i38 { background-position:-1480px 80px !important;}
+#moremenu .i39 { background-position:-1520px 80px !important;}
+#moremenu .i40 { background-position:-1560px 80px !important;}
+#moremenu .i41 { background-position:-1600px 80px !important;}
+#moremenu .i42 { background-position:-1640px 80px !important;}
+#moremenu .i43 { background-position:-1680px 80px !important;}
+#moremenu .i44 { background-position:-1720px 80px !important;}
+#moremenu .i45 { background-position:-1760px 80px !important;}
+#moremenu .i46 { background-position:-1800px 80px !important;}
+#moremenu .i47 { background-position:-1840px 80px !important;}
+#moremenu .i48 { background-position:-1880px 80px !important;}
+#moremenu .i49 { background-position:-1920px 80px !important;}
+#moremenu .i50 { background-position:-1960px 80px !important;}
+#top-55 {
+      background-color: transparent !important;
+      }
+#rockdock {
+      border-left: none !important;
+      border-right: none !important;
+      -moz-border-radius: 6px !important;
+      }
+}</stylish:code>
+    <stylish:originalCode>@namespace url(http://www.w3.org/1999/xhtml);
+
+/* This file is licensed under Creative Commons Attribution License
+ * http://creativecommons.org/licenses/by/3.0/
+ *
+ * Initial Developer:
+ * Andreas Jung (sd-daken.deviantart.com)
+ *
+ * Contributor(s):
+ *
+ */
+
+@-moz-document domain("deviantart.com") {
+
+/* removes the join link */
+   #activeArea a[href="http://www.deviantart.com/join"], #form-login A[href="https://www.deviantart.com/join/"] {
+      display: none !important;
+   }
+/* always the same background image (if you want the small background image remove "_tall" */
+   body {
+      background: #728776 url(http://st.deviantart.com/minish/main/gradient.gif) repeat-x scroll !important;
+   }
+/* hide banner on top of some pages */
+   #ad-blocking-makes-fella-sad, .ad-blocking-makes-fella-confused {
+      display:none !important;
+   }
+/* remove empty space */
+   #midSection {
+      top: 0px !important;
+   }
+/* make login area smaller */
+   #top-55, #top-collect {
+      top : 0px !important;
+      left: 15% !important;
+      width: 85% !important;
+      position: absolute !important;
+   }
+/* move other content up */
+   #headerTop {
+      height: 75px !important; 
+   }
+   #top &gt; h1 {
+      position: absolute !important;
+      top: 0px;
+   }
+   #searchForm, #moremenu-h{
+      top: 0px !important;
+      float: left !important;
+      position: absolute !important;
+      margin-top: 42px !important;
+   }
+   #moremenu-h {
+      left: 50% !important;
+      position: absolute !important;
+   }
+   #moremenu-h li{
+      background-color: transparent !important;
+   }
+   #lub {
+      left: -16% !important;
+   }
+   #output {
+      top: 75px !important;
+      position: absolute !important;
+      width: 100% !important;
+   }
+   .bubbletop {
+      -moz-border-radius-topright: 10px !important;
+   }
+   .bubbleprefix {
+      top: 75px !important;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      position: absolute !important;
+   }
+   .bubbleprefix .tr {
+      right: 0px !important;
+      position: absolute !important;
+   }
+   #headerTop i.tr, #headerTop i.tl {
+      top: 76px !important; 
+   }
+   #noTouch #searchDropdownOverlay {
+   top: 43px !important; 
+      }
+   #noTouch #searchDropdownMenu {
+      top: 64px !important; 
+   }
+   #appFolderShadow {
+      top: 37px !important; 
+   }
+   #appFolder {
+      top: 37px !important; 
+   } 
+/* avoid "jumping" on some pages */
+   #viewPort {
+      top: -1px !important;
+   }
+   #searchArea {
+      top: 42px !important;
+   }
+/* avoid blank boxes */
+   DIV[style="position: absolute; top: 0pt; right: 0pt;"] IFRAME,  
+    DIV[style="position: absolute; top: 0pt; right: 0pt; z-index: 30;"] IFRAME {
+      height: 0px !important;
+      width: 0px !important;
+   }
+/* replace images to avoid color differences */
+#topLeft-55, #topRight-55 {
+      background-color: transparent !important;
+      background-image: url(data:image/gif;base64,R0lGODlh8ABYAsZ+AK/IHFRqXoqbklljFzpJRGV0bUNVTd6LAU5jWGyAdio3N05iV1NpXV91ZzVDPrKyslduYe7u7pm0FUxZVMzMzKrKE01hVsfhITQ+PLKRZJOgknCEEbfLVE9kWf70q9vb21VsXwUEBNPj1wCmAFBnXvT19e/kxLvWHEBNSMPXWcOJboukFebm5qrGG6G8GJOtFHmLgaKsp0lVUFBlWkZZUcjVjJNyTCwxB3+WErjAutDV0tfIolxuZcumdMbXy6XBGlJmW9bpWVFoXKPBEx8pKu2xRZavMLLOGNF8AFljW6izrY5YAOHatiIsLaJrA5pjAk9bV77FwTxFDNPY1pynoejJkL/Ne1FiWvnYVndaOFA+IkVRTa+3s1BlWafGFFtmYlRfWywzMazBQ1ZoX1JkW1FnW1BhWFBmWlFmWlFmW1BmW1FnWlFoYE5lXUpfVtfkj2FraVBnW7BiPlBnWt3h3yv/Menr54efErusjMubQVJoXDE/OkBTSvLy8v///////yH5BAEKAH8ALAAAAADwAFgCAAf+gH+Cg4SFhoeIiYqLjI2Oj5CRkpOUfwl8mJmaCZWdnp+goaKjpIOXmqicpausra6vrKeomaqwtre4ubCys3y1usDBwsOKvLO/xMnKy67GqczQ0dKdzpvT19jZhtW02t7f0NyYyODl5rbivufr7K3p5O3x8pLv8/b3j/X4+/yF+v0A8f0LSDDewIIIzR1MyFDbwoYQpT2MSFHZxIoYg13MyPHWxo4g3fXqFrKkx5HjTKp89XGlS0otX8rMh1LdzJvUasLDyZNRzJ5ATY3cGbSov6FGkxY7prQpogSnoDqdekgq1atYswpKsKer169Etbrk+rVsWLEqyZb1ehZtSbX+a/e0dQsS7tq5dDnaNZv35l6wfWf+ZRtY5uCueAtHPCxX8di4hB2nhYxY8mTKiS0jZJxZM0HOnkOCDt1xNOmMpk9XTK16MeXGrVe/7hzbHuvaCW/jLqh7d8DevvsBD75vOPF7xo/PS65c3mDazRVChh693F7q1a2TtZo9N/bu4MOLH0++vPnz6NOrX8++vfv38OPLn0+/vv37+PPr38+/v///AAYo4IAEFmjggQgmqOCCDDbo4IMQRijhhBRWaOGFGGao4YYcdujhhyCGKOKIJJZo4okopqjiiiy26OKLMMYo44w01mjjjTjmqOOOPPbo449ABinkkEQWaeSRSCb+qeSSTDbp5JNQRinllFRWaeWVWGap5ZZcdunll2CGKeaYZJZp5plopqnmmmy26eabcMYp55x01mnnnXjmqeeefPbp55+ABirooIQWauihiCaq6KKMNuroo5BGKumklFZq6aWYZqrpppx26umnoIYq6qiklmrqqaimquqqrLbq6quwxirrrLTWauutuOaq66689urrr8AGK+ywxBZr7LHIJqvsssw26+yz0EYr7bTUVmvttdhmq+223Hbr7bfghivuuOSWa+656Kar7rrstuvuu/DGK++89NZr77345qvvvvz26++/AAcs8MAEF2zwwQgnrPDCDDfs8MMQRyzxxBRTV2zxxRhnrPHGHHfs8ccghyzyyCSXbPLJKKes8sost+zyyzDHLPPMNNds880456zzzjz37PPPQAct9NBEF2300UgnrfTSTDft9NNQRy311FRrHAgAOw==) !important
+      }
+#moremenu .i1 { background-position:-0px 80px !important;}
+#moremenu .i2 { background-position:-40px 80px !important;}
+#moremenu .i3 { background-position:-80px 80px !important;}
+#moremenu .i4 { background-position:-120px 80px !important;}
+#moremenu .i5 { background-position:-160px 80px !important;}
+#moremenu .i6 { background-position:-200px 80px !important;}
+#moremenu .i7 { background-position:-240px 80px !important;}
+#moremenu .i8 { background-position:-280px 80px !important;}
+#moremenu .i9 { background-position:-320px 80px !important;}
+#moremenu .i10 { background-position:-360px 80px !important;}
+#moremenu .i11 { background-position:-400px 80px !important;}
+#moremenu .i12 { background-position:-440px 80px !important;}
+#moremenu .i13 { background-position:-480px 80px !important;}
+#moremenu .i14 { background-position:-520px 80px !important;}
+#moremenu .i15 { background-position:-560px 80px !important;}
+#moremenu .i16 { background-position:-600px 80px !important;}
+#moremenu .i17 { background-position:-640px 80px !important;}
+#moremenu .i18 { background-position:-680px 80px !important;}
+#moremenu .i19 { background-position:-720px 80px !important;}
+#moremenu .i20 { background-position:-760px 80px !important;}
+#moremenu .i21 { background-position:-800px 80px !important;}
+#moremenu .i22 { background-position:-840px 80px !important;}
+#moremenu .i23 { background-position:-880px 80px !important;}
+#moremenu .i24 { background-position:-920px 80px !important;}
+#moremenu .i25 { background-position:-960px 80px !important;}
+#moremenu .i26 { background-position:-1000px 80px !important;}
+#moremenu .i27 { background-position:-1040px 80px !important;}
+#moremenu .i28 { background-position:-1080px 80px !important;}
+#moremenu .i29 { background-position:-1120px 80px !important;}
+#moremenu .i30 { background-position:-1160px 80px !important;}
+#moremenu .i31 { background-position:-1200px 80px !important;}
+#moremenu .i32 { background-position:-1240px 80px !important;}
+#moremenu .i33 { background-position:-1280px 80px !important;}
+#moremenu .i34 { background-position:-1320px 80px !important;}
+#moremenu .i35 { background-position:-1360px 80px !important;}
+#moremenu .i36 { background-position:-1400px 80px !important;}
+#moremenu .i37 { background-position:-1440px 80px !important;}
+#moremenu .i38 { background-position:-1480px 80px !important;}
+#moremenu .i39 { background-position:-1520px 80px !important;}
+#moremenu .i40 { background-position:-1560px 80px !important;}
+#moremenu .i41 { background-position:-1600px 80px !important;}
+#moremenu .i42 { background-position:-1640px 80px !important;}
+#moremenu .i43 { background-position:-1680px 80px !important;}
+#moremenu .i44 { background-position:-1720px 80px !important;}
+#moremenu .i45 { background-position:-1760px 80px !important;}
+#moremenu .i46 { background-position:-1800px 80px !important;}
+#moremenu .i47 { background-position:-1840px 80px !important;}
+#moremenu .i48 { background-position:-1880px 80px !important;}
+#moremenu .i49 { background-position:-1920px 80px !important;}
+#moremenu .i50 { background-position:-1960px 80px !important;}
+#top-55 {
+      background-color: transparent !important;
+      }
+#rockdock {
+      border-left: none !important;
+      border-right: none !important;
+      -moz-border-radius: 6px !important;
+      }
+}</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/906"
+                   stylish:updateURL="http://userstyles.org/styles/906.css"
+                   stylish:global="false"
+                   stylish:namespace="http://www.w3.org/1999/xhtml"
+                   stylish:domain="deviantart.com"
+                   stylish:description="Website: cleaner - DeviantART V6"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:enabled="true">
+    <stylish:urlPrefix>http://www.deviantart.com/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://my.deviantart.com/messages</stylish:urlPrefix>
+    <stylish:urlPrefix>http://my.deviantart.com/notes</stylish:urlPrefix>
+    <stylish:urlPrefix>http://news.deviantart.com/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://forum.deviantart.com/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://communities.deviantart.com/</stylish:urlPrefix>
+    <stylish:code>@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("deviantart.com") { 
+/* ads */
+div[id="ad-blocking-makes-fella-sad"],
+div[class="ad-blocking-makes-fella-confused"],
+div[id="adso-magnifico"],
+div[class="sleekadbubble section squareBrowsead ch"],
+div[id="google_ads_div_right_wr_homepage"],
+div[id="deviant-infobox"] + div.box,
+div[class="notices"],
+div[style="border-top: 1px solid rgb(248, 250, 248); border-left: 1px solid rgb(186, 199, 187); padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; overflow: hidden; float: right; width: 160px; margin-left: 6px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98); position: relative;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/artshout.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 232px; height: 64px;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/corner_artblock.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 303px; height: 64px;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/corner_giveprint.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 303px; height: 64px;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/corner_basic.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 303px; height: 64px;"],
+#moreAdFrame, .hidoframe, .hh&gt;div[style~="overflow:"] { display:none !important; position:absolute !important; left:-9999px !important; top:-9999px !important; } .stream-ads { border:0 !important; }
+
+
+/* gallery ads */
+div[id="gallery-admaster"],
+div[style="float: right; position: relative; width: 410px; text-align: left;"],
+div[style="border: 1px dashed gray; float: right; position: relative; width: 410px; text-align: left;"],
+iframe[width="300"],
+#ad-footprint-160x600 {display: none !important }
+
+
+/* "subscription" link */
+#rockdock-message-count{ margin: 0 -2px 0 -16px !important;
+background: #40534A !important;
+border: 2px solid #40534A !important }
+.bling { display: none !important }
+
+
+/* "way back" link */
+a[href="?order=1025"]
+{ display: none !important; }
+
+
+/* "browse limit" link */
+div[class="browse2-limits"],
+a[class="browseLimitLink"]
+{ display: none !important; }
+
+
+/* removes empty space */
+#midSection {
+top: 27px !important; }
+#headerTop {
+height: 100px !important; }
+#headerTop i.tr, #headerTop i.tl {
+top: 101px !important; }
+#noTouch #searchDropdownOverlay {
+top: 71px !important; }
+#noTouch #searchDropdownMenu {
+top: 92px !important; }
+#appFolderShadow {
+top: 65px !important; }
+#appFolder {
+top: 65px !important; } 
+}
+
+
+@-moz-document url-prefix(http://www.deviantart.com/) {
+td[id="home-bar"],
+div[class="trailing section-block"],
+td[style="padding-left: 42px ! important; width: 302px;"]
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://my.deviantart.com/messages) {
+td[style="border-top: 1px solid rgb(248, 250, 248); border-left: 1px solid rgb(186, 199, 187); padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; width: 160px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98);"],
+iframe[height="90"],
+iframe[height="600"],
+div[class="read"] &gt; div:first-child
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://my.deviantart.com/notes) {
+div[class="rr"] &gt; div:first-child
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://news.deviantart.com/) {
+div[class="section"],
+div[class="sleekadbubble section ch"]
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://forum.deviantart.com/) {
+div[class="sleekadbubble section"]
+{ display: none !important; }
+div[class="comments"]
+{ width: 100%! important; }
+}
+
+
+@-moz-document url-prefix(http://communities.deviantart.com/) {
+div[style="border: 1px dashed gray; padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; overflow: hidden; float: right; width: 160px; margin-left: 6px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98); position: relative;"],
+div[style="border-top: 1px solid rgb(248, 250, 248); border-left: 1px solid rgb(186, 199, 187); padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; overflow: hidden; float: right; width: 160px; margin-left: 6px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98); position: relative;"]
+{ display: none !important; }
+}</stylish:code>
+    <stylish:originalCode>@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("deviantart.com") { 
+/* ads */
+div[id="ad-blocking-makes-fella-sad"],
+div[class="ad-blocking-makes-fella-confused"],
+div[id="adso-magnifico"],
+div[class="sleekadbubble section squareBrowsead ch"],
+div[id="google_ads_div_right_wr_homepage"],
+div[id="deviant-infobox"] + div.box,
+div[class="notices"],
+div[style="border-top: 1px solid rgb(248, 250, 248); border-left: 1px solid rgb(186, 199, 187); padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; overflow: hidden; float: right; width: 160px; margin-left: 6px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98); position: relative;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/artshout.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 232px; height: 64px;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/corner_artblock.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 303px; height: 64px;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/corner_giveprint.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 303px; height: 64px;"],
+a[style="background: transparent url(http://st.deviantart.com/minish/widgets/corner_basic.gif) repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; top: -1px; right: 0pt; width: 303px; height: 64px;"],
+#moreAdFrame, .hidoframe, .hh&gt;div[style~="overflow:"] { display:none !important; position:absolute !important; left:-9999px !important; top:-9999px !important; } .stream-ads { border:0 !important; }
+
+
+/* gallery ads */
+div[id="gallery-admaster"],
+div[style="float: right; position: relative; width: 410px; text-align: left;"],
+div[style="border: 1px dashed gray; float: right; position: relative; width: 410px; text-align: left;"],
+iframe[width="300"],
+#ad-footprint-160x600 {display: none !important }
+
+
+/* "subscription" link */
+#rockdock-message-count{ margin: 0 -2px 0 -16px !important;
+background: #40534A !important;
+border: 2px solid #40534A !important }
+.bling { display: none !important }
+
+
+/* "way back" link */
+a[href="?order=1025"]
+{ display: none !important; }
+
+
+/* "browse limit" link */
+div[class="browse2-limits"],
+a[class="browseLimitLink"]
+{ display: none !important; }
+
+
+/* removes empty space */
+#midSection {
+top: 27px !important; }
+#headerTop {
+height: 100px !important; }
+#headerTop i.tr, #headerTop i.tl {
+top: 101px !important; }
+#noTouch #searchDropdownOverlay {
+top: 71px !important; }
+#noTouch #searchDropdownMenu {
+top: 92px !important; }
+#appFolderShadow {
+top: 65px !important; }
+#appFolder {
+top: 65px !important; } 
+}
+
+
+@-moz-document url-prefix(http://www.deviantart.com/) {
+td[id="home-bar"],
+div[class="trailing section-block"],
+td[style="padding-left: 42px ! important; width: 302px;"]
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://my.deviantart.com/messages) {
+td[style="border-top: 1px solid rgb(248, 250, 248); border-left: 1px solid rgb(186, 199, 187); padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; width: 160px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98);"],
+iframe[height="90"],
+iframe[height="600"],
+div[class="read"] &gt; div:first-child
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://my.deviantart.com/notes) {
+div[class="rr"] &gt; div:first-child
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://news.deviantart.com/) {
+div[class="section"],
+div[class="sleekadbubble section ch"]
+{ display: none !important; }
+}
+
+
+@-moz-document url-prefix(http://forum.deviantart.com/) {
+div[class="sleekadbubble section"]
+{ display: none !important; }
+div[class="comments"]
+{ width: 100%! important; }
+}
+
+
+@-moz-document url-prefix(http://communities.deviantart.com/) {
+div[style="border: 1px dashed gray; padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; overflow: hidden; float: right; width: 160px; margin-left: 6px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98); position: relative;"],
+div[style="border-top: 1px solid rgb(248, 250, 248); border-left: 1px solid rgb(186, 199, 187); padding: 8px; background: rgb(228, 234, 227) none repeat scroll 0% 0%; overflow: hidden; float: right; width: 160px; margin-left: 6px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(80, 105, 98); position: relative;"]
+{ display: none !important; }
+}</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/148"
+                   stylish:updateURL="http://userstyles.org/styles/148.css"
+                   stylish:global="true"
+                   stylish:namespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+                   stylish:description="URL Security Indicators"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:enabled="false">
+    <stylish:code>@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+/* URL bar background image for high security site */
+#urlbar[level="high"] &gt; .autocomplete-textbox-container {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAAUCAIAAADNxb6ZAAAAFXRFWHRDcmVhdGlvbiBUaW1lAAfU
+CREHDDWKhtjIAAAAB3RJTUUH1AkRBw0BZyj+TAAAAAlwSFlzAAAOwwAADsMBx2+oZAAAA1tJREFU
+eNrtmOtS6jAUhZu2HEQFuXhX+OX7P8N5EGd0VPDGiIIIgm3Ol6YTS/GUHnHaH6drOkxbkpVkZe+1
+A0LK31aBrGDnPYH/C4XcmaKQO1MUcmcKd83+nmc9P/vTqbrf2hLVqnAcdf/0JGMtazXhBqO9v8uX
+FzmfW7Zt7eyIzU3By48PaziUlYpVqcQfJxM5mXzy0Gt7O6QajRRPFIbB4O1NDef7VqmkhiuXhenY
+bIplBvDl+2XmHOTudv3ZTP76pebR7/vDoeh07EBuP9ayUrFdV7y+yrs7ny2hy3Qqx2OJBHt79nwu
+6dJs2qwKRB/ROsY2GFjttoPibAmbsahUyGC07vXC4RiL9sfHNhusOzabzjJDQOKsZM5BbiaE1o2G
+aLWUxLe3PkuazVib1lecnCyYFanw+Oizct4jAY/sFqHXaKweiy46uGgPCXIQg/qrszPnb70GAyVZ
+p+MwHBO7uvLorvPJ0OqFMBMENZwrmXOQu1RSk2PljqPWcHS0ohIQa0i8uxsaDp/EmpqEay1ndDLs
+dEUHAyE5Hh58bSM/Lt+/Yi25kQkbxR+wEb02bMHEDiFzfu6ZxixVa+q6CwwpQfSZe/KDImEeo6OY
+JNCo1+3x2CPnuKygfpCITmrNE5hzkBscHtqUPhTnQk2Mst22dTlC/Wr1x04+KGUFmYTWujwYYALm
+XiecAbaGk1D32Hvt3bOZf3qadlYJzN/DWnJzfkBlArzV4gpddTy2yuWA2hUxK9SlBksxYUKaYy/k
+xMqxCGd6ua4qoYwS7RIbJQptX/W64OLm5sajPqdfYAJzDnJTJ7GRyUTs76sM1aWcoNZgedHiTnSg
+F7FJ+RJC6iOHjlYsRQh9PvNrNXXkYOd43Nj4Yv2jkfq2VpM6hyxrYRTHEbpQa/T7Mjg4qYRjPvo4
+mB4JzDnIjU2jIEl6cRF6HNoZ72ad3e7ndHXdxwE5wJiDHe2xo2Ax6lCMjpeXX1BFQfvra//+XnY6
+4bdRW48dhw4ORK8naW/epMkkgwTm70Gs/48gCat/5hCM0ToZa0Z0m8KIC3GyXo4Xzmq4kxX6vog2
+Rn1T4mjmeeoNActNlGGZUzsecR39faQZjKfBQ3BEZ6gbJDPnI3eB9Cj+M8kUhdyZopA7UxRyZ4o/
+wHTctZbN+pkAAAAASUVORK5CYII=") !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+}
+
+/* URL bar background image for low security site */
+#urlbar[level="low"] &gt; .autocomplete-textbox-container {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAAUCAIAAADNxb6ZAAAAB3RJTUUH1AofDCYpj8dJ3QAAAAlw
+SFlzAAAK8AAACvABQqw0mAAAA9ZJREFUeNrtmFly2kAQhgUCbYjF4CXJQ+5/i9wiB0hVXHEwq6xd
+uPJJbQZZShwwtvIQdbkoz9DT3fPP34vd+eJ91VppSrr/OoD/S1q4G5UW7kalhbtR6Z2k7W+9rq7b
+A6eyv8t2wYOfJSm/m7ZpOTZqSRSnSWI5jt7T5Syf5WXF1ONu53tVI+pgWZQRlPGL906nY7uOaVsS
+TBQEfcMwLLOylJCUHU6Ztl2Jp+5OwiA85VdFNRgN3xHuh7VH0BW4szRb/VwQDV/x6a224UNwcT0T
+fYmJffm91+8TMddm6U6exYoRTPX6eUhiZPbxWhkpC9hhJA6i9f0SLDiSJmk8XzrDwfBivMsyMb6H
++7AE64o1f+tPby6xpq5Wd8f+cDJaLNZxGKMsWNfjf3u4fyvb5Ro0gUaQgm7echP6gbxKEiWDkZYW
+nM2BjhM4mKWpQK+M8ABg7YxcLsZyPV/GYaTQ58LyfkrwuF1t+JZ9EGfJawWe7wzdvwbMEXkJCRXu
+l0l68/mTAlRpImQPDCCfuno38ALuUs/yd4ebVE0LBAUXxHEHwfaByLgDm0CWoxknxJencxhpk5Fs
+9o0D3HovPx75oa53DcuaXE1f9htHMRC7k4lkOp+Tq5m8KHQ+6QqUlGPU3PEQdm8WK0ni2Ycrcd0w
+3AVwZr+8CXawtdg3wJ0nAWWilCX7aYF+OVyWpmNRHygjJAxLyoLUYq3g/t23W6UMAblwfuq5hSNj
+Jg8O9+/3aBLHnCLawdglG+BKTi+jf8ypN4b7ZRF8KR1SKAwzT0wwlYgrypPLKakaBmEchLwQ9QQG
+ya3yzHVPztw/iZgiMLCW9nCkkLghzTzNoMLrXJ8Lt9QQioAqf/AOMso+PY1PSiqfYC2MpmLmS8so
+2wHfOAyZE6jd/EhVjaNoD3evMgOIZUqKqq1FC3k8BgjozClpj95qcxJ2eUam2fGZdC7cgqZa5t28
+6CH0FplA6GDsw2V5DJkIiU9CpF7TA7XnfVLLx5uUMkJfHU3HckTbT2B1p6CPX4zTJLrdDtAzcghb
+8SKlmKXMbfK6FXdaMS+hAxXoeK+rDE3ALWOfWlJG6SHUYpiiRiiqsOraQJAUM+L+eQyBW+08HbEt
+dvhq/j1SB829TsUpExhgMTas71fKKfrjy6k8EhMhON7f3h1M1WqXVpSvxY853e+kknKOdE76j2CZ
+Ynv4nhAp5jb5C8VWU4pWVAnaKXwUdsNTsJNhuW5fGYGM5T5ZUVPWlP26QbxQnQR99faiLDmn1AhJ
+JqiykbpmWb/ClfeCu5Uzpf2fSaPSwt2otHA3Ki3cjcov+4Ry6JJcW+YAAAAASUVORK5CYII=") !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+}
+
+/* URL bar background image for broken secure site */
+#urlbar[level="broken"] &gt; .autocomplete-textbox-container {
+  background-image: url("data:image/png;base64,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
+ZW0P4v4LWFvQLqDk3rMAAAAASUVORK5CYII=") !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+}</stylish:code>
+    <stylish:originalCode>@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+/* URL bar background image for high security site */
+#urlbar[level="high"] &gt; .autocomplete-textbox-container {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAAUCAIAAADNxb6ZAAAAFXRFWHRDcmVhdGlvbiBUaW1lAAfU
+CREHDDWKhtjIAAAAB3RJTUUH1AkRBw0BZyj+TAAAAAlwSFlzAAAOwwAADsMBx2+oZAAAA1tJREFU
+eNrtmOtS6jAUhZu2HEQFuXhX+OX7P8N5EGd0VPDGiIIIgm3Ol6YTS/GUHnHaH6drOkxbkpVkZe+1
+A0LK31aBrGDnPYH/C4XcmaKQO1MUcmcKd83+nmc9P/vTqbrf2hLVqnAcdf/0JGMtazXhBqO9v8uX
+FzmfW7Zt7eyIzU3By48PaziUlYpVqcQfJxM5mXzy0Gt7O6QajRRPFIbB4O1NDef7VqmkhiuXhenY
+bIplBvDl+2XmHOTudv3ZTP76pebR7/vDoeh07EBuP9ayUrFdV7y+yrs7ny2hy3Qqx2OJBHt79nwu
+6dJs2qwKRB/ROsY2GFjttoPibAmbsahUyGC07vXC4RiL9sfHNhusOzabzjJDQOKsZM5BbiaE1o2G
+aLWUxLe3PkuazVib1lecnCyYFanw+Oizct4jAY/sFqHXaKweiy46uGgPCXIQg/qrszPnb70GAyVZ
+p+MwHBO7uvLorvPJ0OqFMBMENZwrmXOQu1RSk2PljqPWcHS0ohIQa0i8uxsaDp/EmpqEay1ndDLs
+dEUHAyE5Hh58bSM/Lt+/Yi25kQkbxR+wEb02bMHEDiFzfu6ZxixVa+q6CwwpQfSZe/KDImEeo6OY
+JNCo1+3x2CPnuKygfpCITmrNE5hzkBscHtqUPhTnQk2Mst22dTlC/Wr1x04+KGUFmYTWujwYYALm
+XiecAbaGk1D32Hvt3bOZf3qadlYJzN/DWnJzfkBlArzV4gpddTy2yuWA2hUxK9SlBksxYUKaYy/k
+xMqxCGd6ua4qoYwS7RIbJQptX/W64OLm5sajPqdfYAJzDnJTJ7GRyUTs76sM1aWcoNZgedHiTnSg
+F7FJ+RJC6iOHjlYsRQh9PvNrNXXkYOd43Nj4Yv2jkfq2VpM6hyxrYRTHEbpQa/T7Mjg4qYRjPvo4
+mB4JzDnIjU2jIEl6cRF6HNoZ72ad3e7ndHXdxwE5wJiDHe2xo2Ax6lCMjpeXX1BFQfvra//+XnY6
+4bdRW48dhw4ORK8naW/epMkkgwTm70Gs/48gCat/5hCM0ToZa0Z0m8KIC3GyXo4Xzmq4kxX6vog2
+Rn1T4mjmeeoNActNlGGZUzsecR39faQZjKfBQ3BEZ6gbJDPnI3eB9Cj+M8kUhdyZopA7UxRyZ4o/
+wHTctZbN+pkAAAAASUVORK5CYII=") !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+}
+
+/* URL bar background image for low security site */
+#urlbar[level="low"] &gt; .autocomplete-textbox-container {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAAUCAIAAADNxb6ZAAAAB3RJTUUH1AofDCYpj8dJ3QAAAAlw
+SFlzAAAK8AAACvABQqw0mAAAA9ZJREFUeNrtmFly2kAQhgUCbYjF4CXJQ+5/i9wiB0hVXHEwq6xd
+uPJJbQZZShwwtvIQdbkoz9DT3fPP34vd+eJ91VppSrr/OoD/S1q4G5UW7kalhbtR6Z2k7W+9rq7b
+A6eyv8t2wYOfJSm/m7ZpOTZqSRSnSWI5jt7T5Syf5WXF1ONu53tVI+pgWZQRlPGL906nY7uOaVsS
+TBQEfcMwLLOylJCUHU6Ztl2Jp+5OwiA85VdFNRgN3xHuh7VH0BW4szRb/VwQDV/x6a224UNwcT0T
+fYmJffm91+8TMddm6U6exYoRTPX6eUhiZPbxWhkpC9hhJA6i9f0SLDiSJmk8XzrDwfBivMsyMb6H
++7AE64o1f+tPby6xpq5Wd8f+cDJaLNZxGKMsWNfjf3u4fyvb5Ro0gUaQgm7echP6gbxKEiWDkZYW
+nM2BjhM4mKWpQK+M8ABg7YxcLsZyPV/GYaTQ58LyfkrwuF1t+JZ9EGfJawWe7wzdvwbMEXkJCRXu
+l0l68/mTAlRpImQPDCCfuno38ALuUs/yd4ebVE0LBAUXxHEHwfaByLgDm0CWoxknxJencxhpk5Fs
+9o0D3HovPx75oa53DcuaXE1f9htHMRC7k4lkOp+Tq5m8KHQ+6QqUlGPU3PEQdm8WK0ni2Ycrcd0w
+3AVwZr+8CXawtdg3wJ0nAWWilCX7aYF+OVyWpmNRHygjJAxLyoLUYq3g/t23W6UMAblwfuq5hSNj
+Jg8O9+/3aBLHnCLawdglG+BKTi+jf8ypN4b7ZRF8KR1SKAwzT0wwlYgrypPLKakaBmEchLwQ9QQG
+ya3yzHVPztw/iZgiMLCW9nCkkLghzTzNoMLrXJ8Lt9QQioAqf/AOMso+PY1PSiqfYC2MpmLmS8so
+2wHfOAyZE6jd/EhVjaNoD3evMgOIZUqKqq1FC3k8BgjozClpj95qcxJ2eUam2fGZdC7cgqZa5t28
+6CH0FplA6GDsw2V5DJkIiU9CpF7TA7XnfVLLx5uUMkJfHU3HckTbT2B1p6CPX4zTJLrdDtAzcghb
+8SKlmKXMbfK6FXdaMS+hAxXoeK+rDE3ALWOfWlJG6SHUYpiiRiiqsOraQJAUM+L+eQyBW+08HbEt
+dvhq/j1SB829TsUpExhgMTas71fKKfrjy6k8EhMhON7f3h1M1WqXVpSvxY853e+kknKOdE76j2CZ
+Ynv4nhAp5jb5C8VWU4pWVAnaKXwUdsNTsJNhuW5fGYGM5T5ZUVPWlP26QbxQnQR99faiLDmn1AhJ
+JqiykbpmWb/ClfeCu5Uzpf2fSaPSwt2otHA3Ki3cjcov+4Ry6JJcW+YAAAAASUVORK5CYII=") !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+}
+
+/* URL bar background image for broken secure site */
+#urlbar[level="broken"] &gt; .autocomplete-textbox-container {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAUCAIAAACF9qEZAAAAFXRFWHRDcmVhdGlvbiBUaW1lAAfU
+CREHFjhEGl6uAAAAB3RJTUUH1AkRBxcHPmahogAAAAlwSFlzAAAOwwAADsMBx2+oZAAABg1JREFU
+eNrtme1rE1kUxifpTJImbKGhBcVCi7GKLUorSnUVqVU/qOiXxb9S/OQm+2FRumoxRVeLYoq1rSlU
+LKRE6JK0MS/d39yTuU6meUcWuvEQ6sydyXnuOc95u9G3H48bXcvt291/N5H4ifsf4Pp7ytoexO2W
+4MNpbQ/idkXwobW2B3E7J/gwW9uDuOYPRF1Opdy3g4ODR44e5SKfz2+k08bHj/rRsb6+AX81tgr7
++xul0la5bH/F749ZVtjns7+l1of8/uG+PnB3dnY+b24GgsFYLJbJZLYzGTdWOBweHRuT9WMjIwMD
+Axp39NMnUagFrLViETzWgRtUO8mUy9uVSo1On2/03j17h4UCera+fLF3GI2ePHUqGAxyzSIQpycm
+5H33re0Kl71AHMEKB2XUNHOVigcOwVgWNa79vrJoaNiWLtjtkOBWMZV6/96zEjtxYmp6OpfLeR4R
+CJdDIWyG3ad7ezuVCnwHfb6VYhFSr4ZC3OKC1LdvE4HA8N27sPt0fp4vXp2d5S82exRiPwTLOkxc
+u36dRcEdCoXCyrma3YW9PbCA4Bo42cm2gvPqVOwCzQYkaFY+fIDIuRs3CCkuIMBNsL6t4wrLmgoE
+BEWI9MDZ1oVCW6VSFm9ks0QS0IsvXrB+PBbrjt1OCG6vYuAU4YDNPXn8eG11FYKNZJIVqDptWVxA
+55+7u3CJW9dLJW6xPOZ69HehcK2/v6pxfJy0wMUonLl0SbxcdcfsbN24zmazduKOjQmuR8Dl783+
+fjgWuDW1E+3iYbl27F1fW4NdoEdGRrjd3NzE6fB3/sKF5l5GD9oMVaKeKBTM1K/gCvHGw1xOv4nM
+3Lr1Rzy+9OYNMQo0Vk+dOycFowt22ya4234QjkQa9SHxaLpYDKo6KYtkFeWLrKI+ywoWLjx7JuyK
+i1tKNBpNpVKjtf3i+5ZUuX5VKEhx/o0dNrU3nU5jhYbmItggsJp4GQnWtolGfg6TCZOTBNAasrqK
+LbE207cBbhsEd8IuNerhgwdV1ab5q2kaTnJQkXRRwtozKpwhcthVP5GI6ojUZ+PiRWN+HiNlvVwq
+ebCkaIvgFF0qqRkUj+VAYMhfZ4Q8aVlUZvlwSzyxE+19+oX9jzJBdObJsFo622yHtFuyU9/OtMxC
+x88UZKJq6fVrw2lJraXxNNeK4A5zl2AfozYaRqlU2lhZWapUbjrFFiLJGLKzvL8vXbaZIth1hKQh
+bt69fcvI5i5WFOGIk39DLqcPJpPQRkn8xVUStYDLlthGRnHMxT+Viu4IjXS2JdlsjSt8vjHLokQR
+xNLm2/QzNk5PTy88f85m3C2poTSd1ZsS3HlljoTD1UxKJEzLImUzKlEMRTBdZ8Q0aUiLhYIQj7t5
+gS6lc2hTZSqG0fm4gFSKMz311cuXfC5fuaKxsL9RMtHvt3Z33x2YYgw1ZAFHHvOR7ph1TbMHdXJL
+eNEjJLYYCP6an2eQ9lbOA16mFGHvcdOkzdMR5vr7w42qdDTqWegzbV4idduHR1qdxBqnUVd9F0fg
+jsyjR/hRqIrUZuqg6rJMN8tq2Dmpui/2F1TTJe14hJd1pkaV8axwwXj81ZUlREDGJfaSczKR849u
+5G6BdeC+KlIBLTtdmWmurk64NFQ7AJ0PAwFFmzg21JHJkBNRIsG25SzggZNmBNCiFP8fK22csxtk
+cLdTlT7PiJBJuC9X+w4Gy0kUpvlIKPyez8tTcvfM2bMHNZPHjJfJZHJOHYEQ6VJaPOMSqSPl0aPn
+fDDIMYnE/a6ZYMJeNZR5dd6/LyWEdWpm1ajJSTnfcwiktDAQpVzKD+4cG9eLRerEllPMavzsjCwd
+S3u/ovjq/G9St+zaIe86mZC7khzEL9Gtbw01W+VcKzz9jPHj4/q3EUMVA8KFMhVW6WKo6GGRCCiX
+y7lcbdgkk7QAUaunNrmVE7b7XdYJqbKa5GkZ4Tt3DFV7vTpr5ylJaNDdc0AhHoc2CSOI1AbSd+So
+XX1NeYAVk3DXW1J+Ri0KPb32oO3dsVuP4EP+y9xPXI/U9oz/u7U9iOsiuAes7UFch+DesLYHcf09
+ZW0P4v4LWFvQLqDk3rMAAAAASUVORK5CYII=") !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+}</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/12586"
+                   stylish:updateURL="http://userstyles.org/styles/12586.css"
+                   stylish:global="true"
+                   stylish:namespace="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+                   stylish:description="Fission - Animated Progress Bar"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:enabled="false">
+    <stylish:code>/*--------------------------------------------------------------------------------
+  Fission animated progress bar (version 0.1.5)
+  --------------------------------------------------------------------------------
+  Author: Louis H - Tested on: Windows XP Firefox 3.0.4 - Last Update: 3.12.2008
+  --------------------------------------------------------------------------------
+  Description:
+    Fission progress bar become animated when loading (like Mac/Ubuntu)
+  --------------------------------------------------------------------------------*/
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+
+/* Background image of progress bar */
+#urlbar[fission="fusion"] &gt; #statusbar-icon &gt; .progress-bar {
+
+background-image:  
+url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAACGFjVEwAAAAGAAAAAAYNNbAAAAAa
+ZmNUTAAAAAAAAAAMAAAAFAAAAAAAAAAAAAoD6AEBu64azQAAAe9JREFUKJFl0MFuozAQgGG//yu1
+AiKairY/ENEgAgKsAWQcOSCSau97IGWb7eGTfPCv0YyybuYn3Y9kp/aXWgzWzSh3WTj/8B3llSav
+ZFPUgvQjyljHtFy5zMvdFTctiDlTtj2VHja1GJT0lrObWa5fzMuNebmxLDem5cowOhoxtN24UdKP
+dOaMuywstz8s16/NtNwYRofuRmSwyGBRbTfSikEGi5uWx0nXLy7zlc6ct0mqbHrKpudUdzT3S0z3
+Pdy07mTdTCOGU92hsmNNVjSrvKaohMG4+5knrJs4u5nOOPKTRsWHkre44D1ZRXFBljfIcGYw7kHd
+GlR+EsLokzDKHiRZhXQj0tl/eotqtCHNarwwwQvTjR+mxIcKLSPtD6rRhroZ+EhKnvwYb5fg7RKe
+gwQ/TEmzGi0jjTY02qxBqw1VPRB9FDx5MV6Q4AVrFIQHsmODdHYN2nugZaSqe6L3/yI/YfeScSw0
+IhYlYvmOREbKquc1OvLsxXhBihekPHsJ4T6jKARVlB2PkaWsevbREc9P8Hcp/i7F8xPC/SfqNTpS
+VT0iI61eiVhOp46X/ecaBQf84IDnJSjPT4neCura/IqKQgjDDN9Pt0gF98f7x4mmMWg9bkQsea4J
+w4wgOBCsQca3OK4egm9Z1mx//gIUGigBIBtltgAAABpmY1RMAAAAAQAAAAwAAAAUAAAAAAAAAAAA
+CgPoAQEg3fAZAAAB3WZkQVQAAAACKJFtzlGLnDAYheH8/7+0RV3sLu7uqw6ZER1RQ1QSh4wSd+h9
+L1rTLe3F4SFwDl/E4jYWt6Emi2yGf9Jpw9FZ3IZwd8/td9RkqVpF1eovavRkOXrivnlWv3PfPPfN
+o+cb12GiVXOwVTNmcax+R/j9wc1t+P3B5j/Z/CezdfTaBIfRMoyW2/El//mDQ78/8PuD2TrUaIN6
+XtDzghhGi1s9fn8Ej0ujudFrExxGi7j2E9d+YnEb67YH3epxq6fXhqYbg0JeOmTdI+ue2TgWtwUX
+t7K4lapRyEtH1ShEfrrylte8FzWy6tHzjdm44Gwc3WA4eiLNJGl25peSQrbo0aLH5YsLVaNIszMi
+SguitOSPJfmpRWnLoG1w0Jby3CE+iitPcU70XASj54JSdiht6ZUJ9sogemXIPmqeopwoKYJRUiAv
+PXpc6JUJikEZBmXI3qr/ji61QuuFQRm0XhDHY1CG1+zCtygnSspglJTUjQ4jcSyP0Ut2IYoL4ucy
+GD+XNNfxuGBp2wmtLYOyNM3I95czUVwE4+TEa3ahbSdE181obek6E0Z1rUlTSRyXwTg5kWU14v2j
+oe8NStmgUpaqUqSpJElOwSQ5IZJEkudtKH6NlD1JIv/KT9n2J/jiuPCwAAAAGmZjVEwAAAADAAAA
+DAAAABQAAAAAAAAAAAAKA+gBAc1LI/AAAAGZZmRBVAAAAAQokW3OUWuzMBTG8Xz/r9QXdWQtrnvU
+klbUoIajkihpJa7sfhetZZnvxeFHOP+QMNUbiLLdTE0ao503w+zVQfUGuVTIJXlSb2CvDtPVvWTX
+2eHmFtAwoWp7SDV46tHi5hasHXPLHZOd4ZY7BmPRkN647qf1S+7rG6uDsVCd2Whvjz1zy/1x+GWn
+JzSkN9qbAxvtjNu84K8NaZR1t5EVkjBoi9HOG/NSQVxqT5acKoi8AQ0TBm0961YjOVX4SIqXjMcC
+PD4jFRLUGVA3eualAo/PWDsW8BQBzxDwFMlJQpFBS8YzEzXWjgVvKXZhgtVM1FBk0Cjt+ZlW2IUJ
+2C5IEEQpfisuDegZUze+jD8LsPhY4H+XzrkC0TOmEe1TVskeh/iCf0GCIMpe8r1AUZIXt0qDtUqj
+kj328QVBmCJ8y16+H84oq+4Zm8cLRAZS9ijLDu/7M4Iw9TzEF0jZY+1YXQ8gMqhrjaIgcC4Qhpln
+/FFg7ZhSBk2jsZrnCpwLRNHJ83gs0DT6ceHvCNEgisRmkkTiB8cMKAq9Q8lMAAAAGmZjVEwAAAAF
+AAAADAAAABQAAAAAAAAAAAAKA+gBASCBUYoAAAGnZmRBVAAAAAYokWXQUYujMBQF4Pz/v9QlWuwU
+Z+aoJa2oITFclcSSVnTLvu+DY7fZPhw+5J6DECbqFq9RZDH66S2mdxB1C1ZKg1ISXqXewd9mXG9z
+oOkdGNkrGt1DmgFN+087etznBbdpDmTz8sBgPTRZDC706ifMyyOQ+duM+fcfDM7DdO5Nf1/vm2xe
+HuvH8kD386fOXgO3u7/PYKOfcJ8WbGqyqFX35nZno58wWI9Xy9pAXFRgJQmD9WA0XDFYj1dVa5Gd
+GnxmVaAoNVguJKhzoG4MLGuDJD0jSUUg40mO7CRhyKElF1gIBZ7k4EnxlPF9jl2UoRAKhhy0sYHf
+eYNdlGHrsR3PwOMcO55BXDSoG6GNBf2MqBuRflfYemwr8zjH/iBwqQyIRrTGgmgdS9Uj/VpH7BfP
+wOMCm8mHQFVTMGqNRSN7HNMS7JhewKMc0b54ejieUTfdfyOHRvZgddPh8HEGj/LAY3qBlD2IXCBT
+akBVEZJEIIqKwPSzglLrAyg1gMiBGeOgtUVZrqM4PgV+fdfQ2mLrMWMctgihEcfiLVkmn52/v6wo
+F7rELoEAAAAaZmNUTAAAAAcAAAAMAAAAFAAAAAAAAAAAAAoD6AEBzReCYwAAAaxmZEFUAAAACCiR
+bc/RbqMwEIVhv/8rdQWpaCLa/kDlBAEWYBmQTeQEkVZ7vxdd2nqzF0efRnNGloWse2Td0xrL7Je7
+6NGxdWTdI0qlKZWhVBozOvxl5XxZA/Xo2HpC6YmmG1F6oulH7Oy5rjcuyxpo7JmmGxGdsUzW0xnL
+5D49+4X19nHnZD1ich49OP7VX1fW9993ivX2wWDPdMYy/H1pm/11Zb19BIrZL1yXG52x1O1w57bf
+FLNfmKxn9gtlrZGnNrBS5ms/WY8w05nJesx0pu0t2VvDc1YFyrJj6wkzzJjBsVnWmiQ9kqQyMJcK
+bRxCG0dvHD8tZEuU5ERJEZi9KUQhW7RxdNoGvuYND3FG9JgHiocoQ546zDDTafutcaSvFQ9RRrTL
+vxTbcKo0ZpjptcWYT1U7kr6ER+JXlBHtCpK9pKrMV3mzUSOH9MTWE/FjQRTnxI8FT4cjdTP892if
+nojiHBHFOU/7I5uH9IRSI8a4wLoeeNofEUkiieOCn6bPFW37+fFvJ6rKIMpSkySS3e4t8OW1puss
+WrtAobVDyo7dTt4lyxRauyB/ALsiJ//R8q00AAAAGmZjVEwAAAAJAAAADAAAABQAAAAAAAAAAAAK
+A+gBASBksz8AAAGgZmRBVAAAAAookW3NQY+bMBQEYP//v7QVEDmJSDNAZIIAC8d6BtkgJ4h01XsP
+KVl52cPoO7wZm3VkMfp5E907iOa2CaukBvUO/r5gui+BNIyopEYl6S2TekCretjR47E8cZ+XQLIT
+WtVj7TFFFoP1UGQx+RnL83Pjeh+sBxuchzYOq/6+YPnzF/4Rut6ZIgtjJ7x8veQfC5bn50Zjp9eg
+6Qy+O/oZj/m5kY1+RtVoiGsXWEvCYD1GPwcyGiZ0N4vs0uKU1YGiUqBhwmD9W0ZmBBmHqtHgaQme
+isBcSJBxIDNCkwPT5HAjB00OhegQ8RwRLwKzi8TaY0pbaHJYPecNPuIM0S4PLET3+oH+l8mMb9Nz
+jY8oQ5TkgaJUYGWtQfRVvmkL2fVIT9WPI8YPAnVD7zLRy1b2OKZX/IoyREnxlsW7AvtjiaY1IHKb
+0SG9IopzxLsCUZyDRXGO/aHEMb1Cyh5ELrBpDfaHEmuPcS4QxwU4F0hPNbrOgsgF1jVh7bEkuYBz
+gdXf5wZKWWjtAqtKg3MBliQC35NlElq7TYRQ+Aft+Sf9Q3L8YAAAAABJRU5ErkJggg==")!important;
+background-repeat:  repeat-x !important;
+}
+
+#urlbar[fission="fusion"] &gt; #statusbar-icon &gt; .progress-bar 
+{
+/* 
+  == Border of progress bar == 
+*/
+
+/* old */
+/* border: solid thin rgba(160,198,255, 0.6) !important; */
+
+/* new, matched with different color */
+ border: solid thin rgba(200,200,200, 0.4) !important; 
+
+/* 
+  == Background Color of progress bar, enable it if you don't want the color of Fission option == 
+*/
+/* background-color: #a1c7ff !important; */
+}
+
+
+/* Different text style while the progress bar is shown */
+/*
+#urlbar[fission="fusion"][progress]:not([progress="0"]):not([progress="100"]) {
+
+}
+*/
+
+/* Different text style for linkified URLs */
+/*
+#urlbar[fission-link] .textbox-input-box { 
+text-decoration: underline !important;
+}
+*/
+
+/* Different background for linkified URLs */
+/*
+#urlbar[fission-link] { 
+background-image: 
+url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAf1JREFU
+OE9lkeuSmkAQhSe/kq1U3v9lVvHCGl1dUVm5gwwXFVERzdYmv066RyVWxaqPaobz9UyPX4p9BfHw
++/z9R1w+Ph+XVP307av48f1JiPJwwu4BbhBnW1h+TMgGO0ggaV2siz2OpzMOVX3jjPJYI1nv4K0y
++HHeEMg1hMwK7Kjr6fwLVX1RnAhukm/3iJINVum2gYQtUupWHmrUlw8lMjVxPF2UFJOQ5IVCKJu6
+8MuejsLBioIMi4fqrBredxJelIFxwxQRnbEoKxwpxDLDAq/xN86IxTKEaUeKhRXC8RPkm70KFeVR
+wTOm6xKWG0O8zT28Th2MjSsjqk0roiPuSCwf2CNY0S1ZroQ+ekd/aEK/wbWx8CFpPpkWDQndqIji
+DWZmAK1vELOGjj7DdO4jTvhS/qGEIMoxMTw8d97Q7hmKVtcASzMzVBLnGCWsCD/MMZo4eNZIojDD
+Ulefw1xG6lhK4DATyy38IMNwbCtJozDT6hjovSywtGPIhGbgx12SJHl+hp/DJVralASaiWhpBvSB
+CduREI6XKrORqGZpQFKbund6MwXX+uAdgrv5FODuq/iKlAVcN8ULBTSWunNFm3YSWmeG0auNIFz/
+J9lOAl030aHMXRLdmz2euIgiGp52uMM7WVaMfn8BzjEk8MuV6ZT+qAfhXptm1GT+AhOXOBpuKL+H
+AAAAAElFTkSuQmCC")!important;
+}
+*/
+
+
+/* Different favicon for linkified URLs */
+#urlbar[fission-link] #page-proxy-deck,
+#urlbar[fission-link] #page-proxy-stack {
+background:
+url("chrome://browser/content/web-panels.xul") center center no-repeat !important;
+}
+
+
+#urlbar[fission-link] #page-proxy-deck,
+#urlbar[fission-link] #page-proxy-stack {
+background:
+url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAAeeAAAHngBy6sDHwAAABh0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzT7MfTgAAA5JJREFU
+SIm1lk1PI0cQhp+ZsRnD8LV8GUXeZbWLgpTECZIFigQcQeaEEBefuHNH8t03JO4c+AFw4Q/wCyKc
+QZZIosQRSTZogWEJu4AH7LE9kwPVuGMRRbtSWiq5p9X9vlVvdVXbiKLIBCzNYkBc5qZYjKdHCDTF
+QiAAGtpaM6YBxYEOwNasnchoAw8FsC7gVaAm8wjxzBTghJgjlgC6ZE/sXwgaYvfAHeCLmbInUBF0
+AJ1AD9Avv72ylhACq41AyVAT0FvgWvY9Rqi86xBv+4EBsX6g+wmpkPBDkaYKVLRoFXkDqKuEKmn6
+gCGxgf8gUMlUBLZEqKIKlEQqgm5NokHgmawlhMDQTEXQEIIOIa9LLioiWUwnSAhgn+jfK1HZmvft
+SW4KuSnf91oubEVgyaZO0bET6PJ939nf3584Pj5+NTAwELu4uKgtLy//PDIyUt3e3v5maGgocXV1
+1RgfH/99fn7+F8dxatp5W5y2jCiKXgEjwBjwHHhRq9WGt7a2pgzDeJ3L5fB9n5OTE1zXrdq2HSws
+LHRblmWenp7iui5RFP22trb2vW3bHvAW+AP4E/CMKIpeA0ngpZCk9vb2vnZd99vV1VV2d3dvXNd9
+Njo6aqTTac7Ozri8vOT8/DzKZDLvJycnuw4ODmKZTOa7lZWVH4AT4I2QeHqFPs5LpdKw4zhmpVI5
+zufzPwZBEOZyOebm5lhcXCSbzRIEQZjP539KpVJvHMcxS6XScDsOYMTkRujJM5LJpF8ul5uNRsMq
+FApfhWFobmxs4DgOAL7vE0WRWSgUvlxaWrryPK85MTFxJ1j/GKowQt1mZ2e9w8PDz4vF4svp6Wmm
+pqYMz/Mol8vYts3Y2BjJZNIwDKOnWCz2+L5fm5mZ8bTrG8o8eirJz5vN5sjR0dFnm5ub0729vfF4
+PG4ARjab/XVwcLC2s7PzRRiGRr1ej25uburr6+vFdDr91rKsd08l+QUwrMCBlCS9T65dXCJVBabk
+VN4GPBTXNXAhST4RgncxKZaAVkdUpgpMSWi2gUe02kJVO38v33XkPWjQ6uUV4IaHYrFoNTS9Vaih
+t4qKRHDNQyXfCXFDJ1D944MARrJJ9aL2Ztek9dDcAu/l7C0P7TtQBKrl+rT6eSjgH9Our4G/hKSi
+ZNJzoL9EddGySwg+5sH5IBI9RqAkUuChsN/y6U9mVTCbMVpXTR1SXtk8JPxTH/0ACI3/+2/L38Gg
+rXtQp/INAAAAAElFTkSuQmCC") center center no-repeat !important;
+}
+
+
+/*
+#urlbar[fission-link] #page-proxy-deck image,
+#urlbar[fission-link] #page-proxy-stack &gt; image {
+visibility: visible !important;
+}
+*/</stylish:code>
+    <stylish:originalCode>/*--------------------------------------------------------------------------------
+  Fission animated progress bar (version 0.1.5)
+  --------------------------------------------------------------------------------
+  Author: Louis H - Tested on: Windows XP Firefox 3.0.4 - Last Update: 3.12.2008
+  --------------------------------------------------------------------------------
+  Description:
+    Fission progress bar become animated when loading (like Mac/Ubuntu)
+  --------------------------------------------------------------------------------*/
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+
+/* Background image of progress bar */
+#urlbar[fission="fusion"] &gt; #statusbar-icon &gt; .progress-bar {
+
+background-image:  
+url("data:image/png;base64,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")!important;
+background-repeat:  repeat-x !important;
+}
+
+#urlbar[fission="fusion"] &gt; #statusbar-icon &gt; .progress-bar 
+{
+/* 
+  == Border of progress bar == 
+*/
+
+/* old */
+/* border: solid thin rgba(160,198,255, 0.6) !important; */
+
+/* new, matched with different color */
+ border: solid thin rgba(200,200,200, 0.4) !important; 
+
+/* 
+  == Background Color of progress bar, enable it if you don't want the color of Fission option == 
+*/
+/* background-color: #a1c7ff !important; */
+}
+
+
+/* Different text style while the progress bar is shown */
+/*
+#urlbar[fission="fusion"][progress]:not([progress="0"]):not([progress="100"]) {
+
+}
+*/
+
+/* Different text style for linkified URLs */
+/*
+#urlbar[fission-link] .textbox-input-box { 
+text-decoration: underline !important;
+}
+*/
+
+/* Different background for linkified URLs */
+/*
+#urlbar[fission-link] { 
+background-image: 
+url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAf1JREFU
+OE9lkeuSmkAQhSe/kq1U3v9lVvHCGl1dUVm5gwwXFVERzdYmv066RyVWxaqPaobz9UyPX4p9BfHw
++/z9R1w+Ph+XVP307av48f1JiPJwwu4BbhBnW1h+TMgGO0ggaV2siz2OpzMOVX3jjPJYI1nv4K0y
++HHeEMg1hMwK7Kjr6fwLVX1RnAhukm/3iJINVum2gYQtUupWHmrUlw8lMjVxPF2UFJOQ5IVCKJu6
+8MuejsLBioIMi4fqrBredxJelIFxwxQRnbEoKxwpxDLDAq/xN86IxTKEaUeKhRXC8RPkm70KFeVR
+wTOm6xKWG0O8zT28Th2MjSsjqk0roiPuSCwf2CNY0S1ZroQ+ekd/aEK/wbWx8CFpPpkWDQndqIji
+DWZmAK1vELOGjj7DdO4jTvhS/qGEIMoxMTw8d97Q7hmKVtcASzMzVBLnGCWsCD/MMZo4eNZIojDD
+Ulefw1xG6lhK4DATyy38IMNwbCtJozDT6hjovSywtGPIhGbgx12SJHl+hp/DJVralASaiWhpBvSB
+CduREI6XKrORqGZpQFKbund6MwXX+uAdgrv5FODuq/iKlAVcN8ULBTSWunNFm3YSWmeG0auNIFz/
+J9lOAl030aHMXRLdmz2euIgiGp52uMM7WVaMfn8BzjEk8MuV6ZT+qAfhXptm1GT+AhOXOBpuKL+H
+AAAAAElFTkSuQmCC")!important;
+}
+*/
+
+
+/* Different favicon for linkified URLs */
+#urlbar[fission-link] #page-proxy-deck,
+#urlbar[fission-link] #page-proxy-stack {
+background:
+url("chrome://browser/content/web-panels.xul") center center no-repeat !important;
+}
+
+
+#urlbar[fission-link] #page-proxy-deck,
+#urlbar[fission-link] #page-proxy-stack {
+background:
+url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAAeeAAAHngBy6sDHwAAABh0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzT7MfTgAAA5JJREFU
+SIm1lk1PI0cQhp+ZsRnD8LV8GUXeZbWLgpTECZIFigQcQeaEEBefuHNH8t03JO4c+AFw4Q/wCyKc
+QZZIosQRSTZogWEJu4AH7LE9kwPVuGMRRbtSWiq5p9X9vlVvdVXbiKLIBCzNYkBc5qZYjKdHCDTF
+QiAAGtpaM6YBxYEOwNasnchoAw8FsC7gVaAm8wjxzBTghJgjlgC6ZE/sXwgaYvfAHeCLmbInUBF0
+AJ1AD9Avv72ylhACq41AyVAT0FvgWvY9Rqi86xBv+4EBsX6g+wmpkPBDkaYKVLRoFXkDqKuEKmn6
+gCGxgf8gUMlUBLZEqKIKlEQqgm5NokHgmawlhMDQTEXQEIIOIa9LLioiWUwnSAhgn+jfK1HZmvft
+SW4KuSnf91oubEVgyaZO0bET6PJ939nf3584Pj5+NTAwELu4uKgtLy//PDIyUt3e3v5maGgocXV1
+1RgfH/99fn7+F8dxatp5W5y2jCiKXgEjwBjwHHhRq9WGt7a2pgzDeJ3L5fB9n5OTE1zXrdq2HSws
+LHRblmWenp7iui5RFP22trb2vW3bHvAW+AP4E/CMKIpeA0ngpZCk9vb2vnZd99vV1VV2d3dvXNd9
+Njo6aqTTac7Ozri8vOT8/DzKZDLvJycnuw4ODmKZTOa7lZWVH4AT4I2QeHqFPs5LpdKw4zhmpVI5
+zufzPwZBEOZyOebm5lhcXCSbzRIEQZjP539KpVJvHMcxS6XScDsOYMTkRujJM5LJpF8ul5uNRsMq
+FApfhWFobmxs4DgOAL7vE0WRWSgUvlxaWrryPK85MTFxJ1j/GKowQt1mZ2e9w8PDz4vF4svp6Wmm
+pqYMz/Mol8vYts3Y2BjJZNIwDKOnWCz2+L5fm5mZ8bTrG8o8eirJz5vN5sjR0dFnm5ub0729vfF4
+PG4ARjab/XVwcLC2s7PzRRiGRr1ej25uburr6+vFdDr91rKsd08l+QUwrMCBlCS9T65dXCJVBabk
+VN4GPBTXNXAhST4RgncxKZaAVkdUpgpMSWi2gUe02kJVO38v33XkPWjQ6uUV4IaHYrFoNTS9Vaih
+t4qKRHDNQyXfCXFDJ1D944MARrJJ9aL2Ztek9dDcAu/l7C0P7TtQBKrl+rT6eSjgH9Our4G/hKSi
+ZNJzoL9EddGySwg+5sH5IBI9RqAkUuChsN/y6U9mVTCbMVpXTR1SXtk8JPxTH/0ACI3/+2/L38Gg
+rXtQp/INAAAAAElFTkSuQmCC") center center no-repeat !important;
+}
+
+
+/*
+#urlbar[fission-link] #page-proxy-deck image,
+#urlbar[fission-link] #page-proxy-stack &gt; image {
+visibility: visible !important;
+}
+*/</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/3524"
+                   stylish:updateURL="http://userstyles.org/styles/3524.css"
+                   stylish:global="false"
+                   stylish:namespace="http://www.w3.org/1999/xhtml"
+                   stylish:domain="imdb.com"
+                   stylish:description="IMDB Latte"
+                   stylish:enabled="true"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false">
+    <stylish:code>@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("imdb.com") {
+
+body{
+background-image: url(http://pokerhermit.googlepages.com/beigegradient.gif) !important ;
+background-repeat: repeat-x;
+background-color: #e3e1c0 !important;
+margin: 0 !important;
+padding: 0 !important;
+width: 100% !important;
+}
+#wrapper{
+background-color: #e3e1c0 !important;
+background-image: none !important;
+margin: 0 !important;
+padding: 0 !important;
+width: 100% !important;
+}
+#pagecontent, #footer, #root{
+background-color: transparent !important;
+margin: 0 !important;
+}
+
+#root {position: relative !important;
+top: -25px !important;
+margin: auto !important;
+background-color: #e3e1c0 !important;
+background-image: url(http://pokerhermit.googlepages.com/beigegradient.gif) !important ;
+background-repeat: repeat-x !important;
+background-position: top left !important;
+margin-bottom: 0 !important;
+width: 100% !important;
+}
+table#outerbody{
+width: 100% !important;
+}
+#nb15home {position: relative !important;
+top: 20px !important;}
+
+img[width="177"][title="The Internet Movie Database"]
+{width: 0 !important;
+padding-left: 177px !important;
+background: url(http://pokerhermit.googlepages.com/imdblogo2.png) !important;}
+
+
+
+#tn15lhs{
+/*border: 1px solid #847955 !important;*/
+}
+td.lhscol{
+/*border: 2px solid #93803f !important;*/
+border-top: none !important;
+padding-top: 20px !important;
+padding-bottom: 20px !important;
+background-color: #d5d2a2 !important;
+}
+
+/*div.hpleftnav div.boxbottom,*/
+img[src="http://i.imdb.com/f115.gif"], /* Hide for now. Shop later */
+img[src="http://ia.media-imdb.com/media/imdb/01/I/29/53/16.gif"],
+img[src="http://i.imdb.com/Photos/CMSIcons/logos/sblogo.gif"],
+img[src="http://i.imdb.com/Photos/CMSIcons/logos/wennlogo.gif"],
+img[alt="Click Here"],
+img[src="http://ia.imdb.com/media/imdb/01/I/87/42/69.gif"],
+img[src="http://i.media-imdb.com/images/tn15/add_change_photo.gif"],
+img[src="http://i.media-imdb.com/images//tn15/button_addresume.gif"],
+img[src="http://ia.imdb.com/media/imdb/01/I/09/96/52/10.gif"],
+img[src="http://i.imdb.com/SecGal/wibutton.gif"],
+.chart_more,
+div.right img[width="300"],
+map[name="imageMap"],
+img[src="http://i.imdb.com/f9.gif"],
+#tn15bot div.right,
+div table[width="115"][cellspacing="0"][cellpadding="0"][border="0"],
+embed,
+iframe,
+.imdb_lb,
+.cool_services,
+td[width="5"],
+td[width="1"][bgcolor="#999999"],
+td[width="120"][valign="top"][align="center"],
+.w_box_head,
+.w_box_right,
+.w_box_left,
+.w_box_middle,
+.moka &gt; a,
+#nb15go,
+#tn15shopbox,
+#tn15adrhs,
+#lea_728x90,
+#swf_Adbox_Trailers_300,
+div#tn15rating.one &gt; span.hint,
+div#swf_supertab_02,
+#swf_DE_supertab_initvideo,
+a[href*="register/subscribe"],
+a[href*="/publicity"],
+table[width="468"],
+table[width="728"][height="90"],
+table[width="171"][cellspacing="0"],
+table[width="171"][bgcolor="#708090"],
+map[name="nav"],
+img[usemap="#nav"],
+img[src*="/31/97/18.jpg"],
+img[width="400"][height="41"],
+img[src*="/96/12/10.gif"],
+img[src*="/19/39/22.gif"],
+img[src*="/19/39/22.gif"]+br,
+img[src*="/19/39/22.gif"]+br+i,
+img[src*="http://i.imdb.com/f68.gif"] {
+  display: none !important;
+}
+/* HIDE RULER ON VOTING BARS */
+td[background="http://i.imdb.com/ruler.gif"]{
+background-image: none !important;
+}
+
+                    /*  -- SIDE BOXES BORDERS - */
+.hpLeftNav div.boxBottom, 
+.hpRightNav div.boxBottom,
+.hpLeftNav h2, 
+.hpRightNav h2
+{
+background-image: url(http://pokerhermit.googlepages.com/eyebrowbrown0.png) !important;
+}
+.hpLeftNav h2, 
+.hpRightNav h2{
+background-color: #988544!important;
+}
+.hpLeftNav div.boxBottom, 
+.hpRightNav div.boxBottom{
+background-color: transparent!important;
+}
+.boxSides{
+background-color: transparent!important;
+}
+
+.hpLeftNav div.boxSides, .hpRightNav div.boxSides{
+border-color: #847955!important;
+}
+
+td[width="14"][bgcolor="#6677dd"], tr[bgcolor="#6677dd"]{
+background-color: transparent !important;
+}
+td[width="3"][bgcolor="#6677dd"]{
+background-color: #87773b !important;
+}
+ /*  -- Movie and TV News -- */
+img[src="http://i.imdb.com/f294.gif"]{
+width: 0px !important;
+padding-left: 171px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/top5boxoffice.png)
+!important;
+background-color: transparent !important;
+}
+
+                     /* --  END --  */
+
+
+#nb15tabs{ /*#a57c52*/
+background-image: url(http://pokerhermit.googlepages.com/navbarbrownnolines.png)
+!important;
+}
+
+#nb15tabs a:hover {
+background-image: url(http://pokerhermit.googlepages.com/navbarbrownnolines.png) !important;
+}
+
+td[width="30"][valign="top"][height="28"][bgcolor="#ffffff"][align="left"]{
+background-color: transparent !important;
+}
+
+                       /* -- Front Page -- */
+table table td {margin: 20px !important;}
+
+#nb15 {padding-top: 0px !important;
+margin: 0 !important;
+}
+
+table{
+background-color: transparent !important;
+}
+
+
+div.photo {
+background-color: #d5d2a2 !important;
+}
+
+
+            /* ----------- Movie Page ----------- */
+            /* ----------- Title --------------- */
+#tn15title span{
+color: black !important;}
+
+hr {background-color: #948266 !important;
+height: 3px !important;}
+
+.strip
+{background-color: transparent !important;
+border: none !important;}
+
+tr.even, .chart_even_row, td[class="movie even"], td[class="comingsoon even"]
+{background-color: #E5DDA7 !important;} /* -- dark --- */
+
+tr.odd, .chart_odd_row, td[class="movie odd"], td[class="comingsoon odd"]
+{background-color: #E8E5CF !important;} /* -- light  -- */
+
+
+
+                        /*  -  lefthand menus - */
+div.hpLeftNav, #tn15lhs {
+background-color: #d5d2a2 !important;
+}
+
+
+                      /* - gets rid of the brown on Main Details link  */
+#tn15lhs div.link.selected,
+td.list[bgcolor="#cccccc"],
+a[class="link selected"]{
+background: #BEBE81 !important ;
+}
+.lhsef[bgcolor="#ffffff"]{
+background-color: #BEBE81 !important;/*#BCB847 #B2B372*/
+}
+
+
+                      /* --  LH Menu Titles --- */
+img[alt="Stay Informed"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: url(http://pokerhermit.googlepages.com/stayinformed.png) !important;
+} 
+img[alt="All-Time Box Office"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/alltimeboxoffice.png) !important;
+}
+img[alt="Top Genre Searches"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/topgenresearches.png) !important;
+}
+img[alt="UK Box Office"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/ukboxoffice.png) !important;
+}
+img[alt="USA Box Office"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/usboxoffice.png) !important;
+}
+img[alt="IMDb Charts"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/IMDBcharts.png) !important;
+}
+img[alt="Votes by Decade"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/votesbydecade.png) !important;
+}
+img[alt="Votes by gender"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/votesbygender.png) !important;
+}
+img[alt="Votes by genre"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/votesbygenre.png) !important;
+}
+img[alt="Video Rentals"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/videorentals.png) !important;
+}
+img[alt="More to Explore"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/MoretoExplore.png) !important;
+}
+img[alt="Top Photo Galleries"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/topphotogalleries.png) !important;
+}
+                    /*  -- My Movies  -- */
+img[src="http://i.imdb.com/f310.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/specialcategories.png) !important;
+}
+img[src="http://i.imdb.com/f266.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/mycategories.png) !important;
+}
+img[src="http://i.imdb.com/f314.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/mymovieshelparea.png) !important;
+}
+img[src="http://i.imdb.com/f270.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/showtitlesbeginning.png) !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/39/55/49.gif"]{
+width: 0 !important;
+padding-left: 60px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/dailyquote3.png) !important;
+}
+img[src="http://i.imdb.com/Dpics/trivia.gif"]{
+width: 0 !important;
+padding-left: 60px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/dailytrivia.png) !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/19/55/49.gif"]{
+width: 0 !important;
+padding-left: 60px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/dailypoll.png) !important;
+}
+img[src="http://i.media-imdb.com/images/tn15/meter_help.gif"]{
+width: 0 !important;
+padding-left: 12px !important;
+background-image: url(http://pokerhermit.googlepages.com/meter_help.png) !important;
+}
+img[src="http://i.media-imdb.com/images/help13x10.gif"]{
+width: 0 !important;
+padding-left: 13px !important;
+background-image: url(http://pokerhermit.googlepages.com/help13x10.png) !important;
+}
+
+input[src="http://ia.imdb.com/media/imdb/01/I/61/28/48.gif"]{
+width: 0 !important;
+padding-left: 131px !important;
+background-image: url(http://pokerhermit.googlepages.com/register48.png) !important;
+}
+
+         /* --- Photo Buttons --- */
+
+
+img[src="http://ia.imdb.com/media/imdb/01/I/56/87/71/10.gif"]{ /*Slideshow*/
+width: 0px !important;
+padding-left: 123px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/viewslideshow.png) !important;
+}
+img[alt="Photo Index"]{
+width: 0px !important;
+padding-left: 112px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/photoindex.png) !important;
+}
+
+
+img[src="http://ia.media-imdb.com/media/imdb/01/I/74/72/49.jpg"],
+img[width='68'][alt="next"]{
+width: 0px !important;
+padding-left: 68px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/nextphoto.png) !important;
+}
+
+img[src="http://ia.media-imdb.com/media/imdb/01/I/84/72/49.jpg"],
+img[width='68'][alt="prev"]{ /*Prev*/
+width: 0px !important;
+padding-left: 68px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/prevphoto.png) !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/04/08/71/10.gif"],
+img[src="http://ia.imdb.com/media/imdb/01/I/04/08/71/10.gif"]{
+width: 0px !important;
+padding-left: 123px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/stopslideshow.png) !important;
+}
+
+img[width="14"][height="11"]{         /* --- Yellow Dots --- */
+width: 0 !important;
+padding-left: 14px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/yellowdot.png) !important;
+}
+
+                    /* - Top &amp; Bottom Movie List -- */
+table table table tr[bgcolor="#e5e5e5"]{
+background-color: #E5DDA7 !important;
+}
+table table table tr[bgcolor="#ffffff"]{
+background-color: #E8E5CF !important;
+}
+
+
+                /* ------- Photos ------- */
+td[width="35%"][valign="top"][bgcolor="#dde0e9"][align="center"], 
+td[width="15%"][valign="top"][bgcolor="#dde0e9"][align="left"]{
+background-color: #E5DDA7 !important;
+}
+td[width="35%"][valign="top"][bgcolor="#ffffff"][align="center"], 
+td[width="15%"][valign="top"][bgcolor="#ffffff"][align="left"]
+{
+background-color: #E8E5CF !important;
+}
+td[width="15%"][valign="top"][bgcolor="#dde0e9"][align="left"],
+td[width="15%"][valign="top"][bgcolor="#ffffff"][align="left"]{
+padding: 15px !important;
+}
+td[width="15%"][valign="top"][bgcolor="#ffffff"][align="left"] table tr td[colspan="3"]
+{
+display: none !important;
+}
+div.resume_box, td.nconst_url{
+background-color: transparent !important;
+border: none !important;
+}
+
+                   /* ------ Now Playing --------- */
+table[style="background: rgb(96, 114, 214) url(http://ia.imdb.com/media/imdb/01/I/32/48/99.jpg) repeat-x scroll center top; border-collapse: separate; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white; border-spacing: 0pt; font-family: Arial,sans-serif; font-size: 12px; font-weight: bold;"]{
+background-image: 
+url(http://pokerhermit.googlepages.com/nowplayinggradient.png)
+!important;
+}
+img[alt="Now Playing"][src="http://ia.imdb.com/media/imdb/01/I/22/48/99.jpg"]{
+width: 0 !important;
+padding-left: 182px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/nowplaying.png) !important;
+background-repeat: no-repeat !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/52/48/99.jpg"]{
+width: 0 !important;
+padding-left: 158px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/goldreel.png) !important;
+background-repeat: no-repeat !important;
+}
+table[style="background: rgb(96, 114, 214) url(http://ia.imdb.com/media/imdb/01/I/32/48/99.jpg) repeat-x scroll center top; border-collapse: separate; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white; border-spacing: 0pt; font-family: Arial,sans-serif; font-size: 12px; font-weight: bold;"] a:link{
+color: #CBC87E !important;
+}
+div.showtimes{
+background-image: 
+url(http://pokerhermit.googlepages.com/goldtab_usmovieshowtimes.png)
+!important;
+background-repeat: no-repeat !important;
+}
+img[src="/images/nowplaying/goldtab_ComingSoon.gif"]{
+width: 0 !important;
+padding-left: 800px !important;
+background-image: url(http://pokerhermit.googlepages.com/goldtab_comingsoon.png)
+!important;
+background-repeat: no-repeat !important;
+}
+
+
+                         /* ---- LINKS -- --  */
+a:link {color: /*#A18636 -- little bit too light #8F722D*/ #8F802D !important;}
+a:visited {color: #504d0d !important;}
+
+
+div a img {
+color: tan !important;
+}
+
+div.main{
+background-color: transparent !important;
+border: none !important;
+}
+
+                               /*  --- Star Bars --- */
+.starbar .outer, .starbar #starbar, .starbar a:hover, .starbar .inner {
+  background-image: url(http://pokerhermit.googlepages.com/starbarOct18.png) !important;
+}
+
+.tinystarbar{
+background: url(http://pokerhermit.googlepages.com/tinystarbar.png)
+no-repeat 0px -12px !important;
+}
+.tinystarbar div{
+background: url(http://pokerhermit.googlepages.com/tinystarbar.png)
+no-repeat 0px 0px !important;
+}
+
+
+                     /* ----- Movie Page ----- */
+img[alt="[Add to My Movies]"]{
+width: 0 !important;
+padding-left: 115px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/button_addtomymovies.png) !important;
+}
+
+#tn15main
+{border: none !important;}
+
+.photo{
+border: none !important;
+}
+
+#boxoffice, #moviemeter{
+border: none !important;
+}
+
+
+                 /* - Little Arrows - */
+#tn15 a.tn15more{
+background-image:
+url(http://pokerhermit.googlepages.com/brownlittlearrow.png) !important;
+}
+
+                /* -- Forum Stuff - */
+/*table[width="100%"][cellspacing="0"][cellpadding="5"]*/ td[bgcolor="#006699"],
+/* -- My Movies --*/ table table table tr [bgcolor="#9999ff"]{
+background-color: /*#7D7416*/#978443 !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/eyebrowcontainerbrown2.png) !important;
+background-repeat: repeat-x !important;
+}
+td[width="90%"] font[size="+1"][face="Arial, Helvetica, sans-serif"][color="#000000"]{
+color: #ffffff !important;
+}
+
+table td[bgcolor="#dfdfdf"]{
+background-color: #d3d09d !important;
+}
+td[width="20"][height="28"]{ /* Skinny left column of search results */
+background-color: transparent !important;
+}
+#tn15main table.boards{
+margin-top: 20px !important;
+}
+
+#tn15main table.boards th, .chart_head {
+background-image:
+url(http://pokerhermit.googlepages.com/eyebrowcontainerbrown2.png)
+!important;
+}
+
+/* NEW PHOTO GALLERY Feb 24 */
+#media_canvas{
+background-color: transparent !important;
+border: 3px #847955 solid !important;
+color: black !important;
+}
+
+
+img[src="http://i.media-imdb.com/images/SF840d04cd416fd1883b6a0ff2682dc4cc/media_icon_see_all.gif"],
+img[src="http://i.media-imdb.com/images/SFc19d3fb7d1149bdfa44466034489e1c5/media_icon_slideshow.gif"],
+img[src="http://i.media-imdb.com/images/media_icon_slideshow.gif?c19d3fb7d1149bdfa44466034489e1c5"],
+img[src="http://i.media-imdb.com/images/media_icon_see_all.gif?840d04cd416fd1883b6a0ff2682dc4cc"]{
+display: none !important;
+}
+
+
+#context_strip&gt;tbody&gt;tr&gt;td[style="vertical-align: middle; text-align: left;"]&gt;button{
+font-size: 0px !important;
+border: none !important;
+width: 68px !important;
+height: 25px !important;
+background-image: url(http://pokerhermit.googlepages.com/prevphoto.png) !important;
+background-color: transparent !important;
+}
+#context_strip&gt;tbody&gt;tr&gt;td[style="vertical-align: middle; text-align: right;"]&gt;button{
+font-size: 0px !important;
+border: none !important;
+width: 68px !important;
+height: 25px !important;
+background-image: url(http://pokerhermit.googlepages.com/nextphoto.png) !important;
+background-color: transparent !important;
+}
+#media_canvas table#principal td img{
+border: 15px #6F6136 solid !important;
+}
+.nominees, .nominees&gt;h2&gt;span{
+background-color: #e3e1c0 !important;
+}
+/*Related Galleries*/
+.aux-content-widget-2{
+background: transparent !important;
+border: none !important;
+}
+}</stylish:code>
+    <stylish:originalCode>@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("imdb.com") {
+
+body{
+background-image: url(http://pokerhermit.googlepages.com/beigegradient.gif) !important ;
+background-repeat: repeat-x;
+background-color: #e3e1c0 !important;
+margin: 0 !important;
+padding: 0 !important;
+width: 100% !important;
+}
+#wrapper{
+background-color: #e3e1c0 !important;
+background-image: none !important;
+margin: 0 !important;
+padding: 0 !important;
+width: 100% !important;
+}
+#pagecontent, #footer, #root{
+background-color: transparent !important;
+margin: 0 !important;
+}
+
+#root {position: relative !important;
+top: -25px !important;
+margin: auto !important;
+background-color: #e3e1c0 !important;
+background-image: url(http://pokerhermit.googlepages.com/beigegradient.gif) !important ;
+background-repeat: repeat-x !important;
+background-position: top left !important;
+margin-bottom: 0 !important;
+width: 100% !important;
+}
+table#outerbody{
+width: 100% !important;
+}
+#nb15home {position: relative !important;
+top: 20px !important;}
+
+img[width="177"][title="The Internet Movie Database"]
+{width: 0 !important;
+padding-left: 177px !important;
+background: url(http://pokerhermit.googlepages.com/imdblogo2.png) !important;}
+
+
+
+#tn15lhs{
+/*border: 1px solid #847955 !important;*/
+}
+td.lhscol{
+/*border: 2px solid #93803f !important;*/
+border-top: none !important;
+padding-top: 20px !important;
+padding-bottom: 20px !important;
+background-color: #d5d2a2 !important;
+}
+
+/*div.hpleftnav div.boxbottom,*/
+img[src="http://i.imdb.com/f115.gif"], /* Hide for now. Shop later */
+img[src="http://ia.media-imdb.com/media/imdb/01/I/29/53/16.gif"],
+img[src="http://i.imdb.com/Photos/CMSIcons/logos/sblogo.gif"],
+img[src="http://i.imdb.com/Photos/CMSIcons/logos/wennlogo.gif"],
+img[alt="Click Here"],
+img[src="http://ia.imdb.com/media/imdb/01/I/87/42/69.gif"],
+img[src="http://i.media-imdb.com/images/tn15/add_change_photo.gif"],
+img[src="http://i.media-imdb.com/images//tn15/button_addresume.gif"],
+img[src="http://ia.imdb.com/media/imdb/01/I/09/96/52/10.gif"],
+img[src="http://i.imdb.com/SecGal/wibutton.gif"],
+.chart_more,
+div.right img[width="300"],
+map[name="imageMap"],
+img[src="http://i.imdb.com/f9.gif"],
+#tn15bot div.right,
+div table[width="115"][cellspacing="0"][cellpadding="0"][border="0"],
+embed,
+iframe,
+.imdb_lb,
+.cool_services,
+td[width="5"],
+td[width="1"][bgcolor="#999999"],
+td[width="120"][valign="top"][align="center"],
+.w_box_head,
+.w_box_right,
+.w_box_left,
+.w_box_middle,
+.moka &gt; a,
+#nb15go,
+#tn15shopbox,
+#tn15adrhs,
+#lea_728x90,
+#swf_Adbox_Trailers_300,
+div#tn15rating.one &gt; span.hint,
+div#swf_supertab_02,
+#swf_DE_supertab_initvideo,
+a[href*="register/subscribe"],
+a[href*="/publicity"],
+table[width="468"],
+table[width="728"][height="90"],
+table[width="171"][cellspacing="0"],
+table[width="171"][bgcolor="#708090"],
+map[name="nav"],
+img[usemap="#nav"],
+img[src*="/31/97/18.jpg"],
+img[width="400"][height="41"],
+img[src*="/96/12/10.gif"],
+img[src*="/19/39/22.gif"],
+img[src*="/19/39/22.gif"]+br,
+img[src*="/19/39/22.gif"]+br+i,
+img[src*="http://i.imdb.com/f68.gif"] {
+  display: none !important;
+}
+/* HIDE RULER ON VOTING BARS */
+td[background="http://i.imdb.com/ruler.gif"]{
+background-image: none !important;
+}
+
+                    /*  -- SIDE BOXES BORDERS - */
+.hpLeftNav div.boxBottom, 
+.hpRightNav div.boxBottom,
+.hpLeftNav h2, 
+.hpRightNav h2
+{
+background-image: url(http://pokerhermit.googlepages.com/eyebrowbrown0.png) !important;
+}
+.hpLeftNav h2, 
+.hpRightNav h2{
+background-color: #988544!important;
+}
+.hpLeftNav div.boxBottom, 
+.hpRightNav div.boxBottom{
+background-color: transparent!important;
+}
+.boxSides{
+background-color: transparent!important;
+}
+
+.hpLeftNav div.boxSides, .hpRightNav div.boxSides{
+border-color: #847955!important;
+}
+
+td[width="14"][bgcolor="#6677dd"], tr[bgcolor="#6677dd"]{
+background-color: transparent !important;
+}
+td[width="3"][bgcolor="#6677dd"]{
+background-color: #87773b !important;
+}
+ /*  -- Movie and TV News -- */
+img[src="http://i.imdb.com/f294.gif"]{
+width: 0px !important;
+padding-left: 171px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/top5boxoffice.png)
+!important;
+background-color: transparent !important;
+}
+
+                     /* --  END --  */
+
+
+#nb15tabs{ /*#a57c52*/
+background-image: url(http://pokerhermit.googlepages.com/navbarbrownnolines.png)
+!important;
+}
+
+#nb15tabs a:hover {
+background-image: url(http://pokerhermit.googlepages.com/navbarbrownnolines.png) !important;
+}
+
+td[width="30"][valign="top"][height="28"][bgcolor="#ffffff"][align="left"]{
+background-color: transparent !important;
+}
+
+                       /* -- Front Page -- */
+table table td {margin: 20px !important;}
+
+#nb15 {padding-top: 0px !important;
+margin: 0 !important;
+}
+
+table{
+background-color: transparent !important;
+}
+
+
+div.photo {
+background-color: #d5d2a2 !important;
+}
+
+
+            /* ----------- Movie Page ----------- */
+            /* ----------- Title --------------- */
+#tn15title span{
+color: black !important;}
+
+hr {background-color: #948266 !important;
+height: 3px !important;}
+
+.strip
+{background-color: transparent !important;
+border: none !important;}
+
+tr.even, .chart_even_row, td[class="movie even"], td[class="comingsoon even"]
+{background-color: #E5DDA7 !important;} /* -- dark --- */
+
+tr.odd, .chart_odd_row, td[class="movie odd"], td[class="comingsoon odd"]
+{background-color: #E8E5CF !important;} /* -- light  -- */
+
+
+
+                        /*  -  lefthand menus - */
+div.hpLeftNav, #tn15lhs {
+background-color: #d5d2a2 !important;
+}
+
+
+                      /* - gets rid of the brown on Main Details link  */
+#tn15lhs div.link.selected,
+td.list[bgcolor="#cccccc"],
+a[class="link selected"]{
+background: #BEBE81 !important ;
+}
+.lhsef[bgcolor="#ffffff"]{
+background-color: #BEBE81 !important;/*#BCB847 #B2B372*/
+}
+
+
+                      /* --  LH Menu Titles --- */
+img[alt="Stay Informed"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: url(http://pokerhermit.googlepages.com/stayinformed.png) !important;
+} 
+img[alt="All-Time Box Office"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/alltimeboxoffice.png) !important;
+}
+img[alt="Top Genre Searches"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/topgenresearches.png) !important;
+}
+img[alt="UK Box Office"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/ukboxoffice.png) !important;
+}
+img[alt="USA Box Office"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/usboxoffice.png) !important;
+}
+img[alt="IMDb Charts"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/IMDBcharts.png) !important;
+}
+img[alt="Votes by Decade"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/votesbydecade.png) !important;
+}
+img[alt="Votes by gender"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/votesbygender.png) !important;
+}
+img[alt="Votes by genre"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/votesbygenre.png) !important;
+}
+img[alt="Video Rentals"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/videorentals.png) !important;
+}
+img[alt="More to Explore"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/MoretoExplore.png) !important;
+}
+img[alt="Top Photo Galleries"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/topphotogalleries.png) !important;
+}
+                    /*  -- My Movies  -- */
+img[src="http://i.imdb.com/f310.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/specialcategories.png) !important;
+}
+img[src="http://i.imdb.com/f266.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/mycategories.png) !important;
+}
+img[src="http://i.imdb.com/f314.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/mymovieshelparea.png) !important;
+}
+img[src="http://i.imdb.com/f270.gif"]{
+width: 0 !important;
+padding-left: 170px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/showtitlesbeginning.png) !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/39/55/49.gif"]{
+width: 0 !important;
+padding-left: 60px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/dailyquote3.png) !important;
+}
+img[src="http://i.imdb.com/Dpics/trivia.gif"]{
+width: 0 !important;
+padding-left: 60px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/dailytrivia.png) !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/19/55/49.gif"]{
+width: 0 !important;
+padding-left: 60px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/dailypoll.png) !important;
+}
+img[src="http://i.media-imdb.com/images/tn15/meter_help.gif"]{
+width: 0 !important;
+padding-left: 12px !important;
+background-image: url(http://pokerhermit.googlepages.com/meter_help.png) !important;
+}
+img[src="http://i.media-imdb.com/images/help13x10.gif"]{
+width: 0 !important;
+padding-left: 13px !important;
+background-image: url(http://pokerhermit.googlepages.com/help13x10.png) !important;
+}
+
+input[src="http://ia.imdb.com/media/imdb/01/I/61/28/48.gif"]{
+width: 0 !important;
+padding-left: 131px !important;
+background-image: url(http://pokerhermit.googlepages.com/register48.png) !important;
+}
+
+         /* --- Photo Buttons --- */
+
+
+img[src="http://ia.imdb.com/media/imdb/01/I/56/87/71/10.gif"]{ /*Slideshow*/
+width: 0px !important;
+padding-left: 123px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/viewslideshow.png) !important;
+}
+img[alt="Photo Index"]{
+width: 0px !important;
+padding-left: 112px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/photoindex.png) !important;
+}
+
+
+img[src="http://ia.media-imdb.com/media/imdb/01/I/74/72/49.jpg"],
+img[width='68'][alt="next"]{
+width: 0px !important;
+padding-left: 68px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/nextphoto.png) !important;
+}
+
+img[src="http://ia.media-imdb.com/media/imdb/01/I/84/72/49.jpg"],
+img[width='68'][alt="prev"]{ /*Prev*/
+width: 0px !important;
+padding-left: 68px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/prevphoto.png) !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/04/08/71/10.gif"],
+img[src="http://ia.imdb.com/media/imdb/01/I/04/08/71/10.gif"]{
+width: 0px !important;
+padding-left: 123px !important;
+height: 25px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/stopslideshow.png) !important;
+}
+
+img[width="14"][height="11"]{         /* --- Yellow Dots --- */
+width: 0 !important;
+padding-left: 14px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/yellowdot.png) !important;
+}
+
+                    /* - Top &amp; Bottom Movie List -- */
+table table table tr[bgcolor="#e5e5e5"]{
+background-color: #E5DDA7 !important;
+}
+table table table tr[bgcolor="#ffffff"]{
+background-color: #E8E5CF !important;
+}
+
+
+                /* ------- Photos ------- */
+td[width="35%"][valign="top"][bgcolor="#dde0e9"][align="center"], 
+td[width="15%"][valign="top"][bgcolor="#dde0e9"][align="left"]{
+background-color: #E5DDA7 !important;
+}
+td[width="35%"][valign="top"][bgcolor="#ffffff"][align="center"], 
+td[width="15%"][valign="top"][bgcolor="#ffffff"][align="left"]
+{
+background-color: #E8E5CF !important;
+}
+td[width="15%"][valign="top"][bgcolor="#dde0e9"][align="left"],
+td[width="15%"][valign="top"][bgcolor="#ffffff"][align="left"]{
+padding: 15px !important;
+}
+td[width="15%"][valign="top"][bgcolor="#ffffff"][align="left"] table tr td[colspan="3"]
+{
+display: none !important;
+}
+div.resume_box, td.nconst_url{
+background-color: transparent !important;
+border: none !important;
+}
+
+                   /* ------ Now Playing --------- */
+table[style="background: rgb(96, 114, 214) url(http://ia.imdb.com/media/imdb/01/I/32/48/99.jpg) repeat-x scroll center top; border-collapse: separate; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white; border-spacing: 0pt; font-family: Arial,sans-serif; font-size: 12px; font-weight: bold;"]{
+background-image: 
+url(http://pokerhermit.googlepages.com/nowplayinggradient.png)
+!important;
+}
+img[alt="Now Playing"][src="http://ia.imdb.com/media/imdb/01/I/22/48/99.jpg"]{
+width: 0 !important;
+padding-left: 182px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/nowplaying.png) !important;
+background-repeat: no-repeat !important;
+}
+img[src="http://ia.imdb.com/media/imdb/01/I/52/48/99.jpg"]{
+width: 0 !important;
+padding-left: 158px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/goldreel.png) !important;
+background-repeat: no-repeat !important;
+}
+table[style="background: rgb(96, 114, 214) url(http://ia.imdb.com/media/imdb/01/I/32/48/99.jpg) repeat-x scroll center top; border-collapse: separate; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white; border-spacing: 0pt; font-family: Arial,sans-serif; font-size: 12px; font-weight: bold;"] a:link{
+color: #CBC87E !important;
+}
+div.showtimes{
+background-image: 
+url(http://pokerhermit.googlepages.com/goldtab_usmovieshowtimes.png)
+!important;
+background-repeat: no-repeat !important;
+}
+img[src="/images/nowplaying/goldtab_ComingSoon.gif"]{
+width: 0 !important;
+padding-left: 800px !important;
+background-image: url(http://pokerhermit.googlepages.com/goldtab_comingsoon.png)
+!important;
+background-repeat: no-repeat !important;
+}
+
+
+                         /* ---- LINKS -- --  */
+a:link {color: /*#A18636 -- little bit too light #8F722D*/ #8F802D !important;}
+a:visited {color: #504d0d !important;}
+
+
+div a img {
+color: tan !important;
+}
+
+div.main{
+background-color: transparent !important;
+border: none !important;
+}
+
+                               /*  --- Star Bars --- */
+.starbar .outer, .starbar #starbar, .starbar a:hover, .starbar .inner {
+  background-image: url(http://pokerhermit.googlepages.com/starbarOct18.png) !important;
+}
+
+.tinystarbar{
+background: url(http://pokerhermit.googlepages.com/tinystarbar.png)
+no-repeat 0px -12px !important;
+}
+.tinystarbar div{
+background: url(http://pokerhermit.googlepages.com/tinystarbar.png)
+no-repeat 0px 0px !important;
+}
+
+
+                     /* ----- Movie Page ----- */
+img[alt="[Add to My Movies]"]{
+width: 0 !important;
+padding-left: 115px !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/button_addtomymovies.png) !important;
+}
+
+#tn15main
+{border: none !important;}
+
+.photo{
+border: none !important;
+}
+
+#boxoffice, #moviemeter{
+border: none !important;
+}
+
+
+                 /* - Little Arrows - */
+#tn15 a.tn15more{
+background-image:
+url(http://pokerhermit.googlepages.com/brownlittlearrow.png) !important;
+}
+
+                /* -- Forum Stuff - */
+/*table[width="100%"][cellspacing="0"][cellpadding="5"]*/ td[bgcolor="#006699"],
+/* -- My Movies --*/ table table table tr [bgcolor="#9999ff"]{
+background-color: /*#7D7416*/#978443 !important;
+background-image: 
+url(http://pokerhermit.googlepages.com/eyebrowcontainerbrown2.png) !important;
+background-repeat: repeat-x !important;
+}
+td[width="90%"] font[size="+1"][face="Arial, Helvetica, sans-serif"][color="#000000"]{
+color: #ffffff !important;
+}
+
+table td[bgcolor="#dfdfdf"]{
+background-color: #d3d09d !important;
+}
+td[width="20"][height="28"]{ /* Skinny left column of search results */
+background-color: transparent !important;
+}
+#tn15main table.boards{
+margin-top: 20px !important;
+}
+
+#tn15main table.boards th, .chart_head {
+background-image:
+url(http://pokerhermit.googlepages.com/eyebrowcontainerbrown2.png)
+!important;
+}
+
+/* NEW PHOTO GALLERY Feb 24 */
+#media_canvas{
+background-color: transparent !important;
+border: 3px #847955 solid !important;
+color: black !important;
+}
+
+
+img[src="http://i.media-imdb.com/images/SF840d04cd416fd1883b6a0ff2682dc4cc/media_icon_see_all.gif"],
+img[src="http://i.media-imdb.com/images/SFc19d3fb7d1149bdfa44466034489e1c5/media_icon_slideshow.gif"],
+img[src="http://i.media-imdb.com/images/media_icon_slideshow.gif?c19d3fb7d1149bdfa44466034489e1c5"],
+img[src="http://i.media-imdb.com/images/media_icon_see_all.gif?840d04cd416fd1883b6a0ff2682dc4cc"]{
+display: none !important;
+}
+
+
+#context_strip&gt;tbody&gt;tr&gt;td[style="vertical-align: middle; text-align: left;"]&gt;button{
+font-size: 0px !important;
+border: none !important;
+width: 68px !important;
+height: 25px !important;
+background-image: url(http://pokerhermit.googlepages.com/prevphoto.png) !important;
+background-color: transparent !important;
+}
+#context_strip&gt;tbody&gt;tr&gt;td[style="vertical-align: middle; text-align: right;"]&gt;button{
+font-size: 0px !important;
+border: none !important;
+width: 68px !important;
+height: 25px !important;
+background-image: url(http://pokerhermit.googlepages.com/nextphoto.png) !important;
+background-color: transparent !important;
+}
+#media_canvas table#principal td img{
+border: 15px #6F6136 solid !important;
+}
+.nominees, .nominees&gt;h2&gt;span{
+background-color: #e3e1c0 !important;
+}
+/*Related Galleries*/
+.aux-content-widget-2{
+background: transparent !important;
+border: none !important;
+}
+}</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="http://userstyles.org/styles/10750"
+                   stylish:updateURL="http://userstyles.org/styles/10750.css"
+                   stylish:description="Tabs on top (like google chrome)"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:global="false"
+                   stylish:url="chrome://browser/content/browser.xul"
+                   stylish:enabled="false">
+    <stylish:code>@-moz-document url("chrome://browser/content/browser.xul")
+{
+
+.tabbrowser-strip
+{
+top:1px !important;
+position:fixed !important;
+z-index:0 !important;
+padding:0px 0px 0px 0px !important;
+width:99.9% !important;
+}
+
+tab
+{
+-moz-user-select:-moz-none!important;
+z-index:1!important;
+-moz-border-radius-bottomleft: 0px!important;
+background-color:transparent !important;
+}
+
+.tabbrowser-strip .tabbrowser-tabs
+{
+background-color:transparent !important;
+width:100% !important;
+}
+
+.tab-drop-indicator-bar
+{
+position:fixed!important;
+top:0px !important;
+left:0px !important;
+width:100%!important;
+}
+
+window
+{
+padding-top:28px !important;
+}
+
+
+}</stylish:code>
+    <stylish:originalCode>@-moz-document url("chrome://browser/content/browser.xul")
+{
+
+.tabbrowser-strip
+{
+top:1px !important;
+position:fixed !important;
+z-index:0 !important;
+padding:0px 0px 0px 0px !important;
+width:99.9% !important;
+}
+
+tab
+{
+-moz-user-select:-moz-none!important;
+z-index:1!important;
+-moz-border-radius-bottomleft: 0px!important;
+background-color:transparent !important;
+}
+
+.tabbrowser-strip .tabbrowser-tabs
+{
+background-color:transparent !important;
+width:100% !important;
+}
+
+.tab-drop-indicator-bar
+{
+position:fixed!important;
+top:0px !important;
+left:0px !important;
+width:100%!important;
+}
+
+window
+{
+padding-top:28px !important;
+}
+
+
+}</stylish:originalCode>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$WeHRZ2"
+                   stylish:global="true"
+                   stylish:domain="douban.com"
+                   stylish:description="deviantart-douban"
+                   stylish:neverUpdate="false"
+                   stylish:customized="false"
+                   stylish:enabled="true">
+    <stylish:urlPrefix>http://9.douban.com/</stylish:urlPrefix>
+    <stylish:urlPrefix>http://www.douban.com/plaza/</stylish:urlPrefix>
+    <stylish:code>/*
+*  Unofficial douban.com skin
+*
+* Author : mvj3
+* Created : 15th Sep, 2007
+* Updated : 29th Nov, 2008
+* Version :2.1
+* Website : http://hallogoodbye.deviantart.com/art/deviantART-Douban-71244940
+* Description : Skins douban.com with deviantART appearance.
+* Usage : Use with Stylish Firefox extension (http://userstyles.org/) or copy to your Firefox userContent.css file
+*/
+
+@-moz-document domain("douban.com") {
+
+/*replace logo and emos*/
+
+.logo {
+background:url(http://deviantart-douban.googlecode.com/files/deviantart-douban.png) !important;
+width:0 !important;
+padding:17px 82px !important;
+}
+a img[src="http://otho.douban.com/pics/douban9.gif"]{
+background:url(http://deviantart-douban.googlecode.com/files/douban9.png) !important;
+width:0 !important;
+height:0 !important;
+padding:25px 45px !important;
+}
+img[src="http://otho.douban.com/pics/new1.gif"] {
+width:0 !important;
+}
+.quote,.quote span.inq {
+background:none !important;
+}
+img[src="http://otho.douban.com/pics/sts.gif"] {
+background:url(http://deviantart-douban.googlecode.com/files/sts.gif) !important;
+width:0 !important;
+padding:6px 9px 6px 6px !important;
+}
+img[src="http://otho.douban.com/pics/new_menu.gif"] {
+background:url(http://.gif) !important;
+width:0 !important;
+}
+img[src="http://www.douban.com/pics/arrow2.gif"] {
+background:url(http://deviantart-douban.googlecode.com/files/top-login.3.gif) !important;
+
+}
+img[src="http://www.douban.com/pics/arrow3.gif"] {
+background:url(http://deviantart-douban.googlecode.com/files/top-login.3.gif) !important;
+
+}
+
+
+/*text background*/
+/*body {
+background:#76827B !important;
+}*/
+#maxw {
+background:#4D625D !important;
+}
+#tableb ,#tablerb ,#table ,#tabler ,#in_tablem ,#tablerm ,#tablem{
+background:url(http://deviantart-douban.googlecode.com/files/div.gif) repeat-y !important;
+-moz-border-radius: 5px ! important;/*wuxiao*/
+color:#3B4A4A !important;
+}
+
+/*text area*/
+table {
+-moz-border-radius: 5px ! important;
+}
+textarea {
+
+
+}
+
+/*navigate bar*/
+#subnav{
+background:#374341 !important;
+}
+#header {
+background: #485856 !important;
+color:white !important;
+padding:5px 5px 0px 5px !important;
+-moz-border-radius: 5px ! important;
+}
+#status {
+background:#374341 !important;
+-moz-border-radius-topleft: 5px !important;
+-moz-border-radius-topright: 5px !important;
+}
+#status a ,#status span {
+color:#96A19B !important;
+}
+
+/*navigate font*/
+#nav a {
+color:#EEE8E4 !important;
+height:12px !important;
+-moz-border-radius-topleft: 5px !important;
+-moz-border-radius-topright: 5px !important;
+}
+#nav a:hover{
+
+text-decoration:none !important;
+}
+#nav a.now span {
+background:#374341 !important;
+
+margin:0px -10px 0px 0px !important;
+}
+
+/*search bar*/
+/*search 下拉菜单*/
+#searbar span.submit {
+background:transparent  url(http://deviantart-douban.googlecode.com/files/top-search.gif) repeat  scroll  0px -60px!important;
+}
+
+#searbar span.submit a.butt {
+background:none !important;
+}
+#dsearch a ,.butt {
+color:#96A19B !important;
+
+}
+/*search area*/
+#page_focus {
+border-color:transparent !important;
+background:url(http://deviantart-douban.googlecode.com/files/top-search.gif) repeat  scroll   -1px  0px !important;
+color:transparent !important;
+height:16px !important;
+width:155px !important;
+padding:5px 9px 0px 5px !important;
+margin: 0 0 0 0px !important;
+}
+#page_focus:focus {
+background:url(http://deviantart-douban.googlecode.com/files/top-search.gif) scroll 0 -30px !important;
+color:#233231 !important;
+height:16px !important;
+width:173px !important;
+padding: 2px 0 2px 0 !important;
+margin: 0 !important;
+}
+img[src="http://otho.douban.com/pics/down.gif"] {
+background: url(http://deviantart-douban.googlecode.com/files/top-search.gif) scroll 30px 90px !important;
+width:0 !important;
+padding:13px 15px 12px 15px !important;
+}
+img[src="http://otho.douban.com/pics/up.gif"] {
+background: url(http://deviantart-douban.googlecode.com/files/top-search.gif) scroll 30px 90px!important;
+width:0 !important;
+padding:6.5px 7.5px 6px 7.5px !important;
+}
+
+
+
+/*font scraps*/
+/*.li.mbtr a: {
+color: #3B5A4A !important;
+}*/
+
+a:hover {
+background:none !important;
+}
+
+h1,h2,h3,h4,h5,h6,.tablecc .pl ,#mycontact .pl .gtleft ,.pl .pl ,.olt .pl ,#tabler .pl ,.mbt .pl ,obmo .pl ,.sbjtd .pl ,.indent .pl  ,#tablerm .pl ,#in_table .pl ,.clst .pl ,.cluster-preview span {color:#414D4C !important;}
+h2 {background:#D5E2DE !important;-moz-border-radius: 5px ! important;
+padding:5px !important;}
+h3 {
+background:url(http://deviantart-douban.googlecode.com/files/bg-bubblb3.gif) !important;
+margin:0px !important;
+-moz-border-radius: 5px ! important;
+}
+h4 {background:#D5E2DE !important;-moz-border-radius: 5px ! important;margin-left:-5px !important;padding-left:3px !important}
+body {
+background:#76827B !important;
+}
+textarea {
+background:#F0FBF8 !important;
+}
+textarea:focus {
+border:4px solid #D3E0DC !important;
+}
+table {
+-moz-border-radius: 5px ! important;
+}
+
+/*right*/
+.indent ,.sbjtd {
+background-color:#D3E0DC !important;
+-moz-border-radius: 5px ! important;
+margin:0px 0px 5px 0px !important;
+}
+.tablecc {
+background:#D3E0DC !important;
+color:#547062 !important;
+-moz-border-radius: 5px ! important;
+}
+.tablelt ,.tablect ,.tablert ,.tablelc ,.tablerc ,.tablelb ,.tablecb ,.tablerb {background:#E7F0EC !important;
+}
+.mbtrmini {
+background: transparent !important;
+}
+
+
+
+/*foot*/
+#maxw:after {
+/*content:"Current skin:'deviantART Douban' by mvj3,-- send me a douyou or comment the topic if you find a bug or want something changed."!important;*/
+display: block !important;
+color: #A7B094 !important;
+text-align:center !important;
+}
+.fdiv {
+background: #485856 !important;
+color:#739CA3 !important;
+border-top: 0px !important;
+padding:6px 4px 0px 4px !important;
+-moz-border-radius: 5px ! important;
+}
+.fspl {
+color: #98A8A3 !important;
+}
+.ul {
+border-bottom: 0px !important;
+}
+
+/*scraps*/
+.fdiv a {
+color:#879B9B !important;
+}
+.zbar ,.zbar span.now {
+background:#D5E2DE !important;
+margin-right:0px !important;
+}
+.gact ,.gact a:link ,a.gact:link{
+border:0px !important;
+background:#D5E2DE !important;
+-moz-border-radius: 5px ! important;
+padding:2px !important;
+}
+a.redbutt span {
+color:#6C8232 !important;
+background:#DEEAC3 url(http://pouringthemilkshake.org/images/douban/redbutt.gif) !important;
+margin:0px -7px 0px -2px !important;
+}
+input:not([type="submit"]) {
+background: #899B91 !important;
+color:#434341 !important;
+}
+
+
+
+.submit ,.butt ,.j a_search_text greyinput {
+background:black !important;
+}
+#subnav{
+background:#374341 !important;
+}
+
+#status {
+background:#374341 !important;
+-moz-border-radius-topleft: 5px !important;
+-moz-border-radius-topright: 5px !important;
+}
+#status a ,#status span {
+color:#96A19B !important;
+}
+
+
+/*group search
+.j a_search_text {
+background:#899B91 !important;
+}*/
+
+.xbar div ,.xbar span ,.now span ,.zbar div {
+background:url(http://deviantart-douban.googlecode.com/files/topicbar.gif) !important;
+margin-left:0  !important;
+}
+}
+
+
+
+
+@-moz-document url-prefix(http://9.douban.com/){
+body ,.mt {
+background:url(http://deviantart-douban.googlecode.com/files/div.gif) repeat-y !important;
+-moz-border-radius: 5px ! important;/*wuxiao*/
+color:#3B4A4A !important;
+}
+.nt-spanel {
+background:#4F605E !important;
+-moz-border-radius: 5px ! important;
+}
+.nt-mmpr .pl{
+color:#89988E !important;
+}
+.ninetaps h1{
+background:#374341 !important;
+-moz-border-radius: 5px ! important;
+}
+.mmp a:link ,.a:link {
+color:white !important;
+text-decoration:none;
+}
+.nt-mmpr a:link ,h1 ,pl ,.pl span ,.nt-mmpr span{
+color:#899B91 !important;
+text-decoration:none;
+}
+/*left*/
+.pl {
+color:#438EB7 !important;
+}
+.mmp {
+color: #4C5D5A !important;
+}
+.spanel {
+border-bottom:none !important;
+-moz-border-radius: 5px ! important;
+}
+.act {
+color:#374341 !important;
+background:#899B91 !important;
+padding:0px 3px 3px 0px !important;
+border-bottom:1px solid #899B91 !important;
+border-right:1px solid #899B91 !important;
+}
+.act a {
+color:#414D4C !important;
+}
+.act:hover {
+border-bottom:1px solid #899B91 !important;
+border-right:1px solid #899B91 !important;
+}
+}
+
+@-moz-document url-prefix(http://www.douban.com/plaza/){
+#maxw p {background:#D6DED4 !important;
+-moz-border-radius: 2px ! important;
+}
+}
+/*@-moz-document domain("googlesyndication.com") {
+#aus {
+display:none !important;
+}
+}*/
+
+
+/*Dropdown menu*/
+div#maxw form#ssform div#header div#nav div.Box ul li a {
+color: #3B4A4A !important;
+}</stylish:code>
+  </RDF:Description>
+  <RDF:Seq RDF:about="urn:stylish:userstyles">
+    <RDF:li RDF:resource="http://userstyles.org/styles/2264"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/10750"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/6476"/>
+    <RDF:li RDF:resource="rdf:#$WeHRZ2"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/9738"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/906"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/12586"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/148"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/9425"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/3524"/>
+    <RDF:li RDF:resource="http://userstyles.org/styles/4498"/>
+  </RDF:Seq>
+</RDF:RDF>

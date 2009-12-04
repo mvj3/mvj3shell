@@ -1,0 +1,13 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Alexa</os:ShortName>
+<os:Description>Use Alexa to search the Web</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/x-icon;base64,R0lGODlhEAAQAOYAACxVn1ut6jVHYgAAAgsgYVWGy2+HpitZmqfF5RY7h3ql1QMWV1aHvISXurvG2maItVl6p+Lk6QAAJ9PZ4QECFVKW7EVyq0FTZGSk2pmqvWiAob3Dy5Oy0+vu8X2MnXebyLe/ywMLT5umshtKnhxKpB0qN4q115u+2RQlZP///xI1ehpFloipzcDN3fLz9HuMpDR6vISTpHCAkW299vL1+TFw00eU687T2El7saG/1o+ap4eWqpPN8n6lzYXI8sHF1lCl8G+Vvhs6eAcQIoiYqgAZaSxWjxxRmGuLrqDE3pCZvJvD3kZWiAIQRr3S6R9NhEB4yiI3fgACOoey4w4bNdje6bC/0dHU2V5tequ4y8XL1Vqh2ZOgr297qbTL5TVpoTxvvB88cpikttzm7pWrvRAvaqWwvc/d7Udnm1lvkn2y2mFyhTdXkhMwcQ8kW2t4nxRBlxhGn2eIrIiPr2mGr0peeNDU4XaRtAADRAAIRJOtziU9Ym6YyG2Y0XOGoAAAACH5BAEAAH8ALAAAAAAQABAAAAfugH+CgmIGSHIaO4OLf2JoPSc5OScfbC+MLwccZDsxMURkLABpgxkrDx4eZiAgXDIxEHB+ggAJazITIjI6LiJrWG0AfxlxVBc6KRsCAjc3FxdDJAYPCQMldSBvBCg/WnslAwkWBSoDFG5FUV1KEQ4LFANlYOQDEiFzVQ1GDj8hUvFQ+oyggGdOigcHvoxxIASFhBUF9NRossAODRwMWKRwQIdJnhof/lSIs+BOijNOEHhJ0SIMnApZ/nCwceRJEAQIpijgAOGIjR6DTACBYYGBAgV8cMAAoobRiRkBtmCYGmCGCUaDkvDw4YPHEkaBAAA7</os:Image>
+<UpdateInterval>7</UpdateInterval>
+<UpdateUrl>http://www.alexa.com/xmlpensearch.xml</UpdateUrl>
+<IconUpdateUrl>http://www.alexa.com/favicon.ico</IconUpdateUrl>
+<SearchForm>http://www.alexa.com/</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.alexa.com/search?q={searchTerms}">
+</os:Url><os:Url type="text/html" method="GET" template="http://www.alexa.com/search?q={searchTerms}">
+</os:Url>
+</SearchPlugin>

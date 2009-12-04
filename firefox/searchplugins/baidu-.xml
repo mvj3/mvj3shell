@@ -1,0 +1,12 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Baidu 知道</os:ShortName>
+<os:Description>plugin for Baidu zhidao</os:Description>
+<os:InputEncoding>GBK</os:InputEncoding>
+<os:Image width="16" height="16">data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAdTAAAOpgAAA6lwAAF2+XqZnUAAAEFklEQVR4nGJggAKAAGL+fuESa7/hu78AAcQ4oeulGg8v8yuAAGJ58+qP0rEjP9cABBDzxtVv2HQ0C7xPRD2JbLPcxwIQQAzfz10Q/vTxz/+lC9//L855/h8ggMAmaCrc+R/o+fARiA0QQEyq0nf+SwVd3vD3LwNTQ8XTaIAAYqqq4TG++vJVwPOnf8UPH/o1CyCAmB/dyXx2eIkdw5XLP5mkZVj6AQII5hCGkrxnVdLeq/6LzEo4qyZz57+v68NdIHGAAGKaO/ONAkjg65d/ovz2t3Z/+//dqHuCEOuDe39c1WXv/AcIIKYo82dPnN04mx/e/1vgbaTsCtJVV/X+t6g40++bj1UYAQKICeRPVlaGT8Zm7Azyl10Y3NZ3M3h6czKwsjKyLpr3VgAggBhhbrA2uv9dUYl5k5Y608SrN/+3LV0j6wASBwggOFKRuvNfvKHyv5bN0f8gNkwcIIAYAzwe3gc6SME/iNN3oXRPoPlT31v8z1VU//9n+JucxJkOEAAhAN7/BOnp/SD39/8AQkYMtIvb5bPt/PGxNykGkZiU874BAQH7AoipvkWIqa6BR7iy5O1nkJG3j3P7f/z4n5eTi5FBUYllNkAAsXh4C/w3VL/7VluPjeECUIGUDDPDhTM/NgK9nlZZL3ERIIAYJ/W+svv1i/Hg+bPfGfyDeBnsnbgZBASYGbQU7zPcfa7CCBBAjFAv/o+K42Z49vQvg4YmG8Pr1/8YDu77dm/jTnllgABiQAdleU9KlYHeBAW/i82Dn9s2f2T2dHh4D8RXAUZ1esKTFmT1AAHEAiK6Wl+qXzj7s09SknmtiDjLNlHRX633tHazPnHYx3bsGcMfLeG07wx35BlAzgEGDzuyAQABxDh9wkunGVO/7AUFFSNQhYMT+8aZC2UDuGaGNwDl66HqHL+lrzywZMFbyYVzP9++f/cPN78AIyhKvQECiEnbgGufpQ3HRF4+RgYFBeYXRkasuQ3VL7xETjjDNDNILk/Zn5/5tPTd279Kr1785WYCppAvn/8zvHnzzxUggBi/X7zMxKmv+2/f7k8MG9d9yT5++MeEz5//sSgXH2XYx74NbIDoohQG9oeKDIKCTL88vDmT+QWZXvHyMV9JzRR5BhAAQQC+/wD3z9ELmJTrJTox3v1WT+P/7u37/+Tj+f/7+/7/qqbv/6Gd7//h3/j/W1Tj//Hw+/9xaub/Ny3d/I2F5jUAAAAAAogJ6PFfEhLMT7h5mP4AbWDg5GRkePzgN8Pfv8D0BgyTnz//M4hJsDIUVwgz8PKxMDAzMzK8e/+f+e2b/2YgAwACCJ6c9+/5yHD10k/zJ49/q3NwMX0HGvpZQIDpHis706v7t39aP3z4T/X7t3/6nNxMr7R12CZm5Io+A+kDCDAAxrKinVBfrIQAAAAASUVORK5CYII=</os:Image>
+<UpdateInterval>7</UpdateInterval>
+<UpdateUrl>http://mycroft.mozdev.org/updateos.php/id0/baiduzhidao.xml</UpdateUrl>
+<IconUpdateUrl>http://mycroft.mozdev.org/updateos.php/id0/baiduzhidao.png</IconUpdateUrl>
+<SearchForm>http://zhidao.baidu.com/</SearchForm>
+<os:Url type="text/html" method="GET" template="http://zhidao.baidu.com/q?word={searchTerms}&amp;ct=17&amp;pn=0&amp;tn=ikaslist&amp;rn=10">
+</os:Url>
+</SearchPlugin>

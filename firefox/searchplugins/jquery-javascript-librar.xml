@@ -1,0 +1,7 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>jQuery JavaScript Librar</os:ShortName>
+<os:Description>jQuery JavaScript Library (English)</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Url type="text/html" method="GET" template="http://docs.jquery.com/index.php?title=Special:Search&amp;search={searchTerms}">
+</os:Url>
+</SearchPlugin>

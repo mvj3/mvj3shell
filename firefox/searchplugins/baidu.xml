@@ -1,0 +1,12 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Baidu</os:ShortName>
+<os:Description>Baidu Search</os:Description>
+<os:InputEncoding>GB2312</os:InputEncoding>
+<os:Image width="16" height="16">data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAAChUlEQVQ4jZ2T+UtUURTH719QQlCOlWRqRQsKmZraYClaajYuYCpNSplFEzFkti9ThD/0Q1AQ0UYYSpkViIEFthFl2WJOhTNvFt9znGlC0xp13Jpv592XM0z2UwcO955z3/m8c+/9XsZOfwF3w2ewk0aw4+RHOsAOfQCrfgdW1Q6mbwPb8xJs9wuwnc/BKp6AlbeCaR+CycX/a6ykhQD057/N1OXFGYMbxo8jPDabvLCYR6cDipoJcMIYlBwb8+FglRtLowWUlTpgFcaQmmRHTobI50GAwiYCHOv0Jwa+T/KxWu/G6lg7dmx1or1tBPExNmSuFfk8CKC5T4DDHTwQu8exXeuArtKJe40/ePHF8/18TR5llwGSOB4AbLxLgAPvedBQN4iIUBPUCTYey+2Oen3+j+W4uMCB4nwJLueEAtjQQID9b3nwhugpcXbk5/TgQZOHF+za5oRe5+LzszV9SIi1ISpMoE6GFUDmLQLse82DSdp+4+1BarWPF2zKFLE43IzlUVZsKerhuYJcCXlZImxW5UZYWh0B9r7yt+n1/uIfatZLWELFC0MFv2/WSHzt2WMP8GdnLPUmAUhdU/apcxTZ6RIWzbMEFcseE21FeUkvrJbAVbI1NwhA0pTNR9RTR91YMNuMiDnCNICcXxFpxdNWTwCQfJ0ApOspQI3hG1QzTQgLMWNuiAmqGV0UmxE+y4T55JEqAfW1AwFA4jUC0KOYMlkLugoXMtQiCrN7cOFcP/e05G7ELbOhsqwX7q8TAUD8FQJoH/kTPmpjZHgIw0M//+nyWpASV10mQGmL8ihkXeeRNHNJXVl3lDtOrwdbRyetrgVLoQNLoj0nXlX+HEfFKy/hN2XtBDU6ajQ/AAAAAElFTkSuQmCC</os:Image>
+<UpdateInterval>7</UpdateInterval>
+<UpdateUrl>http://mycroft.mozdev.org/update.php/id0/baidu.src</UpdateUrl>
+<IconUpdateUrl>http://mycroft.mozdev.org/update.php/id0/baidu.png</IconUpdateUrl>
+<SearchForm>http://www.baidu.com/</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.baidu.com/s?wd={searchTerms}&amp;cl=3">
+</os:Url>
+</SearchPlugin>
