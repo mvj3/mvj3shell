@@ -1,3 +1,4 @@
+source /etc/profile
 # load zsh function
 source $HOME/utils/zsh/functions.zsh
 
