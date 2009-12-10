@@ -76,6 +76,7 @@ alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverE
 alias js='java org.mozilla.javascript.tools.shell.Main'
 alias geminstall="sudo gem install --rdoc --no-ri"
 alias lgeminstall="rake gem && geminstall pkg/*.gem"
+alias gemuninstall="sudo gem uninstall"
 alias gemupdate="sudo gem update --rdoc --no-ri"
 alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The Internet Right now!'"
 alias dict='dict -d wn'
