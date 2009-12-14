@@ -65,6 +65,7 @@ alias gls='git svn rebase'
 
 # svn
 alias svn-ignore="SVN_EDITOR='vim' svn propedit svn:ignore ."
+alias svn="rm -rf ~/.subversion/auth; svn "
 
 # rails
 alias t='autotest'
