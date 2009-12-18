@@ -35,7 +35,7 @@ alias t='autotest'
 alias rr='rake routes | grep'
 alias dcm='rake db:drop && rake db:create && rake db:migrate'
 alias dcm_production="RAILS_ENV='production' rake db:drop && RAILS_ENV='production' rake db:create && RAILS_ENV='production' rake db:migrate"
-alias ss="rake log:clear; clear; ruby script/server"
+alias ss="ruby script/server"
 alias sc='ruby script/console'
 alias taild='tail -fn100 log/development.log'
 alias tailt='tail -fn100 log/test.log'
