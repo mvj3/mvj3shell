@@ -20,7 +20,6 @@ module Kernel
   end
 
   # file utility
-  # stolen from http://gist.github.com/90444
   def ls
     %x{ls}.split("\n")
   end
