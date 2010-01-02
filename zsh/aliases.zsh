@@ -84,9 +84,9 @@ alias info='info --vi-keys'
 alias dock="killall Dock"
 alias v='/Applications/MacPorts/MacVim.app/Contents/MacOS/Vim -p'
 alias ri=qri
-alias mysql=mysql5
 alias cmi="./configure && make && sudo make install"
 alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
+alias brew="/homebrew/bin/brew"
 
 # http server
 alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
