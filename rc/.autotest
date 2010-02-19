@@ -1,4 +1,4 @@
-# ~.autotest
+# ~/.autotest
 #require 'autotest_notification'
 if RUBY_PLATFORM =~ /darwin/
   require 'autotest-mac'
