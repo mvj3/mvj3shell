@@ -3,7 +3,7 @@
 # load rubygems and pp
 %w$rubygems pp$.each {|std| require std}
 
-## Aliases
+# Aliases
 alias q exit
 alias p pp
 
