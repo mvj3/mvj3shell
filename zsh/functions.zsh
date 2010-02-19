@@ -3,7 +3,7 @@ gsvn() {
   grep $1 -rn . | grep -v svn | less
 }
 
-# 过滤以#开头的行和空白行
+# filter the lines which begin with # and blank lines
 gconf() {
   #awk '{if(NF>0) print $0}' $1 | grep -v '^#'  | less
   #awk '!/^$/' $1 | grep -v '^#'  | less
