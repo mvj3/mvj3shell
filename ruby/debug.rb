@@ -1,18 +1,13 @@
 class Object
-  # non_class_methods
-  def ncm
-    self.methods - Class.methods
-  end
-
-  # local_methods
-  def lm
+  # self's class methods and singleton methods
+  def lm # abbr of local methods
     self.methods.sort - self.class.superclass.methods
   end
 end
 
 module Kernel
   def db
-    if PLATFORM =~ /darwin/
+    if RUBY_PLATFORM =~ /darwin/
       require 'rubygems'
       require 'ruby-debug'
       debugger
@@ -21,12 +16,7 @@ module Kernel
 
   # file utility
   def ls
-    %x{ls}.split("\n")
-  end
-
-  def cd(dir)
-    dir.nil? ? Dir.chdir(ENV['HOME']) : Dir.chdir(dir)
-    Dir.pwd
+    %x{ls -a}.split("\n")[2..-1]
   end
 
   def pwd
@@ -36,14 +26,13 @@ module Kernel
   def clear
     system 'clear'
   end
+
+  # Vi editing mode
+  require 'irb'
+  IRB.conf[:USE_READLINE] = true
+  def vimode; Readline.vi_editing_mode end
+  def emmode; Readline.emacs_editing_mode end
 end
-
-
-# Vi editing mode
-require 'irb'
-IRB.conf[:USE_READLINE] = true
-def vimode; Readline.vi_editing_mode end
-def emmode; Readline.emacs_editing_mode end
 
 # enable the vimode right now
 vimode

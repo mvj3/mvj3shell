@@ -1,14 +1,33 @@
 #!/usr/bin/env ruby
 
-# load rubygems and wirble
-require 'rubygems' rescue nil
-require 'wirble'
-require 'pp'
-require 'colored'
+# load rubygems and pp
+%w$rubygems pp$.each {|std| require std}
+
+## Aliases
+alias q exit
+alias p pp
+
+# UTF-8 CODE
+require 'jcode'
+$KCODE='utf8'
+
+# require wirble and hirb
+%w$wirble hirb$.each {|gem|
+  begin
+    require gem
+  rescue LoadError
+    warn "You haven't installed \"#{gem}\" in your current GEM_PATH!"
+  end
+}
+
+# load wirble
+if defined? Wirble
+  Wirble.init
+  Wirble.colorize
+end
 
 # improve irb’s default output
-require 'hirb'
-Hirb::View.enable
+Hirb::View.enable if defined? Hirb
 
 # Tab completion, cross-session history, history file
 require 'irb/completion'
@@ -48,14 +67,6 @@ IRB.conf[:PROMPT][:XMP][:RETURN] = "\# => %s\n"
 IRB.conf[:PROMPT][:XMP][:PROMPT_I] = ">> "
 IRB.conf[:PROMPT_MODE] = :XMP
 IRB.conf[:AUTO_INDENT] = true
-
-# load wirble
-Wirble.init
-Wirble.colorize
-
-# UTF-8 CODE
-require 'jcode'
-$KCODE='utf8'
 
 # Copious output helper
 def less
@@ -110,18 +121,11 @@ def dumphist(num, path)
   end
 end
 
-## Aliases
-alias q exit
-alias p pp
-
 # Log to STDOUT if in Rails
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
   require 'logger'
   RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
 end
-
-# add ~/.ruby to the library search path
-$LOAD_PATH << File.expand_path('~/.ruby')
 
 class String
   # uncompleted, need to strip js tags and other html formatters
@@ -130,5 +134,5 @@ class String
   end
 end
 
-# load file utility
+# load debug utility
 require ENV['HOME'] + '/utils/ruby/debug.rb'
