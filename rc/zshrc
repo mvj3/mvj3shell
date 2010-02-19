@@ -20,8 +20,10 @@ compinit
 # use Macvim or Gvim as the default editor
 if [[ "Darwin" = "$(uname)" ]] ; then
   export EDITOR=mvim
+  alias v=mvim
 elif [[ "Linux" = "$(uname)" ]] ; then
   export EDITOR=gvim
+  alias v=gvim
 fi
 
 # vi editing mode is awesome!
