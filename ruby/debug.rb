@@ -1,13 +1,13 @@
 class Object
-  def non_class_methods
+  # non_class_methods
+  def ncm
     self.methods - Class.methods
   end
-  alias ncm non_class_methods
 
-  def local_methods
+  # local_methods
+  def lm
     self.methods.sort - self.class.superclass.methods
   end
-  alias lm local_methods
 end
 
 module Kernel

@@ -1,6 +1,10 @@
 # ~.autotest
 #require 'autotest_notification'
-require 'autotest-mac'
+if RUBY_PLATFORM =~ /darwin/
+  require 'autotest-mac'
+  require 'autotest/growl'
+  require 'autotest/fsevent'
+end
 SPEAKING = false
 DOOM_EDITION = false
 BUUF = false
@@ -8,5 +12,3 @@ PENDING = false
 STICKY = false
 SUCCESS_SOUND = ''
 FAILURE_SOUND = ''
-require 'autotest/growl'
-require 'autotest/fsevent'

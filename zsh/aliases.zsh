@@ -1,3 +1,9 @@
+# achive the same function on different platforms of the different procedures
+if [[ "Darwin" = "$(uname)" ]] ; then
+  MVJ3_CLIPBOARD="pbcopy"
+elif [[ "Linux" = "$(uname)" ]] ; then
+  MVJ3_CLIPBOARD="xclip"
+fi
 # file utility
 alias mv="mv -i"
 alias rm="rm -i"
@@ -5,7 +11,7 @@ alias cp="cp -i"
 alias la="ls -a"
 alias ls="ls -pG"
 alias ll="ls -lh"
-alias gwd="pwd | pbcopy"
+alias gwd="pwd | $MVJ3_CLIPBOARD"
 alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
 alias rm-Dot_svn="find . -name '.svn' -exec rm -rf '{}' \;"
 
@@ -60,42 +66,37 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # program launch
-alias firefox="open -a firefox"
-alias safari="open -a safari"
-alias m="mvim"
+if [[ "Darwin" = "$(uname)" ]] ; then
+  alias firefox="open -a firefox"
+  alias safari="open -a safari"
+  alias xulrunner="/Library/Frameworks/XUL.framework/xulrunner-bin "
+  alias hibernateon='sudo pmset -a hibernatemode 1'
+  alias hibernateoff='sudo pmset -a hibernatemode 0'
+  alias quicktime='open -a QuickTime\ Player'
+  alias scripteditor='open -a Script\ Editor'
+  alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
+  alias dock="killall Dock"
+  alias mysql=mysql5
+  alias o="open"
+  #alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
+fi
 alias p="ping"
-alias q="exit"
-alias o="open"
 alias i="curl -I"
-alias xulrunner="/Library/Frameworks/XUL.framework/xulrunner-bin "
-alias hibernateon='sudo pmset -a hibernatemode 1'
-alias hibernateoff='sudo pmset -a hibernatemode 0'
-alias quicktime='open -a QuickTime\ Player'
-alias scripteditor='open -a Script\ Editor'
-alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
-alias js='java org.mozilla.javascript.tools.shell.Main'
-alias geminstall="sudo gem install --rdoc --no-ri"
-alias lgeminstall="rake gem && geminstall pkg/*.gem"
-alias gemuninstall="sudo gem uninstall"
-alias gemupdate="sudo gem update --rdoc --no-ri"
+#alias js='java org.mozilla.javascript.tools.shell.Main'
 alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The Internet Right now!'"
 alias dict='dict -d wn'
 alias info='info --vi-keys'
-alias dock="killall Dock"
-alias v='/Applications/MacPorts/MacVim.app/Contents/MacOS/Vim -p'
-alias ri=qri
 alias cmi="./configure && make && sudo make install"
-alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
-alias brew="/homebrew/bin/brew"
 
 # http server
-alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
+#alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
 alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &" # port 8000
-alias instiki_Documents="instiki -t='/Users/chenyuzai/Documents/instiki/storage'"
-alias gemserver="gem server >> /dev/null 2>&1 &"
+#alias instiki_Documents="instiki -t='/Users/chenyuzai/Documents/instiki/storage'"
+#alias gemserver="gem server >> /dev/null 2>&1 &"
 
 # mysql
-alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
-alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
-alias restart_mysql="Library/StartupItems/MySQLCOM/MySQLCOM restart"
-
+if [[ "Darwin" = "$(uname)" ]] ; then
+  alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
+  alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
+  alias restart_mysql="Library/StartupItems/MySQLCOM/MySQLCOM restart"
+fi

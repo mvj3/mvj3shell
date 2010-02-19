@@ -1,4 +1,5 @@
 source /etc/profile
+
 # load zsh function
 source $HOME/utils/zsh/functions.zsh
 
@@ -16,31 +17,18 @@ SAVEHIST=100000
 autoload -Uz compinit
 compinit
 
-# use Macvim as the default editor
-export EDITOR=mvim
+# use Macvim or Gvim as the default editor
+if [[ "Darwin" = "$(uname)" ]] ; then
+  export EDITOR=mvim
+elif [[ "Linux" = "$(uname)" ]] ; then
+  export EDITOR=gvim
+fi
 
 # vi editing mode is awesome!
 bindkey -v
+
 # export PATH
-export PATH=/Users/chenyuzai/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
-
-# Package Ruby Software
-RIPDIR="$HOME/.rip"
-RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
-PATH="$PATH:$RIPDIR/active/bin"
-export RIPDIR RUBYLIB PATH
-
-# vim:set ft=zsh:
-if [ -f ~/.rvm/bin/rvm ] ; then source ~/.rvm/bin/rvm ; fi
-if [ -f ~/.rvm/current ] ; then source ~/.rvm/current ; fi
-
-# prompt
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null)
-  if [[ -n $ref ]]; then
-    echo "[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}] "
-  fi
-}
+export PATH=$HOME/bin:/usr/sbin:$PATH
 
 autoload -U colors
 colors
@@ -50,28 +38,11 @@ title()   { print -Pn "\e]0;$*\a" }
 precmd()  { title "$0" }
 preexec() { title "$1" }
 
-function export_git_prompt() {
-  export PROMPT='%{$fg_bold[red]%}世界的审美！ %{$fg[cyan]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$reset_color%}%(!.#.$) '
-}
-function export_no_git_prompt() {
-  export PROMPT='%{$fg_bold[red]%}世界的审美！ %{$fg[cyan]%}%~ %{$fg_bold[blue]%}% %{$reset_color%}%(!.#.$) '
-}
+# disable git prompt
 export_no_git_prompt
 
-#GIT_PROMPT_PREFIX="%{$fg[blue]%}["
-#GIT_PROMPT_SUFFIX="%{$reset_color%} "
-#GIT_PROMPT_DIRTY="%{$fg[blue]%}]%{$fg[red]%}⚡%{$reset_color%}"
-#GIT_PROMPT_CLEAN="%{$fg[blue]%}]"
-
-#function parse_git_dirty () {
-  #if [[ $((git status 2> /dev/null) | tail -n1) != "nothing to commit (working directory clean)" ]]; then
-    #echo "$GIT_PROMPT_DIRTY"
-  #else
-    #echo "$GIT_PROMPT_CLEAN"
-  #fi
-#}
-
-#function git_prompt_info() {
-  #ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  #echo "$GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$GIT_PROMPT_SUFFIX"
-#}
+# enable rvm
+if [[ "Darwin" = "$(uname)" ]] ; then
+  if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+elif [[ "Linux" = "$(uname)" ]] ; then
+fi

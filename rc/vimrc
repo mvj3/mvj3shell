@@ -55,11 +55,11 @@ function! Tabstyle_spaces()
   set expandtab
 endfunction
 
-if hostname() == "mini-c2.local"
+"if hostname() == "mini-c2.local"
   call Tabstyle_spaces()
-else
-  call Tabstyle_tabs() 
-endif
+"else
+  "call Tabstyle_tabs() 
+"endif
 
 
 " Indenting *******************************************************************
