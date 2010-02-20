@@ -27,12 +27,15 @@ module Kernel
     system 'clear'
   end
 
+end
+
+unless defined? RUBY_ENGINE
   # Vi editing mode
   require 'irb'
   IRB.conf[:USE_READLINE] = true
   def vimode; Readline.vi_editing_mode end
   def emmode; Readline.emacs_editing_mode end
-end
 
-# enable the vimode right now
-vimode
+  # enable the vimode right now
+  vimode
+end

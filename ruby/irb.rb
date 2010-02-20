@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
 
-# load rubygems and pp
-%w$rubygems pp$.each {|std| require std}
+unless defined? RUBY_ENGINE
+  # load rubygems and pp
+  %w$rubygems pp$.each {|std| require std}
 
-# Aliases
-alias q exit
-alias p pp
+  # Aliases
+  alias q exit
+  alias p pp
+end
 
 # UTF-8 CODE
 require 'jcode'
@@ -29,44 +31,46 @@ end
 # improve irb’s default output
 Hirb::View.enable if defined? Hirb
 
-# Tab completion, cross-session history, history file
-require 'irb/completion'
-IRB.conf[:USE_READLINE] = true
-Readline.vi_editing_mode
-module Readline
-  module History
-    LOG = "#{ENV['HOME']}/.irb_history"
+unless defined? RUBY_ENGINE
+  # Tab completion, cross-session history, history file
+  require 'irb/completion'
+  IRB.conf[:USE_READLINE] = true
+  Readline.vi_editing_mode
+  module Readline
+    module History
+      LOG = "#{ENV['HOME']}/.irb_history"
 
-    def self.write_log(line)
-      File.open(LOG, 'ab') {|f| f << "#{line}\n"}
+      def self.write_log(line)
+        File.open(LOG, 'ab') {|f| f << "#{line}\n"}
+      end
+
+      def self.start_session_log
+        write_log("\n# session start: #{Time.now}\n\n")
+        at_exit { write_log("\n# session stop: #{Time.now}\n") }
+      end
     end
 
-    def self.start_session_log
-      write_log("\n# session start: #{Time.now}\n\n")
-      at_exit { write_log("\n# session stop: #{Time.now}\n") }
+    alias :old_readline :readline
+    def readline(*args)
+      ln = old_readline(*args)
+      begin
+        History.write_log(ln)
+      rescue
+      end
+      ln
     end
   end
+  Readline::History.start_session_log
+  require 'irb/ext/save-history'
+  IRB.conf[:SAVE_HISTORY] = 1000
+  IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 
-  alias :old_readline :readline
-  def readline(*args)
-    ln = old_readline(*args)
-    begin
-      History.write_log(ln)
-    rescue
-    end
-    ln
-  end
+  # Enable prompt-less prompts
+  IRB.conf[:PROMPT][:XMP][:RETURN] = "\# => %s\n"
+  IRB.conf[:PROMPT][:XMP][:PROMPT_I] = ">> "
+  IRB.conf[:PROMPT_MODE] = :XMP
+  IRB.conf[:AUTO_INDENT] = true
 end
-Readline::History.start_session_log
-require 'irb/ext/save-history'
-IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
-
-# Enable prompt-less prompts
-IRB.conf[:PROMPT][:XMP][:RETURN] = "\# => %s\n"
-IRB.conf[:PROMPT][:XMP][:PROMPT_I] = ">> "
-IRB.conf[:PROMPT_MODE] = :XMP
-IRB.conf[:AUTO_INDENT] = true
 
 # Copious output helper
 def less
