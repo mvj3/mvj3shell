@@ -76,7 +76,6 @@ if [[ "Darwin" = "$(uname)" ]] ; then
   alias scripteditor='open -a Script\ Editor'
   alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
   alias dock="killall Dock"
-  alias mysql=mysql5
   alias o="open"
   #alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
 fi
