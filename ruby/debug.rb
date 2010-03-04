@@ -17,7 +17,7 @@ module Kernel
   # file utility
   def ls; %x{ls -a}.split("\n")[2..-1] end
   def pwd; Dir.pwd end
-  def cd(dir); Dir.chdir(dir) end
+  def cd(dir=nil); Dir.chdir(dir.nil? ? ENV['HOME'] : dir) end
   def clear; system 'clear' end
 end
 
