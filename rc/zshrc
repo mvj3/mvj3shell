@@ -32,11 +32,6 @@ bindkey -v
 # export PATH
 export PATH=$HOME/bin:/usr/sbin:$PATH
 
-# enable homebrew
-if [[ "Darwin" = "$(uname)" ]] ; then
-  export PATH=/homebrew/bin:$PATH
-fi
-
 autoload -U colors
 colors
 setopt prompt_subst
