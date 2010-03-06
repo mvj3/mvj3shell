@@ -24,7 +24,11 @@ export_git_prompt() {
 }
 
 export_no_git_prompt() {
-  export PROMPT='%{$fg_bold[red]%}世界的审美！ %{$fg[cyan]%}%~ %{$fg_bold[blue]%}% %{$reset_color%}%(!.#.$) '
+  if [[ "Darwin" = "$(uname)" ]] ; then
+    export PROMPT='%{$fg_bold[red]%}世界的审美！ %{$fg[cyan]%}%~ %{$fg_bold[blue]%}% %{$reset_color%}%(!.#.$) '
+  elif [[ "Linux" = "$(uname)" ]] ; then
+    export PROMPT='%{$fg_bold[red]%}贱兔！ %{$fg[cyan]%}%~ %{$fg_bold[blue]%}% %{$reset_color%}%(!.#.$) '
+  fi
 }
 
 #GIT_PROMPT_PREFIX="%{$fg[blue]%}["
