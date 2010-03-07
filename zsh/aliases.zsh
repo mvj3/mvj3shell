@@ -9,7 +9,7 @@ alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
 alias la="ls -a"
-alias ls="ls -pG"
+alias ls="ls -pG --color"
 alias ll="ls -lh"
 alias gwd="pwd | $MVJ3_CLIPBOARD"
 alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
@@ -78,6 +78,8 @@ if [[ "Darwin" = "$(uname)" ]] ; then
   alias dock="killall Dock"
   alias o="open"
   #alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
+elif [[ "Linux" = "$(uname)" ]] ; then
+  alias l='xscreensaver-command -lock'
 fi
 alias p="ping"
 alias i="curl -I"
