@@ -79,6 +79,7 @@ if [[ "Darwin" = "$(uname)" ]] ; then
   alias o="open"
   #alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
 elif [[ "Linux" = "$(uname)" ]] ; then
+  alias mvj3.fcitx_and_xscreensaver="fcitx && xscreensaver -no-splash &"
   alias l='xscreensaver-command -lock'
 fi
 alias p="ping"
