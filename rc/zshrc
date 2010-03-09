@@ -47,4 +47,5 @@ export_no_git_prompt
 if [[ "Darwin" = "$(uname)" ]] ; then
   if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 elif [[ "Linux" = "$(uname)" ]] ; then
+  if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 fi
