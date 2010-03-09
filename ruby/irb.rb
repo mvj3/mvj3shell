@@ -73,7 +73,7 @@ unless RUBY_ENGINE == "rbx"
   IRB.conf[:PROMPT][:XMP][:PROMPT_I] = ">> "
   IRB.conf[:PROMPT_MODE] = :XMP
   IRB.conf[:AUTO_INDENT] = true
-end
+end if defined? RUBY_ENGINE
 
 # Copious output helper
 def less
