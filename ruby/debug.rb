@@ -6,13 +6,7 @@ class Object
 end
 
 module Kernel
-  def db
-    if RUBY_PLATFORM =~ /darwin/
-      require 'rubygems'
-      require 'ruby-debug'
-      debugger
-    end
-  end
+  alias db debugger if defined? Debugger
 
   # file utility
   def ls; %x{ls -a}.split("\n")[2..-1] end

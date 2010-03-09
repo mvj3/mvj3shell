@@ -9,9 +9,11 @@ unless defined? RUBY_ENGINE
   alias p pp
 end
 
-# UTF-8 CODE
-require 'jcode'
-$KCODE='utf8'
+# enable encoding in UTF-8 if current ruby version is above 1.9
+unless defined? Encoding
+  require 'jcode'
+  $KCODE='utf8'
+end
 
 # require wirble and hirb
 %w$wirble hirb$.each {|gem|
@@ -31,7 +33,8 @@ end
 # improve irb’s default output
 Hirb::View.enable if defined? Hirb
 
-unless defined? RUBY_ENGINE
+# disable readline temporarily if current ruby impletation is rbx
+unless RUBY_ENGINE == "rbx"
   # Tab completion, cross-session history, history file
   require 'irb/completion'
   IRB.conf[:USE_READLINE] = true
