@@ -615,3 +615,9 @@ let g:rct_completion_use_fri = 1  " 0 by default (disabled)
 let g:rct_completion_info_max_len = 20 
 let g:RCT_ri_cmd = "ri -T -f plain "
 let g:RCT_ri_binding="<C-X><C-R>" " use ^X^R to call vim on current word
+
+" 开启中文输入法
+:let g:vimim_static_input_style=2
+
+" 去除菜单栏
+set guioptions-=m
