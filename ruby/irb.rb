@@ -9,7 +9,7 @@ unless defined? RUBY_ENGINE
   alias p pp
 end
 
-# enable encoding in UTF-8 if current ruby version is above 1.9
+# enable encoding in UTF-8 if current ruby version is less than 1.9
 unless defined? Encoding
   require 'jcode'
   $KCODE='utf8'
