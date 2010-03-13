@@ -89,6 +89,7 @@ alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The 
 alias dict='dict -d wn'
 alias info='info --vi-keys'
 alias cmi="./configure && make && sudo make install"
+alias man="gem man -s"
 
 # http server
 #alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
