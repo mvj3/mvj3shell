@@ -74,12 +74,15 @@ if [[ "Darwin" = "$(uname)" ]] ; then
   alias hibernateoff='sudo pmset -a hibernatemode 0'
   alias quicktime='open -a QuickTime\ Player'
   alias scripteditor='open -a Script\ Editor'
-  alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
   alias dock="killall Dock"
+
   alias o="open"
+  alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
   #alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
 elif [[ "Linux" = "$(uname)" ]] ; then
   alias mvj3.fcitx_and_xscreensaver="fcitx && xscreensaver -no-splash &"
+
+  alias o="gnome-open"
   alias l='xscreensaver-command -lock'
 fi
 alias p="ping"
