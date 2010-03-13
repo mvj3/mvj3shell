@@ -6,7 +6,6 @@
 <UpdateInterval>7</UpdateInterval>
 <UpdateUrl>http://mycroft.mozdev.org/update.php/id0/douban.src</UpdateUrl>
 <IconUpdateUrl>http://mycroft.mozdev.org/update.php/id0/douban.png</IconUpdateUrl>
-<SearchForm>ssform</SearchForm>
 <os:Url type="text/html" method="GET" template="http://www.douban.com/subject_search?sourceid=Mozilla-search&amp;search_text={searchTerms}">
 </os:Url>
 </SearchPlugin>

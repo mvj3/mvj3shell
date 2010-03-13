@@ -8,5 +8,6 @@
 <IconUpdateUrl>http://mycroft.mozdev.org/updateos.php/id0/googleimages.ico</IconUpdateUrl>
 <SearchForm>http://images.google.com/images</SearchForm>
 <os:Url type="text/html" method="GET" template="http://images.google.com/images?q={searchTerms}&amp;hl=en&amp;sourceid=mozilla-search&amp;num=20&amp;start=0&amp;start=0">
+</os:Url><os:Url type="application/x-suggestions+json" method="GET" template="http://suggestqueries.google.com/complete/search?output=firefox&amp;client=firefox&amp;hl=en-US&amp;q={searchTerms}">
 </os:Url>
 </SearchPlugin>
