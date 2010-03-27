@@ -51,6 +51,11 @@ alias tailtg="tail -fn100 log/test.log | grep '###'"
 alias sg="./script/generate"
 alias sp="./script/plugin"
 
+# screen
+alias sl="screen -list"
+alias sr="screen -r"
+alias sS="screen -S"
+
 # passenger
 alias tlog="tail -f log/development.log"
 alias rst="touch tmp/restart.txt"
