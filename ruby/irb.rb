@@ -2,10 +2,10 @@
 
 unless defined? RUBY_ENGINE
   # load rubygems and pp
-  %w$rubygems pp$.each {|std| require std}
+  %w$rubygems pp irb$.each {|std| require std}
 
   # Aliases
-  alias q exit
+  alias x exit
   alias p pp
 end
 
@@ -16,7 +16,7 @@ unless defined? Encoding
 end
 
 # require wirble and hirb
-%w$wirble hirb$.each {|gem|
+%w$wirble hirb ruby-debug$.each {|gem|
   begin
     require gem
   rescue LoadError

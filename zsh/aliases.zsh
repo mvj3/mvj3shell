@@ -55,6 +55,7 @@ alias sp="./script/plugin"
 alias sl="screen -list"
 alias sr="screen -r"
 alias sS="screen -S"
+alias sw="screen -wipe"
 
 # passenger
 alias tlog="tail -f log/development.log"

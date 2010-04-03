@@ -1,4 +1,6 @@
-set reload
+set autoreload
 set autolist
+set autoeval
 set forcestep
 set listsize 25
+set history save

@@ -1,3 +1,8 @@
 "set fuoptions=maxvert,maxhorz
 "set guifont=Monaco:h12
 set guifont="DejaVu Sans Mono":h10
+
+" Mac *************************************************************************
+if has("mac") 
+  set imd
+endif
