@@ -398,7 +398,7 @@ let g:RCT_ri_cmd = "ri -T -f plain "
 let g:RCT_ri_binding="<C-X><C-R>" " use ^X^R to call vim on current word
 
 " 开启中文输入法
-:let g:vimim_static_input_style=2
+":let g:vimim_static_input_style=2
 
 " 去除菜单栏
 set guioptions-=m
