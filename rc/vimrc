@@ -350,7 +350,7 @@ endif
  
 " Color scheme
 highlight NonText guibg=#060606
-highlight Folded  guibg=grey guifg=red
+highlight Folded  guibg=blue guifg=white
 highlight FoldColumn guibg=darkgrey guifg=white
  
 " Numbers
