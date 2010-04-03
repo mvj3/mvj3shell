@@ -58,6 +58,7 @@ set splitbelow splitright
 
 :noremap ,q :q<cr>
 :noremap ,w :w<cr>
+:noremap ,t :tabnew<cr>
 
 "imap <F1> :holi<CR>
 
