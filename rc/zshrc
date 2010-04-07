@@ -34,7 +34,6 @@ export PATH=$HOME/bin:/usr/sbin:$PATH
 
 autoload -U colors
 colors
-setopt prompt_subst
 
 title()   { print -Pn "\e]0;$*\a" }
 precmd()  { title "$0" }
