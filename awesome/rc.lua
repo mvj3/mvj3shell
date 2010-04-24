@@ -8,7 +8,7 @@ require("naughty")
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 -- The default is a dark theme
-theme_path = "/usr/share/awesome/themes/mvj3/theme.lua"
+theme_path = os.getenv("HOME").."/utils/awesome/theme.lua"
 
 -- Actually load theme
 beautiful.init(theme_path)
@@ -450,6 +450,8 @@ awful.hooks.timer.register(60, function ()
 end)
 -- }}}
 
+-- Launch apps
+os.execute("awsetbg $HOME/Wallpaper/background.png &")
 os.execute("sudo nm-applet &")
 os.execute("fcitx &")
 os.execute("xscreensaver -no-splash &")
