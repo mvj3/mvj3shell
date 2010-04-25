@@ -112,3 +112,6 @@ if [[ "Darwin" = "$(uname)" ]] ; then
   alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
   alias restart_mysql="Library/StartupItems/MySQLCOM/MySQLCOM restart"
 fi
+
+# music
+alias music="ruby -r $HOME/utils/ruby/irb.rb -e 'Music.play'"
