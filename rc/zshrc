@@ -30,7 +30,7 @@ fi
 bindkey -v
 
 # export PATH
-export PATH=$HOME/bin:/usr/sbin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:$PATH
 
 autoload -U colors
 colors
@@ -43,8 +43,4 @@ preexec() { title "$1" }
 export_no_git_prompt
 
 # enable rvm
-if [[ "Darwin" = "$(uname)" ]] ; then
-  if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
-elif [[ "Linux" = "$(uname)" ]] ; then
-  if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
-fi
+if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi

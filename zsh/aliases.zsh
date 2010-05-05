@@ -8,8 +8,12 @@ fi
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
-alias la="ls -a"
-alias ls="ls -pG --color"
+alias la="ls -aG"
+if [[ "Darwin" = "$(uname)" ]] ; then
+  alias ls="ls -pG"
+if [[ "Linux" = "$(uname)" ]] ; then
+  alias ls="ls -pG --color"
+fi
 alias ll="ls -lh"
 alias gwd="pwd | $MVJ3_CLIPBOARD"
 alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
@@ -93,6 +97,7 @@ elif [[ "Linux" = "$(uname)" ]] ; then
 fi
 alias p="ping"
 alias i="curl -I"
+alias x="exit"
 #alias js='java org.mozilla.javascript.tools.shell.Main'
 alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The Internet Right now!'"
 alias dict='dict -d wn'
