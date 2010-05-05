@@ -11,7 +11,7 @@ alias cp="cp -i"
 alias la="ls -aG"
 if [[ "Darwin" = "$(uname)" ]] ; then
   alias ls="ls -pG"
-if [[ "Linux" = "$(uname)" ]] ; then
+elif [[ "Linux" = "$(uname)" ]] ; then
   alias ls="ls -pG --color"
 fi
 alias ll="ls -lh"
