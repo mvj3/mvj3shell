@@ -90,7 +90,7 @@ if [[ "Darwin" = "$(uname)" ]] ; then
   alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
   #alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
 elif [[ "Linux" = "$(uname)" ]] ; then
-  alias mvj3.fcitx_and_xscreensaver="fcitx && xscreensaver -no-splash &"
+  alias g="gnome-mplayer"
 
   alias o="gnome-open"
   alias l='xscreensaver-command -lock'
@@ -98,18 +98,13 @@ fi
 alias p="ping"
 alias i="curl -I"
 alias x="exit"
-#alias js='java org.mozilla.javascript.tools.shell.Main'
-alias g.cn="ping -c 1 g.cn >> /dev/null 2>&1 && echo 'You Are Connecting To The Internet Right now!'"
 alias dict='dict -d wn'
 alias info='info --vi-keys'
 alias cmi="./configure && make && sudo make install"
 alias man="gem man -s"
 
 # http server
-#alias gembox="sudo gembox -p 8808 >> /dev/null 2>&1 &"
 alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &" # port 8000
-#alias instiki_Documents="instiki -t='/Users/chenyuzai/Documents/instiki/storage'"
-#alias gemserver="gem server >> /dev/null 2>&1 &"
 
 # mysql
 if [[ "Darwin" = "$(uname)" ]] ; then
