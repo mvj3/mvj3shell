@@ -1,7 +1,7 @@
 class Object
   # returns instance methods of current object's class and its singleton methods
   def lm # abbr of local methods
-    self.methods.sort - self.class.superclass.methods
+    self.methods.sort - self.class.superclass.instance_methods
   end
 end
 
