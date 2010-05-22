@@ -384,3 +384,18 @@ let g:RCT_ri_binding="<C-X><C-R>" " use ^X^R to call vim on current word
 " 去除菜单栏
 set guioptions-=m
 set go-=T
+
+if has("autocmd")
+  " Enable filetype detection
+  filetype plugin indent on
+ 
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+if &t_Co > 2 || has("gui_running")
+  " Enable syntax highlighting
+  syntax on
+endif
