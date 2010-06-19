@@ -13,7 +13,7 @@ set pastetoggle=<F2>
 set expandtab
 
 " Display extra whitespace
-" set list listchars=tab:»·,trail:·
+autocmd User Rails set list listchars=tab:»·,trail:·
 
 " Use 2 spaces
 set softtabstop=2
