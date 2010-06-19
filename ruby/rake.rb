@@ -1,6 +1,10 @@
 require 'fileutils'
 include FileUtils
 
+def now
+  '.' << Time.now.strftime("%m%d%H%M%Y")
+end
+
 namespace :firefox do
   task :config_path do
     firefox_config_path_on_osx = ( Dir.glob ENV["HOME"] + "/Library/Application\ Support/Firefox/Profiles/*.default" )[0]
@@ -30,5 +34,13 @@ namespace :firefox do
   task :install_searchplugins => :config_path do
     rm_rf FIREFOX_CONFIG_PATH + "/searchplugins"
     ln_s UTILS_PATH + "/firefox/searchplugins", FIREFOX_CONFIG_PATH + "/searchplugins"
+  end
+end
+
+namespace :zsh do
+  task :setup do
+    zshrc = ENV['HOME'] + '/.zshrc'
+    mv zshrc, zshrc + now if File.exists? zshrc
+    ln_s ENV['HOME'] + '/utils/rc/zshrc', zshrc
   end
 end
