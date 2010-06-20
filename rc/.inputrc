@@ -9,3 +9,4 @@ set page-completions off
 set completion-query-items 350
 
 set editing-mode vi
+set keymap vi
