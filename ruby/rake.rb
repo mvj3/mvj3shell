@@ -1,46 +1,51 @@
-require 'fileutils'
+%w(fileutils dm-core).each {|l| require l }
 include FileUtils
 
-def now
-  '.' << Time.now.strftime("%m%d%H%M%Y")
+def now(path); path + '.' << Time.now.strftime("%m%d%H%M%Y") end
+def home(path); ENV['HOME'] + '/' << path end
+def utils(path); ENV['HOME'] + '/utils/' << path << '/' end
+def sub_files_and_dirs(dir); Dir.entries(dir)[2..-1].map {|s| s.match(/.[a-z]*/).to_s } end
+
+def setup(path, is_cp = false)
+  # implement #to and #from under your namespace
+  t, f = to(path), from(path)
+  mv t, now(t) if File.exists?(t) || File.symlink?(t)
+  is_cp ? cp(f, t) : ln_s(f, t)
 end
 
-namespace :firefox do
-  task :config_path do
-    firefox_config_path_on_osx = ( Dir.glob ENV["HOME"] + "/Library/Application\ Support/Firefox/Profiles/*.default" )[0]
-    firefox_config_path_on_linux = ( Dir.glob ENV["HOME"] + "/.mozilla/firefox/*.default" )[0]
-    FIREFOX_CONFIG_PATH = ( RUBY_PLATFORM =~ /darwin/ ? firefox_config_path_on_osx : firefox_config_path_on_linux )
-    UTILS_PATH = ENV["HOME"] + "/utils"
-  end
+namespace :ff do
+  FIREFOX_CONFIG_PATH = Dir.glob(ENV['HOME'] + (RUBY_PLATFORM =~ /darwin/ ? "/Library/Application\ Support/Firefox/Profiles/*.default" : "/.mozilla/firefox/*.default"))[0]
 
+  def to(path); FIREFOX_CONFIG_PATH << '/' << path end
+  def from(path); utils('firefox') << path end
+
+  dirs = sub_files_and_dirs('firefox')
   desc "install all firefox's config files"
-  task :install_all_firefox_config_files => [:install_gm_scripts, :install_stylish, :install_searchplugins] do
-    puts "install successfully."
-  end
+  task :all do; dirs.each {|p| setup p } end
 
-  desc "install gm_scripts"
-  task :install_gm_scripts => :config_path do
-    rm_rf FIREFOX_CONFIG_PATH + "/gm_scripts"
-    ln_s UTILS_PATH + "/firefox/gm_scripts", FIREFOX_CONFIG_PATH + "/gm_scripts"
-  end
-
-  desc "install stylish.rdf"
-  task :install_stylish => :config_path do
-    rm_f FIREFOX_CONFIG_PATH + "/stylish.rdf"
-    ln_s UTILS_PATH + "/firefox/stylish.rdf", FIREFOX_CONFIG_PATH + "/stylish.rdf"
-  end
-
-  desc "install searchplugins"
-  task :install_searchplugins => :config_path do
-    rm_rf FIREFOX_CONFIG_PATH + "/searchplugins"
-    ln_s UTILS_PATH + "/firefox/searchplugins", FIREFOX_CONFIG_PATH + "/searchplugins"
+  dirs.each do |path|
+    eval("desc 'install #{path}'; task :#{path} do; setup '#{path}' end")
   end
 end
 
-namespace :zsh do
-  task :setup do
-    zshrc = ENV['HOME'] + '/.zshrc'
-    mv zshrc, zshrc + now if File.exists? zshrc
-    ln_s ENV['HOME'] + '/utils/rc/zshrc', zshrc
+namespace :rc do
+  def to(path); home path end
+  def from(path); utils('rc') << path end
+  def dot(path); '.' << path end
+
+  rc_files = sub_files_and_dirs('rc').map {|s| s[1..-1] }.delete_if {|s| s.match(/vimrc|gitconfig/) }
+  rc_files.each do |rc|
+    eval("desc 'setup #{rc} pref'; task :#{rc} do; setup '#{dot(rc)}' end")
   end
+
+  desc "install vim"
+  task :vim do
+    ['.vimrc', '.gvimrc', 'vim'].each {|rc| setup rc }
+  end
+
+  desc "install gitconfig"
+  task :gitconfig do; setup dot('gitcofig') end
+
+  desc "install all rc files"
+  task :all => [:vim] do; rc_files.each {|rc| setup dot(rc) } end
 end
