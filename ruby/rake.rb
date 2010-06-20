@@ -44,8 +44,8 @@ namespace :rc do
   end
 
   desc "install gitconfig"
-  task :gitconfig do; setup dot('gitcofig') end
+  task :git do; setup dot('gitcofig'), true end
 
   desc "install all rc files"
-  task :all => [:vim] do; rc_files.each {|rc| setup dot(rc) } end
+  task :all => [:vim, :git] do; rc_files.each {|rc| setup dot(rc) } end
 end
