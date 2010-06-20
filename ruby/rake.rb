@@ -33,19 +33,19 @@ namespace :rc do
   def from(path); utils('rc') << path end
   def dot(path); '.' << path end
 
-  rc_files = sub_files_and_dirs('rc').map {|s| s[1..-1] }.delete_if {|s| s.match(/vimrc|gitconfig/) }
+  rc_files = sub_files_and_dirs('rc').map {|s| s[1..-1] }.delete_if {|s| s.match(/vim|git/) }
   rc_files.each do |rc|
     eval("desc 'setup #{rc} pref'; task :#{rc} do; setup '#{dot(rc)}' end")
   end
 
-  desc "install vim"
+  desc "setup vim"
   task :vim do
     ['.vimrc', '.gvimrc', 'vim'].each {|rc| setup rc }
   end
 
-  desc "install gitconfig"
-  task :git do; setup dot('gitconfig'), true end
+  desc "setup git"
+  task :git do; setup dot('gitconfig'), true; setup dot('gitexcludes') end
 
-  desc "install all rc files"
+  desc "setup all rc files"
   task :all => [:vim, :git] do; rc_files.each {|rc| setup dot(rc) } end
 end

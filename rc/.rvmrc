@@ -27,7 +27,7 @@ rvm_log_path="${rvm_path}/log"
 
 # Bin Path
 #   This is where rvm places all of it's executable/wrapper scripts.
-rvm_bin_path="${$rvm_path}/bin"
+rvm_bin_path="${rvm_path}/bin"
 
 # Gem Path
 #   This is where rvm installs all gems to for each ruby
@@ -48,4 +48,3 @@ rvm_bin_path="${$rvm_path}/bin"
 
 # Make Flags, I have 8 cpu's so I might use 7 make threads:
 #rvm_make_flags="-j 7"
-
