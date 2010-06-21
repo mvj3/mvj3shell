@@ -23,9 +23,7 @@ namespace :ff do
   desc "install all firefox's config files"
   task :all do; dirs.each {|p| setup p } end
 
-  dirs.each do |path|
-    eval("desc 'install #{path}'; task :#{path} do; setup '#{path}' end")
-  end
+  dirs.each {|path|; eval("desc 'install #{path}'; task :#{path} do; setup '#{path}' end") }
 end
 
 namespace :rc do
@@ -33,15 +31,14 @@ namespace :rc do
   def from(path); utils('rc') << path end
   def dot(path); '.' << path end
 
-  rc_files = sub_files_and_dirs('rc').map {|s| s[1..-1] }.delete_if {|s| s.match(/vim|git/) }
-  rc_files.each do |rc|
-    eval("desc 'setup #{rc} pref'; task :#{rc} do; setup '#{dot(rc)}' end")
-  end
+  rc_files = sub_files_and_dirs('rc').map {|s| s[1..-1] }.delete_if {|s| s.match(/vim|git|my/) }
+  rc_files.each {|rc| eval("desc 'setup #{rc} pref'; task :#{rc} do; setup '#{dot(rc)}' end") }
 
   desc "setup vim"
-  task :vim do
-    ['.vimrc', '.gvimrc', 'vim'].each {|rc| setup rc }
-  end
+  task :vim do; ['.vimrc', '.gvimrc', 'vim'].each {|rc| setup rc } end
+
+  desc "setup mysql"
+  task :mysql do; setup dot('my.cnf') end
 
   desc "setup git"
   task :git do; setup dot('gitconfig'), true; setup dot('gitexcludes') end
