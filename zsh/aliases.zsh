@@ -54,6 +54,7 @@ alias taildg="tail -fn100 log/development.log | grep '###'"
 alias tailtg="tail -fn100 log/test.log | grep '###'"
 alias sg="./script/generate"
 alias sp="./script/plugin"
+alias brain="o $HOME/Documents/rails_brain_2.3.4/index.html"
 
 # screen
 alias sl="screen -list"
