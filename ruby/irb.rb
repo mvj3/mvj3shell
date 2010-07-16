@@ -148,5 +148,12 @@ module Music
   end
 end
 
+module CheckSyntax
+  extend self
+  def ruby rc
+    `#{rc} status`.scan(/\s([^\s]*?\.rb)\s/).flatten.each {|f| `ruby -c #{f}` }
+  end
+end
+
 # load debug utility
 require ENV['HOME'] + '/utils/ruby/debug.rb'
