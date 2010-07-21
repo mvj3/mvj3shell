@@ -95,7 +95,7 @@ elif [[ "Linux" = "$(uname)" ]] ; then
   alias g="gnome-mplayer"
 
   alias o="gnome-open"
-  alias l='xscreensaver-command -lock'
+  alias l='gnome-screensaver-command --lock'
 fi
 alias p="ping"
 alias i="curl -I"
