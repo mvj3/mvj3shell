@@ -15,8 +15,7 @@ module Kernel
   def clear; system 'clear' end
 end
 
-unless defined? RUBY_ENGINE
-  # Vi editing mode
+if !defined?(RUBY_ENGINE) && defined?(Readline) && Readline.respond_to?(:vi_editing_mode)
   IRB.conf[:USE_READLINE] = true
   def vimode; Readline.vi_editing_mode end
   def emmode; Readline.emacs_editing_mode end
