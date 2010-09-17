@@ -103,7 +103,6 @@ alias x="exit"
 alias dict='dict -d wn'
 alias info='info --vi-keys'
 alias cmi="./configure && make && sudo make install"
-alias man="gem man -s"
 
 # http server
 alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &" # port 8000
