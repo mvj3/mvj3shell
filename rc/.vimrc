@@ -166,6 +166,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require ruby compiled in
 
+let filetype_m='objc'
 
 " -----------------------------------------------------------------------------  
 " |                              Pluggins                                     |
