@@ -37,7 +37,6 @@ set sidescrolloff=2
 set splitbelow splitright
 
 "Vertical split then hop to new buffer
-":noremap ,v :vsp^M^W^W<cr>
 :noremap ,v :vsp<cr>
 :noremap ,h :split<cr>
 
@@ -51,13 +50,7 @@ set splitbelow splitright
 :noremap ,w :w<cr>
 :noremap ,t :tabnew<cr>
 
-"imap <F1> :holi<CR>
-
 set showtabline=2 " File tabs allways visible
-
-" Cursor highlights ***********************************************************
-"set cursorline
-"set cursorcolumn
 
 " Searching *******************************************************************
 set hlsearch  " highlight search
@@ -81,33 +74,12 @@ set laststatus=2
 "set nowrap
 set linebreak  " Wrap at word
 
-
 " Mappings ********************************************************************
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
 imap jj <Esc>
-imap uu _
-imap hh =>
-imap aa @
-
-
-" Directories *****************************************************************
-" Setup backup location and enable
-"set backupdir=~/backup/vim
-"set backup
-
-" Set Swap directory
-"set directory=~/backup/vim/swap
-
-" Sets path to directory buffer was loaded from
-"autocmd BufEnter * lcd %:p:h
-
 
 " File Stuff ******************************************************************
 filetype plugin indent on
-" To show current filetype use: set filetype
-
-"autocmd FileType html :set filetype=xhtml 
-
 
 " Inser New Line **************************************************************
 map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
@@ -118,7 +90,6 @@ set fo-=r " do not insert a comment leader after an enter, (no work, fix!!)
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
-
 
 " Misc ************************************************************************
 set backspace=indent,eol,start
@@ -152,17 +123,11 @@ map j gj
 imap <down> <C-o>gj
 map E ge
 
-" Ruby stuff ******************************************************************
-compiler ruby         " Enable compiler support for ruby
-map <F5> :!ruby %<CR>
-
 " Omni Completion *************************************************************
 autocmd FileType html :set omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require ruby compiled in
 
@@ -180,15 +145,6 @@ let NERDTreeHijackNetrw=1
 
 " Single click for everything
 let NERDTreeMouseMode=1
-
-
-" SnippetsEmu *****************************************************************
-"imap <unique> <C-j> <Plug>Jumper
-"let g:snip_start_tag = "_\."
-"let g:snip_end_tag = "\._"
-"let g:snip_elem_delim = ":"
-"let g:snip_set_textmate_cp = '1'  " Tab to expand snippets, not automatically.
-
 
 " fuzzyfinder_textmate ********************************************************
 "map ,f :FuzzyFinderTextMate<CR>
@@ -208,7 +164,7 @@ let g:AutoComplPop_BehaviorKeywordLength = 2
 " |                               Startup                                     |
 " -----------------------------------------------------------------------------  
 " Open NERDTree on start
-"autocmd VimEnter * exe 'NERDTree' | wincmd l 
+autocmd VimEnter * exe 'NERDTree' | wincmd l 
 
 set nobackup
 set nowritebackup
@@ -223,13 +179,6 @@ map Q gq
  
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
- 
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
- 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
   au!
@@ -371,32 +320,14 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
-
-" Rcodetools *****************************************************************
-let g:RCT_toggle_binding="<C-X><C-t>"  " use ^X^T to go test <=> implementation
-let g:rct_completion_use_fri = 1  " 0 by default (disabled)
-let g:rct_completion_info_max_len = 20 
-let g:RCT_ri_cmd = "ri -T -f plain "
-let g:RCT_ri_binding="<C-X><C-R>" " use ^X^R to call vim on current word
-
-" 开启中文输入法
-":let g:vimim_static_input_style=2
-
 " 去除菜单栏
 set guioptions-=m
 set go-=T
 
 if has("autocmd")
-  " Enable filetype detection
-  filetype plugin indent on
- 
   " Restore cursor position
   autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-endif
-if &t_Co > 2 || has("gui_running")
-  " Enable syntax highlighting
-  syntax on
 endif
