@@ -22,7 +22,7 @@ set tabstop=2
 set smarttab
 
 " overwrite it cause of damn rails
-autocmd User Rails set noexpandtab
+"autocmd User Rails set noexpandtab
  
 " Indenting *******************************************************************
 set ai " Automatically set the indent of a new line (local to buffer)
