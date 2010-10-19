@@ -1,5 +1,5 @@
 # export PATH
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
 
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"

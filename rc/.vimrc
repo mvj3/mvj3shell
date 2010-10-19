@@ -12,6 +12,11 @@ set pastetoggle=<F2>
 " Convert tabs to spaces
 set expandtab
 
+" overwrite it cause of damn rails
+if filereadable("/etc/vimrc")
+  source /etc/vimrc " autocmd User Rails set noexpandtab
+endif
+ 
 " Display extra whitespace
 autocmd User Rails set list listchars=tab:»·,trail:·
 
@@ -21,9 +26,6 @@ set shiftwidth=2
 set tabstop=2
 set smarttab
 
-" overwrite it cause of damn rails
-"autocmd User Rails set noexpandtab
- 
 " Indenting *******************************************************************
 set ai " Automatically set the indent of a new line (local to buffer)
 set si " smartindent	(local to buffer)
