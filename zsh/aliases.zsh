@@ -44,17 +44,8 @@ alias svn.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.rub
 # rails
 alias t='autotest'
 alias rr='rake routes | grep'
-alias dcm='rake db:drop && rake db:create && rake db:migrate'
-alias dcm_production="RAILS_ENV='production' rake db:drop && RAILS_ENV='production' rake db:create && RAILS_ENV='production' rake db:migrate"
-alias ss="ruby script/server thin"
+alias ss="ruby script/server thin -u"
 alias sc='ruby script/console'
-alias taild='tail -fn100 log/development.log'
-alias tailt='tail -fn100 log/test.log'
-alias tailp='tail -fn100 log/production.log'
-alias taildg="tail -fn100 log/development.log | grep '###'"
-alias tailtg="tail -fn100 log/test.log | grep '###'"
-alias sg="./script/generate"
-alias sp="./script/plugin"
 alias brain="o $HOME/Documents/rails_brain_2.3.4/index.html"
 
 # screen
@@ -62,10 +53,6 @@ alias sl="screen -list"
 alias sr="screen -r"
 alias sS="screen -S"
 alias sw="screen -wipe"
-
-# passenger
-alias tlog="tail -f log/development.log"
-alias rst="touch tmp/restart.txt"
 
 # rspec
 alias specc="spec -f s spec/controllers"
@@ -99,6 +86,7 @@ elif [[ "Linux" = "$(uname)" ]] ; then
 fi
 alias p="ping"
 alias i="curl -I"
+alias c="curl -C - -O"
 alias x="exit"
 alias dict='dict -d wn'
 alias info='info --vi-keys'
