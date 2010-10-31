@@ -135,6 +135,9 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require rub
 
 let filetype_m='objc'
 
+let sphxfile = "$VIM/syntax/sphinx.vim"
+au BufRead,BufNewFile production.sphinx.conf set filetype=sphinx
+
 " -----------------------------------------------------------------------------  
 " |                              Pluggins                                     |
 " -----------------------------------------------------------------------------  
