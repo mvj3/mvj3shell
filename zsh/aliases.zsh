@@ -46,6 +46,7 @@ alias t='autotest'
 alias rr='rake routes | grep'
 alias ss="ruby script/server thin -u"
 alias sc='ruby script/console'
+alias psc='RAILS_ENV=production ruby script/console'
 alias brain="o $HOME/Documents/rails_brain_2.3.4/index.html"
 
 # screen
