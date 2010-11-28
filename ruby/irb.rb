@@ -50,11 +50,10 @@ module CheckSyntax
   end
 end
 
-module Github
-  def self.install git_url
-    cd FileUtils.mkdir_p(ENV['HOME'] + '/github')
-    cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url).path.split('/'))[1])
-    File.directory?(source_dir = author_and_source_array[-1].split('.')[0]) ? p("already installed #{git_url}") : `git clone #{git_url}`
-    cd source_dir
-  end
+module GI; end
+def GI git_url
+  cd FileUtils.mkdir_p(ENV['HOME'] + '/github')
+  cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url).path.split('/'))[1])
+  File.directory?(source_dir = author_and_source_array[-1].split('.')[0]) ? p("already installed #{git_url}") : `git clone #{git_url}`
+  cd source_dir
 end
