@@ -79,7 +79,7 @@ if [[ "Darwin" = "$(uname)" ]] ; then
 
   alias o="open"
   alias l='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
-  #alias update_macports="sudo port selfupdate && sudo port sync && sudo port outdated"
+  alias oo="open http://www.google.com"
 elif [[ "Linux" = "$(uname)" ]] ; then
   alias g="gnome-mplayer"
 
