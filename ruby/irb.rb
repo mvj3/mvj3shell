@@ -37,15 +37,14 @@ end
 Hirb::View.enable if defined? Hirb
 
 module Music
-  extend self
-  def play
+  require 'pathname'
+  def self.play
     mixes = Dir.glob(ENV['HOME'] + '/Music/*/*').delete_if {|s| s !~ /(ape|mp3|flac|wav)$/ }; count = 0; loop do; print "##{count += 1} ", Time.now.strftime('%I:%M:%S'), " #{single = mixes[rand mixes.size]; p = Pathname.new(single); p.dirname.basename.to_s << '/' << p.basename}\n"; `mplayer #{single}` end
   end
 end
 
 module CheckSyntax
-  extend self
-  def ruby rc
+  def self.ruby rc
     `#{rc} status`.scan(/\s([^\s]*?\.rb)\s/).flatten.each {|f| `ruby -c #{f}` }
   end
 end
