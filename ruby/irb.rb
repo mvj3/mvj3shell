@@ -1,13 +1,11 @@
 #!/usr/bin/env ruby
 
-unless defined? RUBY_ENGINE
-  # load rubygems and pp
-  %w$rubygems pp irb fileutils uri$.each {|std| require std}
+# load rubygems and pp
+%w$rubygems pp irb fileutils uri$.each {|std| require std}
 
-  # Aliases
-  alias x exit
-  alias p pp
-end
+# Aliases
+alias x exit
+alias p pp
 
 # enable encoding in UTF-8 if current ruby version is less than 1.9
 unless defined? Encoding
