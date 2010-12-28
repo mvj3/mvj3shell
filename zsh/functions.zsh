@@ -3,6 +3,11 @@ gsvn() {
   grep $1 -rn . | grep -v svn | less
 }
 
+# grep a pattern which is't inincluded in .git files
+ggit() {
+  grep $1 -rn . | grep -v git | less
+}
+
 # filter the lines which begin with # and blank lines
 gconf() {
   #awk '{if(NF>0) print $0}' $1 | grep -v '^#'  | less
