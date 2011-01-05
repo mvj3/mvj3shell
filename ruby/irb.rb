@@ -37,7 +37,16 @@ Hirb::View.enable if defined? Hirb
 module Music
   require 'pathname'
   def self.play
-    mixes = Dir.glob(ENV['HOME'] + '/Music/*/*').delete_if {|s| s !~ /(ape|mp3|flac|wav)$/ }; count = 0; loop do; print "##{count += 1} ", Time.now.strftime('%I:%M:%S'), " #{single = mixes[rand mixes.size]; p = Pathname.new(single); p.dirname.basename.to_s << '/' << p.basename}\n"; `mplayer #{single}` end
+    dirs = Dir.glob(ENV['HOME'] + '/Music/*')
+    dirs.delete_if {|s| s !~ Regexp.new(ARGV[0], 'i') } unless ARGV.size.zero?
+    count = 0
+    loop do
+      count += 1
+      dir = dirs[rand dirs.size]
+      puts "##{count} #{Time.now.strftime('%I:%M:%S')} #{dir.split('/')[-1]}"
+      FileUtils.chdir dir
+      `mplayer *ape`
+    end unless dirs.size.zero?
   end
 end
 
