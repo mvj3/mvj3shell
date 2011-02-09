@@ -36,6 +36,7 @@ alias gco='git checkout'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gps='git svn dcommit'
 alias gls='git svn rebase'
+alias gx='open -a GitX'
 
 # svn
 alias svn.ignore="SVN_EDITOR='vim' svn propedit svn:ignore ."
