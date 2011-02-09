@@ -37,6 +37,9 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gps='git svn dcommit'
 alias gls='git svn rebase'
 alias gx='open -a GitX'
+alias gi="ruby -r $HOME/utils/ruby/irb.rb -e 'GI.clone'"
+alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GI.search'"
+
 
 # svn
 alias svn.ignore="SVN_EDITOR='vim' svn propedit svn:ignore ."

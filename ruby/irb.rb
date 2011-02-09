@@ -56,10 +56,17 @@ module CheckSyntax
   end
 end
 
-module GI; end
-def GI git_url
-  cd FileUtils.mkdir_p(ENV['HOME'] + '/github')
-  cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url).path.split('/'))[1])
-  File.directory?(source_dir = author_and_source_array[-1].split('.')[0]) ? p("already installed #{git_url}") : `git clone #{git_url}`
-  cd source_dir
+module GI
+  def self.clone git_url = nil
+    cd FileUtils.mkdir_p(ENV['HOME'] + '/github')
+    cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url || ARGV[0]).path.split('/'))[1])
+    File.directory?(source_dir = author_and_source_array[-1].split('.')[0]) ? p("already installed #{git_url}") : `git clone #{git_url}`
+    cd source_dir
+  end
+
+  def self.search keyword = nil
+    cd(ENV['HOME'] + '/github')
+    Dir.glob('*/*').grep(Regexp.new(keyword ||= ARGV[0], 'i')).each {|repo| puts repo }
+    nil
+  end
 end
