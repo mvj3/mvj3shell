@@ -56,7 +56,7 @@ module CheckSyntax
   end
 end
 
-module GI
+module GitHub
   def self.clone git_url = nil
     cd FileUtils.mkdir_p(ENV['HOME'] + '/github')
     cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url ||= ARGV[0]).path.split('/'))[1])
