@@ -1,5 +1,5 @@
 [user]
-  name = Yuzai Chen
+  name = David Chen
   email = mvjome@gmail.com
 [color]
   status = auto
@@ -32,7 +32,7 @@
   gb = branch
   gba = git branch -a
   gc = git commit -v
-  gd = git diff | mate
+  gd = git diff | mvim
   gl = git pull
   gp = git push
   gst = git status
