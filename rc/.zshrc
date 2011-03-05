@@ -12,6 +12,9 @@ source $HOME/utils/zsh/aliases.zsh
 # load zsh setopt
 source $HOME/utils/zsh/setopt.zsh
 
+# load zsh-syntax-highlighting
+source $HOME/utils/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 autoload -Uz compinit
 compinit
