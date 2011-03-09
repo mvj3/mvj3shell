@@ -1,5 +1,5 @@
 " Encoding *******************************************************************
-set fileencodings=utf-8,gbk,ucs-bom,cp936,gb2312,gb18030
+set fileencodings=utf-8,ucs-bom,cp936,gbk,gb2312,gb18030,big5,latin1
 set encoding=utf-8
 
 set nocompatible
