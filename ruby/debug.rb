@@ -13,6 +13,7 @@ module Kernel
   def pwd; Dir.pwd end
   def cd(dir=nil); Dir.chdir(dir || ENV['HOME'] ) end
   def clear; system 'clear' end
+  def oo; `open http://www.google.com`; end
 end
 
 if !defined?(RUBY_ENGINE) && defined?(Readline) && Readline.respond_to?(:vi_editing_mode)
