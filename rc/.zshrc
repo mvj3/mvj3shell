@@ -12,8 +12,8 @@ source $HOME/utils/zsh/aliases.zsh
 # load zsh setopt
 source $HOME/utils/zsh/setopt.zsh
 
-# load zsh-syntax-highlighting
 source $HOME/utils/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/utils/zsh/git-flow-completion/git-flow-completion.zsh
 
 
 autoload -Uz compinit
