@@ -25,3 +25,6 @@ elif [[ "Linux" = "$(uname)" ]] ; then
   export EDITOR=gvim
   alias v=gvim
 fi
+
+export EMAIL=`git config --get user.email`
+export FULLNAME="`git config --get user.name`"
