@@ -42,7 +42,7 @@ alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.search'"
 
 
 # svn
-alias svn.ignore="SVN_EDITOR='vim' svn propedit svn:ignore ."
+alias svn.ignore="svn propedit svn:ignore ."
 alias svn.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"svn\"'"
 
 # rails
