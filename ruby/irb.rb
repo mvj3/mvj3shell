@@ -51,8 +51,8 @@ module Music
 end
 
 module CheckSyntax
-  def self.ruby rc
-    `#{rc} status`.scan(/\s([^\s]*?\.rb)\s/).flatten.each {|f| `ruby -c #{f}` }
+  def self.ruby command
+    `command`.scan(/\s([^\s]*?\.rb)\s/).flatten.each {|f| `ruby -c #{f}` }
   end
 end
 

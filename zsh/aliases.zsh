@@ -39,11 +39,11 @@ alias gls='git svn rebase'
 alias gx='open -a GitX'
 alias gi="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.clone'"
 alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.search'"
-
+alias git.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"git status -s\"'"
 
 # svn
 alias svn.ignore="svn propedit svn:ignore ."
-alias svn.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"svn\"'"
+alias svn.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"svn status\"'"
 
 # rails
 alias t='autotest'
