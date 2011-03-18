@@ -33,4 +33,4 @@ preexec() { title "$1" }
 export_no_git_prompt
 
 # enable rvm
-if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+[[ -s /usr/local/lib/rvm ]] && source /usr/local/lib/rvm
