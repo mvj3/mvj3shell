@@ -22,6 +22,7 @@
 [core]
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = ~/.gitexcludes
+	editor = mvim
 [github]
   user = mvj3
   ;token = modify_me_with_real_API_Token
@@ -42,3 +43,5 @@
   msg = commit --allow-empty -m
 [apply]
   whitespace = nowarn
+[merge]
+	tool = mvimdiff
