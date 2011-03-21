@@ -325,6 +325,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 au BufRead,BufNewFile *.god set filetype=ruby
+au BufRead,BufNewFile *.pill set filetype=ruby
 
 " 去除菜单栏
 set guioptions-=m
