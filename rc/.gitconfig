@@ -35,6 +35,7 @@
   gc = git commit -v
   gd = git diff | mvim
   gl = git pull
+  update = !gx-update
   gp = git push
   gst = git status
   br = branch
