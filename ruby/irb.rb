@@ -70,3 +70,17 @@ module GitHub
     nil
   end
 end
+
+
+
+module Mvj3
+  module Sql
+    extend self
+    def delete_all_records_and_set_auto_increment_to_one *models
+      models.map(&:table_name).each do |tn|
+        ActiveRecord::Base.connection.execute("DELETE FROM #{tn}")
+        ActiveRecord::Base.connection.execute("ALTER TABLE #{tn} AUTO_INCREMENT = 1")
+      end
+    end
+  end
+end
