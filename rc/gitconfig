@@ -42,6 +42,7 @@
   df = diff
   lg = log -p
   msg = commit --allow-empty -m
+  visual = !open -a gitx
 [apply]
   whitespace = nowarn
 [merge]
