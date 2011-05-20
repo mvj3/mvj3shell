@@ -14,7 +14,7 @@ unless defined? Encoding
 end
 
 # require wirble and hirb
-%w$interactive_editor wirble hirb ruby-debug$.each {|gem|
+%w$interactive_editor wirble hirb-unicode ruby-debug$.each {|gem|
   begin
     require gem
   rescue LoadError

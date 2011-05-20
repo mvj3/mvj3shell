@@ -11,6 +11,7 @@ export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 export CLANG=$HOME/bin
+export NODE_PATH=/usr/local/lib/node
 
 # Lines configured by zsh-newuser-install
 export HISTFILE=~/.histfile
