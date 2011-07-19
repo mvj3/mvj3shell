@@ -30,3 +30,6 @@ fi
 export EMAIL=`git config --get user.email`
 export FULLNAME="`git config --get user.name`"
 export SVN_EDITOR="mvim"
+
+alias pro="export RAILS_ENV=production;"
+alias dev="export RAILS_ENV=development;"
