@@ -5,9 +5,6 @@ elif [[ "Linux" = "$(uname)" ]] ; then
   MVJ3_CLIPBOARD="xclip"
 fi
 # file utility
-alias mv="mv -i"
-alias rm="rm -i"
-alias cp="cp -i"
 alias la="ls -aG"
 if [[ "Darwin" = "$(uname)" ]] ; then
   alias ls="ls -pG"
