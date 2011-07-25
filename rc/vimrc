@@ -176,8 +176,8 @@ set laststatus=2
 " Maps autocomplete to tab
 imap <Tab> <C-N>
 
-" For Haml
 au! BufRead,BufNewFile *.haml         setfiletype haml
+au BufRead,BufNewFile *.rabl setf ruby
 
 " Press ^F from insert mode to insert the current file name
 imap <C-F> <C-R>=expand("%")<CR>
