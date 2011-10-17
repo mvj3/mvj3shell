@@ -6,7 +6,10 @@ class Object
 end
 
 module Kernel
-  alias db debugger if defined? Debugger
+  def db
+    require 'ruby-debug'
+    debugger
+  end
 
   # file utility
   def ls; %x{ls -a}.split("\n")[2..-1] end
