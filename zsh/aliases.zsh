@@ -107,5 +107,10 @@ alias music="ruby -r $HOME/utils/ruby/irb.rb -e 'Music.play'"
 
 # ruby
 alias rubygem="cd `rvm info homes | grep 'gem:' | awk -F '"' '{print $2}'`/gems"
-alias rubylib="cd `rvm info homes | grep 'ruby:' | awk -F '"' '{print $2}'`"
+alias rubylib="cd `rvm info homes | grep 'ruby:' | awk -F '"' '{print $2}'`/lib/ruby/1.8"
 alias b="bundle "
+
+
+# python
+alias pip="/usr/local/share/python/pip"
+alias pygmentize="/usr/local/share/python/pygmentize"
