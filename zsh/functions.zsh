@@ -39,6 +39,11 @@ export_no_git_prompt() {
 brightness() {
   sudo -s "echo $1 > /proc/acpi/video/VGA1/LCDD/brightness"
 }
+
+trash() {
+  mv $1 ~/.Trash/
+}
+
 #GIT_PROMPT_PREFIX="%{$fg[blue]%}["
 #GIT_PROMPT_SUFFIX="%{$reset_color%} "
 #GIT_PROMPT_DIRTY="%{$fg[blue]%}]%{$fg[red]%}⚡%{$reset_color%}"
