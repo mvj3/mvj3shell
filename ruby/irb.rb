@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
-
-# load rubygems and pp
-%w$rubygems pp irb fileutils uri$.each {|std| require std}
+%w$rubygems pp irb fileutils uri pathname$.each {|std| require std }
 
 # Aliases
 alias x exit
@@ -12,15 +10,6 @@ unless defined? Encoding
   require 'jcode'
   $KCODE='utf8'
 end
-
-# require wirble and hirb
-%w$interactive_editor wirble hirb-unicode ruby-debug$.each {|gem|
-  begin
-    require gem
-  rescue LoadError
-    warn "You haven't installed \"#{gem}\" in your current GEM_PATH!"
-  end
-}
 
 # load debug utility
 require ENV['HOME'] + '/utils/ruby/debug.rb'
@@ -35,7 +24,6 @@ end
 Hirb::View.enable if defined? Hirb
 
 module Music
-  require 'pathname'
   def self.play
     dirs = Dir.glob(ENV['HOME'] + '/Music/*')
     dirs.delete_if {|s| s !~ Regexp.new(ARGV[0], 'i') } unless ARGV.size.zero?
