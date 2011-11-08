@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
-%w$rubygems pp irb fileutils uri pathname$.each {|std| require std }
+
+module Rubygem; end
+def Rubygem.multiple_require gems = []
+  require 'rubygems'
+  Kernel.class_eval { gems.map &method(:require) }
+end
+
+Rubygem.multiple_require %w[rubygems pp irb fileutils uri pathname]
 
 # Aliases
 alias x exit
