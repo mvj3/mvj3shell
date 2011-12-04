@@ -3,9 +3,9 @@ gsvn() {
   grep $1 -rn . | grep -v svn | less
 }
 
-# grep a pattern which is't inincluded in .git files
 ggit() {
-  grep $1 -rn . | grep -v git | less
+  echo "use git grep keyword | ack keyword"
+  #grep $1 -rn . | grep -v git | less
 }
 
 # filter the lines which begin with # and blank lines
