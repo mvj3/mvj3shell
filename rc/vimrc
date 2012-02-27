@@ -180,6 +180,7 @@ au! BufRead,BufNewFile *.haml         setfiletype haml
 au BufRead,BufNewFile *.rabl setf ruby
 au BufRead,BufNewFile *.jbuilder setf ruby
 au BufRead,BufNewFile *.jsonify setf ruby
+au BufRead,BufNewFile *.json_builder setf ruby
 
 " Press ^F from insert mode to insert the current file name
 imap <C-F> <C-R>=expand("%")<CR>
