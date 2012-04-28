@@ -44,6 +44,10 @@ trash() {
   mv $1 ~/.Trash/
 }
 
+duckduckgo() {
+  open "https://duckduckgo.com/?q=$1"
+}
+
 #GIT_PROMPT_PREFIX="%{$fg[blue]%}["
 #GIT_PROMPT_SUFFIX="%{$reset_color%} "
 #GIT_PROMPT_DIRTY="%{$fg[blue]%}]%{$fg[red]%}⚡%{$reset_color%}"
