@@ -53,8 +53,8 @@ end
 
 module GitHub
   def self.clone git_url = nil
-    cd FileUtils.mkdir_p(ENV['HOME'] + '/github')
-    cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url ||= ARGV[0]).path.split('/'))[1])
+    cd FileUtils.mkdir_p(ENV['HOME'] + '/github')[0]
+    cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url ||= ARGV[0]).path.split('/'))[1])[0]
     File.directory?(source_dir = author_and_source_array[-1].split('.')[0..-2].join('.')) ? p("already installed #{git_url}") : `git clone #{git_url}`
     cd source_dir
   end
