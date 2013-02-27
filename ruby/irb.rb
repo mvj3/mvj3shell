@@ -53,10 +53,18 @@ end
 
 module GitHub
   def self.clone git_url = nil
-    cd FileUtils.mkdir_p(ENV['HOME'] + '/github')[0]
-    cd FileUtils.mkdir_p((author_and_source_array = URI.parse(git_url ||= ARGV[0]).path.split('/'))[1])[0]
-    File.directory?(source_dir = author_and_source_array[-1].split('.')[0..-2].join('.')) ? p("already installed #{git_url}") : `git clone #{git_url}`
-    cd source_dir
+    dir = ENV['HOME'] + '/github'
+    FileUtils.mkdir_p(dir)
+    cd dir
+    author_and_source_array = URI.parse(git_url ||= ARGV[0]).path.split('/')
+    [dir, author_and_source_array[1]].each {|d| FileUtils.mkdir_p(d); cd d }
+    project_name = author_and_source_array[-1].split('.')[0..-2].join('.')
+    if File.directory? project_name
+      p("already installed #{git_url}")
+    else
+      `git clone #{git_url}`
+    end
+    cd project_name
   end
 
   def self.search keyword = nil
