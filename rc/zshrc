@@ -39,3 +39,5 @@ export_no_git_prompt
 PATH=$PATH:$HOME/.manymo/bin # Add manymo to PATH for scripting
 
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
+
+export PATH="${PATH}:/Users/mvj3/.sm/bin:/Users/mvj3/.sm/pkg/active/bin:/Users/mvj3/.sm/pkg/active/sbin"
