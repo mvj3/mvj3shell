@@ -1,16 +1,6 @@
-#!/usr/bin/env ruby
+# encoding: UTF-8
 
-module Rubygem; end
-def Rubygem.multiple_require gems = []
-  require 'rubygems'
-  Kernel.class_eval { gems.map &method(:require) }
-end
-
-Rubygem.multiple_require %w[rubygems pp irb fileutils uri pathname]
-
-# Aliases
-alias x exit
-alias p pp
+require 'rubygems'
 
 # enable encoding in UTF-8 if current ruby version is less than 1.9
 unless defined? Encoding
@@ -18,13 +8,11 @@ unless defined? Encoding
   $KCODE='utf8'
 end
 
-# load debug utility
-require ENV['HOME'] + '/utils/ruby/debug.rb'
-
-# load wirble
-if defined? Wirble
-  Wirble.init
-  Wirble.colorize
+class Object
+  # returns instance methods of current object's class and its singleton methods
+  def lm # abbr of local methods
+    self.methods.sort - self.class.superclass.instance_methods
+  end
 end
 
 # improve irb’s default output
@@ -71,19 +59,5 @@ module GitHub
     cd(ENV['HOME'] + '/github')
     Dir.glob('*/*').grep(Regexp.new(keyword ||= ARGV[0], 'i')).each {|repo| puts repo }
     nil
-  end
-end
-
-
-
-module Mvj3
-  module Sql
-    extend self
-    def delete_all_records_and_set_auto_increment_to_one *models
-      models.map(&:table_name).each do |tn|
-        ActiveRecord::Base.connection.execute("DELETE FROM #{tn}")
-        ActiveRecord::Base.connection.execute("ALTER TABLE #{tn} AUTO_INCREMENT = 1")
-      end
-    end
   end
 end
