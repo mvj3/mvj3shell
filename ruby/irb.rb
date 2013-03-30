@@ -15,9 +15,6 @@ class Object
   end
 end
 
-# improve irb’s default output
-Hirb::View.enable if defined? Hirb
-
 module Music
   def self.play
     dirs = Dir.glob(ENV['HOME'] + '/Music/*')
