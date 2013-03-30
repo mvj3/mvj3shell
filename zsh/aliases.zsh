@@ -111,6 +111,6 @@ alias music="ruby -r $HOME/utils/ruby/irb.rb -e 'Music.play'"
 alias b="bundle exec "
 
 
-# python
+# use custom python setup
 alias pip="/usr/local/share/python/pip"
 alias pygmentize="/usr/local/share/python/pygmentize"
