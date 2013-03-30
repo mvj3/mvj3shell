@@ -46,3 +46,6 @@ if [[ -r /usr/local/share/python/virtualenvwrapper.sh ]]; then
 else
   echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
+
+# JAVA
+export JAVA_HOME=$(/usr/libexec/java_home)
