@@ -1,6 +1,8 @@
 # encoding: UTF-8
 
 require 'rubygems'
+require 'fileutils'
+require 'open-uri'
 
 # enable encoding in UTF-8 if current ruby version is less than 1.9
 unless defined? Encoding
@@ -38,22 +40,23 @@ end
 
 module GitHub
   def self.clone git_url = nil
+    require 'fileutils'
     dir = ENV['HOME'] + '/github'
     FileUtils.mkdir_p(dir)
-    cd dir
+    FileUtils.chdir dir
     author_and_source_array = URI.parse(git_url ||= ARGV[0]).path.split('/')
-    [dir, author_and_source_array[1]].each {|d| FileUtils.mkdir_p(d); cd d }
+    [dir, author_and_source_array[1]].each {|d| FileUtils.mkdir_p(d); FileUtils.chdir d }
     project_name = author_and_source_array[-1].split('.')[0..-2].join('.')
     if File.directory? project_name
       p("already installed #{git_url}")
     else
       `git clone #{git_url}`
     end
-    cd project_name
+    FileUtils.chdir project_name
   end
 
   def self.search keyword = nil
-    cd(ENV['HOME'] + '/github')
+    FileUtils.chdir(ENV['HOME'] + '/github')
     Dir.glob('*/*').grep(Regexp.new(keyword ||= ARGV[0], 'i')).each {|repo| puts repo }
     nil
   end
