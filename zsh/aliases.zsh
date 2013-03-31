@@ -95,13 +95,6 @@ alias cmi="./configure && make && sudo make install"
 # http server
 alias SimpleHTTPServer="/usr/bin/python -m SimpleHTTPServer >> /dev/null 2>&1 &" # port 8000
 
-# mysql
-if [[ "Darwin" = "$(uname)" ]] ; then
-  alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
-  alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
-  alias restart_mysql="Library/StartupItems/MySQLCOM/MySQLCOM restart"
-fi
-
 # music
 alias music="ruby -r $HOME/utils/ruby/irb.rb -e 'Music.play'"
 
