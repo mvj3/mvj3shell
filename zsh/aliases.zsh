@@ -37,6 +37,7 @@ alias gx='open -a GitX'
 alias gi="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.clone'"
 alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.search'"
 alias git.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"git status -s\"'"
+alias git.log="GIT_USERNAME=$(git config --global --get user.name); git log --author $GIT_USERNAME --no-merges --after={1.day.ago} | cat | grep -v '^commit ' | grep -v '^Author: ' | grep -v '^Date: ' | grep -v "^$" | tail -r"
 
 # svn
 alias svn.ignore="svn propedit svn:ignore ."
