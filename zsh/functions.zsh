@@ -48,6 +48,20 @@ duckduckgo() {
   open "https://duckduckgo.com/?q=$1"
 }
 
+function switch_jdk() {
+ local wanted_java_version=$1
+ export JAVA_HOME=`/usr/libexec/java_home -F -v $wanted_java_version -a x86_64 -d64`
+
+ # cleaned PATH
+ export PATH=$(echo $PATH | sed -E "s,(/System)?/Library/Java/JavaVirtualMachines/[a-zA-Z0-9._]+/Contents/Home/bin:,,g")
+
+ # prepend wanted JAVA_HOME
+ export PATH=$JAVA_HOME/bin:$PATH
+
+ echo "Now using : "
+ java -version
+}
+
 #GIT_PROMPT_PREFIX="%{$fg[blue]%}["
 #GIT_PROMPT_SUFFIX="%{$reset_color%} "
 #GIT_PROMPT_DIRTY="%{$fg[blue]%}]%{$fg[red]%}⚡%{$reset_color%}"
