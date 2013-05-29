@@ -49,3 +49,7 @@ fi
 
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+
+# GIT
+export GIT_USERNAME="$(git config --global --get user.name)"
