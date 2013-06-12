@@ -5,13 +5,6 @@ elif [[ "Linux" = "$(uname)" ]] ; then
   MVJ3_CLIPBOARD="xclip"
 fi
 # file utility
-alias la="ls -aG"
-if [[ "Darwin" = "$(uname)" ]] ; then
-  alias ls="ls -pG"
-elif [[ "Linux" = "$(uname)" ]] ; then
-  alias ls="ls -pG --color"
-fi
-alias ll="ls -lh"
 alias gwd="pwd | $MVJ3_CLIPBOARD"
 alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
 alias rm-Dot_svn="find . -name '.svn' -exec rm -rf '{}' \;"
@@ -26,23 +19,6 @@ alias git.log="git log --author '$GIT_USERNAME' --no-merges --after={10.hour.ago
 # svn
 alias svn.ignore="svn propedit svn:ignore ."
 alias svn.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"svn status\"'"
-
-# rails
-alias t='autotest'
-alias rr='rake routes | grep'
-alias pro="export RAILS_ENV=production;"
-alias dev="export RAILS_ENV=development;"
-
-# screen
-alias sl="screen -list"
-alias sr="screen -r"
-alias sS="screen -S"
-alias sw="screen -wipe"
-
-# rspec
-alias specc="spec -f s spec/controllers"
-alias specm="spec -f m spec/models"
-alias specmc="spec -f s spec/controllers; spec -f s spec/models"
 
 # program launch
 if [[ "Darwin" = "$(uname)" ]] ; then
