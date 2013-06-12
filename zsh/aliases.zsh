@@ -17,22 +17,6 @@ alias rm-DS_Store="find . -name '.DS_Store' -exec rm '{}' \;"
 alias rm-Dot_svn="find . -name '.svn' -exec rm -rf '{}' \;"
 
 # git
-alias gl='git pull'
-alias gp='git push'
-alias gd='git diff'
-alias gD='git diff --cached'
-alias ga='git add'
-alias gc='git commit -v'
-alias gb='git branch'
-alias gs='git status'
-alias gr='git rebase'
-alias gri='git rebase -i origin/master'
-alias gm='git merge'
-alias gg='git log --pretty=oneline --abbrev-commit'
-alias gco='git checkout'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gps='git svn dcommit'
-alias gls='git svn rebase'
 alias gx='open -a GitX'
 alias gi="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.clone'"
 alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.search'"
@@ -59,11 +43,6 @@ alias sw="screen -wipe"
 alias specc="spec -f s spec/controllers"
 alias specm="spec -f m spec/models"
 alias specmc="spec -f s spec/controllers; spec -f s spec/models"
-
-# cd
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 
 # program launch
 if [[ "Darwin" = "$(uname)" ]] ; then
