@@ -15,12 +15,8 @@ source $HOME/utils/zsh/setopt.zsh
 # vi editing mode is awesome!
 bindkey -v
 
-# enable rvm
-[[ -s /usr/local/lib/rvm ]] && source /usr/local/lib/rvm
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 PATH=$PATH:$HOME/.manymo/bin # Add manymo to PATH for scripting
-
-PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 
 export PATH="${PATH}:/Users/mvj3/.sm/bin:/Users/mvj3/.sm/pkg/active/bin:/Users/mvj3/.sm/pkg/active/sbin"
