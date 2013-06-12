@@ -22,13 +22,9 @@ alias svn.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.rub
 
 # program launch
 if [[ "Darwin" = "$(uname)" ]] ; then
-  alias firefox="open -a firefox"
-  alias safari="open -a safari"
   alias xulrunner="/Library/Frameworks/XUL.framework/xulrunner-bin "
   alias hibernateon='sudo pmset -a hibernatemode 1'
   alias hibernateoff='sudo pmset -a hibernatemode 0'
-  alias quicktime='open -a QuickTime\ Player'
-  alias scripteditor='open -a Script\ Editor'
   alias dock="killall Dock"
 
   alias o="open"
