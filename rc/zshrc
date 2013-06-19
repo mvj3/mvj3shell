@@ -21,5 +21,7 @@ PATH=$PATH:$HOME/.manymo/bin # Add manymo to PATH for scripting
 
 export PATH="${PATH}:/Users/mvj3/.sm/bin:/Users/mvj3/.sm/pkg/active/bin:/Users/mvj3/.sm/pkg/active/sbin"
 
+rvm reload
+
 # terminal highlight
 source "`brew --prefix`/etc/grc.bashrc"
