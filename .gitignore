@@ -1,9 +1,8 @@
-vim/.netrwhist
 .DS_Store
+*.lock
 *.[ao]
 !.git*
 *~
 #*
 rc/gemrc
 *rbc
-rc/.vim/.netrwhist

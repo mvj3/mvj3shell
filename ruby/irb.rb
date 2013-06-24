@@ -41,18 +41,17 @@ end
 module GitHub
   def self.clone git_url = nil
     require 'fileutils'
-    dir = ENV['HOME'] + '/github'
-    FileUtils.mkdir_p(dir)
-    FileUtils.chdir dir
-    author_and_source_array = URI.parse(git_url ||= ARGV[0]).path.split('/')
-    [dir, author_and_source_array[1]].each {|d| FileUtils.mkdir_p(d); FileUtils.chdir d }
-    project_name = author_and_source_array[-1].split('.')[0..-2].join('.')
-    if File.directory? project_name
+    require "addressable/uri"
+    author, repo_name = Addressable::URI.parse(git_url ||= ARGV[0]).path.split('/').map {|i| i.sub("\.git", "") }
+    author_dir = File.join(ENV['HOME'], 'github', author)
+    FileUtils.mkdir_p author_dir
+    FileUtils.chdir author_dir
+    if File.directory? repo_name
       p("already installed #{git_url}")
     else
       `git clone #{git_url}`
     end
-    FileUtils.chdir project_name
+    FileUtils.chdir repo_name
   end
 
   def self.search keyword = nil
