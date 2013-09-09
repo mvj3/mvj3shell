@@ -7,3 +7,7 @@ if has("mac")
   set imd
   set guifont=Monaco:h12
 endif
+
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': ['ruby'],
+                     \ 'passive_filetypes': ['haml'] }

@@ -15,6 +15,7 @@ alias gi="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.clone'"
 alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.search'"
 alias git.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"git status -s\"'"
 alias git.log="git log --author '$GIT_USERNAME' --no-merges --after={10.hour.ago} | cat | grep -v '^commit ' | grep -v '^Author: ' | grep -v '^Date: ' | grep -v '^$' | tail -r"
+alias gD='gd --cached'
 
 # svn
 alias svn.ignore="svn propedit svn:ignore ."
