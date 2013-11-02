@@ -32,12 +32,6 @@ module Music
   end
 end
 
-module CheckSyntax
-  def self.ruby command
-    `command`.scan(/\s([^\s]*?\.rb)\s/).flatten.each {|f| `ruby -c #{f}` }
-  end
-end
-
 module GitHub
   def self.clone git_url = nil
     require 'fileutils'

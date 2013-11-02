@@ -1,7 +1,7 @@
 # export PATH
 export PATH="$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:${PATH}"
 
-
+# export LANG
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -28,11 +28,12 @@ elif [[ "Linux" = "$(uname)" ]] ; then
   alias v=gvim
 fi
 
+# GIT
 export EMAIL=`git config --get user.email`
 export FULLNAME="`git config --get user.name`"
 export SVN_EDITOR="mvim"
 export VIM_APP_DIR="/Applications"
-
+export GIT_USERNAME="$(git config --global --get user.name)"
 
 # Setting up the VirtualEnv
 export WORKON_HOME=$HOME/.virtualenvs
@@ -49,7 +50,3 @@ fi
 
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home)
-
-
-# GIT
-export GIT_USERNAME="$(git config --global --get user.name)"

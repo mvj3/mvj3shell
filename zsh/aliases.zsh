@@ -13,7 +13,6 @@ alias rm-Dot_svn="find . -name '.svn' -exec rm -rf '{}' \;"
 alias gx='open -a GitX'
 alias gi="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.clone'"
 alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.search'"
-alias git.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"git status -s\"'"
 alias git.log="git log --author '$GIT_USERNAME' --no-merges --after={10.hour.ago} | cat | grep -v '^commit ' | grep -v '^Author: ' | grep -v '^Date: ' | grep -v '^$' | tail -r"
 alias gD='gd --cached'
 
@@ -55,7 +54,6 @@ alias music="ruby -r $HOME/utils/ruby/irb.rb -e 'Music.play'"
 #alias rubygem="cd `rvm info homes | grep 'gem:' | awk -F '"' '{print $2}'`/gems"
 #alias rubylib="cd `rvm info homes | grep 'ruby:' | awk -F '"' '{print $2}'`/lib/ruby/1.8"
 alias b="bundle exec "
-
 
 # use custom python setup
 alias pip="/usr/local/share/python/pip"
