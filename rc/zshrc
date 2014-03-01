@@ -17,9 +17,8 @@ bindkey -v
 
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
-PATH=$PATH:$HOME/.manymo/bin # Add manymo to PATH for scripting
-
 export PATH="${PATH}:/Users/mvj3/.sm/bin:/Users/mvj3/.sm/pkg/active/bin:/Users/mvj3/.sm/pkg/active/sbin"
+export PATH="${PATH}:/usr/local/share/python/"
 
 rvm reload
 
