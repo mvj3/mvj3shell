@@ -18,7 +18,6 @@ alias gD='gd --cached'
 
 # svn
 alias svn.ignore="svn propedit svn:ignore ."
-alias svn.check_ruby_syntax="ruby -r $HOME/utils/ruby/irb.rb -e 'CheckSyntax.ruby \"svn status\"'"
 
 # program launch
 if [[ "Darwin" = "$(uname)" ]] ; then
@@ -39,7 +38,6 @@ fi
 alias p="ping"
 alias i="curl -I"
 alias c="curl -C - -O"
-alias x="exit"
 alias dict='dict -d wn'
 alias info='info --vi-keys'
 alias cmi="./configure && make && sudo make install"
