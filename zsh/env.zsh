@@ -35,18 +35,5 @@ export SVN_EDITOR="mvim"
 export VIM_APP_DIR="/Applications"
 export GIT_USERNAME="$(git config --global --get user.name)"
 
-# Setting up the VirtualEnv
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-
-if [[ -r /usr/local/share/python/virtualenvwrapper.sh ]]; then
-  source /usr/local/share/python/virtualenvwrapper.sh
-else
-  echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
-
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home)

@@ -15,12 +15,6 @@ source $HOME/utils/zsh/setopt.zsh
 # vi editing mode is awesome!
 bindkey -v
 
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-
-export PATH="${PATH}:/Users/mvj3/.sm/bin:/Users/mvj3/.sm/pkg/active/bin:/Users/mvj3/.sm/pkg/active/sbin"
-export PATH="${PATH}:/usr/local/share/python/"
-
-rvm reload
-
 # terminal highlight
+# brew install grc
 source "`brew --prefix`/etc/grc.bashrc"
