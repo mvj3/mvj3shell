@@ -36,5 +36,5 @@ export GIT_USERNAME="$(git config --global --get user.name)"
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-# rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# /usr/local/bin rocks!
+export PATH="/usr/local/bin:$PATH"
