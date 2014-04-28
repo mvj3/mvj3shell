@@ -1,6 +1,3 @@
-# export PATH
-export PATH="$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:${PATH}"
-
 # export LANG
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
@@ -11,6 +8,7 @@ export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+# Node.js
 export CLANG=$HOME/bin
 export NODE_PATH=/usr/local/lib/node
 
@@ -37,3 +35,6 @@ export GIT_USERNAME="$(git config --global --get user.name)"
 
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+# rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
