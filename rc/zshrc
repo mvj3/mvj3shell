@@ -3,7 +3,9 @@ set -o vi
 bindkey -v
 
 source /etc/profile
-source ~/.bash_profile
+source $HOME/.bash_profile
+source $HOME/.bashrc
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 # load zsh locale
 source $HOME/utils/zsh/env.zsh
@@ -23,8 +25,6 @@ source $(brew --prefix)/etc/grc.bashrc
 
 # brew install nvm
 source $(brew --prefix nvm)/nvm.sh
-
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 # pyenv
 export PYENV_VERSION=2.7.5
