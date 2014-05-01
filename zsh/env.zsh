@@ -13,7 +13,7 @@ export CLANG=$HOME/bin
 export NODE_PATH=/usr/local/lib/node
 
 # Lines configured by zsh-newuser-install
-export HISTFILE=~/.histfile
+export HISTFILE=$HOME/.histfile
 export HISTSIZE=100000
 export SAVEHIST=100000
 

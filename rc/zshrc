@@ -24,13 +24,11 @@ plugins=(
   mercurial
   pyenv pip fabric virtualenv pylint
   ruby rvm bundler
-  osx
+  systemadmin osx screen docker
   brew brew-cask
-  node nvm npm bower
+  node nvm bower
   last-working-dir per-directory-history
-  screen
   web-search
-  vi-mode common-aliases
+  vi-mode common-aliases terminalapp
   colorize colored-man
-  docker
 )
