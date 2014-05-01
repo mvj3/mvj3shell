@@ -17,6 +17,9 @@ brew tap homebrew/versions
 brew tap phinze/homebrew-cask
 brew install brew-cask
 brew cask install google-chrome virtualbox vagrant macvim iterm2 dropbox sequel-pro rstudio alfred wireshark
+brew cask install gitx quicklook-csv quicklook-json
+brew cask install vlc
+brew install mplayer
 
 brew install readline gettext libffi pcre libevent libyaml freetype jpeg libpng libtiff fontconfig
 brew install gcc gfortran scala fftw open-mpi libmpc openssl cscope libtool glib libgcrypt pkg-config
