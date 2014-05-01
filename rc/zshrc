@@ -1,7 +1,3 @@
-# vi editing mode is awesome!
-set -o vi
-bindkey -v
-
 source /etc/profile
 source $HOME/.bash_profile
 source $HOME/.bashrc
@@ -10,14 +6,8 @@ source $HOME/.bashrc
 # load zsh locale
 source $HOME/utils/zsh/env.zsh
 
-# load zsh function
-source $HOME/utils/zsh/functions.zsh
-
 # load zsh aliases
 source $HOME/utils/zsh/aliases.zsh
-
-# load zsh setopt
-source $HOME/utils/zsh/setopt.zsh
 
 # terminal highlight
 # brew install grc
@@ -28,8 +18,19 @@ source $(brew --prefix nvm)/nvm.sh
 
 # pyenv
 export PYENV_VERSION=2.7.5
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
-plugins=(git ruby osx brew git-extras git-flow last-working-dir lol per-directory-history rvm screen web-search)
+plugins=(
+  git gitfast git-extras git-flow github gitignore
+  mercurial
+  pyenv pip fabric virtualenv pylint
+  ruby rvm bundler
+  osx
+  brew brew-cask
+  node nvm npm bower
+  last-working-dir per-directory-history
+  screen
+  web-search
+  vi-mode common-aliases
+  colorize colored-man
+  docker
+)
