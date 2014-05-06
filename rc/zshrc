@@ -10,7 +10,7 @@ source $HOME/utils/zsh/env.zsh
 source $HOME/utils/zsh/aliases.zsh
 
 # terminal highlight
-# brew install grc
+# brew install grc # 用colourify包装了很多命令，比如 colourify gcc
 source $(brew --prefix)/etc/grc.bashrc
 
 # brew install nvm
@@ -20,12 +20,13 @@ source $(brew --prefix nvm)/nvm.sh
 export PYENV_VERSION=2.7.5
 
 plugins=(
-  git gitfast git-extras git-flow github gitignore
+# http://superuser.com/questions/236953/zsh-starts-incredibly-slowly
+  git gitfast git-extras git-flow gitignore github
   mercurial
   pyenv pip fabric virtualenv pylint
   ruby rvm bundler
   systemadmin osx screen docker
-  brew brew-cask
+  brew-cask brew
   node nvm bower
   last-working-dir per-directory-history
   web-search

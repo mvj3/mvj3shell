@@ -23,7 +23,8 @@ brew cask install google-chrome virtualbox vagrant macvim iterm2 dropbox sequel-
 brew install mplayer
 
 brew install readline gettext libffi pcre libevent libyaml freetype jpeg libpng libtiff fontconfig
-brew install gcc gfortran scala fftw open-mpi libmpc openssl cscope libtool glib libgcrypt pkg-config
+brew install gcc gfortran cmake openssl cscope libtool glib libgcrypt pkg-config
+brew install scala fftw open-mpi libmpc
 brew install mysql redis postgresql mongodb memcached valgrind erlang go node phantomjs lua v8 neo4j
 brew install mercurial git svn zsh htop-osx unrar grc
 brew install nvm pyenv
