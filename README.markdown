@@ -16,9 +16,11 @@ brew tap homebrew/versions
 
 brew tap phinze/homebrew-cask
 brew install brew-cask
-brew cask install google-chrome virtualbox vagrant macvim iterm2 dropbox sequel-pro rstudio \
+brew cask install google-chrome dropbox \
                   alfred wireshark the-unarchiver evernote \
                   gitx quicklook-csv quicklook-json java \
+                  virtualbox vagrant macvim iterm2 \
+                  sequel-pro rstudio r \
                   vlc
 brew install mplayer
 
