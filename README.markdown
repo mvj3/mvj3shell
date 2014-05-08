@@ -29,7 +29,7 @@ brew install gcc gfortran cmake openssl cscope libtool glib libgcrypt pkg-config
 brew install scala fftw open-mpi libmpc
 brew install mysql redis postgresql mongodb memcached valgrind erlang go node phantomjs lua v8 neo4j
 brew install mercurial git svn zsh htop-osx unrar grc
-brew install nvm pyenv
+brew install nvm pyenv autoenv
 ```
 
 管理后台进程服务

@@ -34,3 +34,6 @@ plugins=(
   vi-mode common-aliases terminalapp
   colorize colored-man
 )
+
+
+[[ -s "/usr/local/opt/autoenv/activate.sh" ]] && source "/usr/local/opt/autoenv/activate.sh"
