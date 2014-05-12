@@ -19,17 +19,17 @@ brew install brew-cask
 brew cask install google-chrome dropbox \
                   alfred wireshark the-unarchiver evernote \
                   gitx quicklook-csv quicklook-json java \
-                  virtualbox vagrant macvim iterm2 \
+                  virtualbox vagrant macvim iterm2 robomongo \
                   sequel-pro rstudio r \
                   vlc
 brew install mplayer
 
 brew install readline gettext libffi pcre libevent libyaml freetype jpeg libpng libtiff fontconfig
 brew install gcc gfortran cmake openssl cscope libtool glib libgcrypt pkg-config
-brew install scala fftw open-mpi libmpc
+brew install scala fftw open-mpi libmpc ccache parallel
 brew install mysql redis postgresql mongodb memcached valgrind erlang go node phantomjs lua v8 neo4j
-brew install mercurial git svn zsh htop-osx unrar grc
-brew install nvm pyenv autoenv
+brew install mercurial git svn zsh htop-osx unrar grc tree
+brew install nvm pyenv pyenv-ccache autoenv
 ```
 
 管理后台进程服务
