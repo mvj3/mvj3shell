@@ -72,8 +72,6 @@ set wrap
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
 imap jj <Esc>
 
-" File Stuff ******************************************************************
-filetype plugin indent on
 
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
@@ -224,7 +222,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -239,6 +237,13 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
+
+Bundle 'git@github.com:vim-scripts/maven-ide.git'
+
+Bundle 'git@github.com:kchmck/vim-coffee-script.git'
+let coffee_compile_vert = 1
+
+
 " ...
 
 "
@@ -251,4 +256,9 @@ Bundle 'git://git.wincent.com/command-t.git'
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
+
 syntax on
+syntax enable
+
+" File Stuff ******************************************************************
+filetype plugin indent on

@@ -14,7 +14,7 @@ source $HOME/utils/zsh/aliases.zsh
 source $(brew --prefix)/etc/grc.bashrc
 
 # brew install nvm
-source $(brew --prefix nvm)/nvm.sh
+#source $(brew --prefix nvm)/nvm.sh
 
 # pyenv
 export PYENV_VERSION=2.7.5
