@@ -36,10 +36,12 @@ module GitHub
   def self.clone git_url = nil
     require 'fileutils'
     require "addressable/uri"
-    author, repo_name = Addressable::URI.parse(git_url ||= ARGV[0]).path.split('/').map {|i| i.sub("\.git", "") }
+    author, repo_name = Addressable::URI.parse(git_url ||= ARGV[0]).path.split('/').map {|i| i.sub("\.git", "") }[-2..-1]
     author_dir = File.join(ENV['HOME'], 'github', author)
     FileUtils.mkdir_p author_dir
     FileUtils.chdir author_dir
+    #require 'pry'; binding.pry
+    #puts author_dir, repo_name
     if File.directory? repo_name
       p("already installed #{git_url}")
     else

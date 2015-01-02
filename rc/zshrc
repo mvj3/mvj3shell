@@ -17,15 +17,18 @@ source $(brew --prefix)/etc/grc.bashrc
 #source $(brew --prefix nvm)/nvm.sh
 
 # pyenv
-export PYENV_VERSION=2.7.5
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
 export PYTHON_BUILD_CACHE_PATH=$HOME/.pyenv_download_cache
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VERSION=2.7.5
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 plugins=(
 # http://superuser.com/questions/236953/zsh-starts-incredibly-slowly
   git gitfast git-extras git-flow gitignore github
   mercurial
-  pyenv pip fabric virtualenv pylint
+  pip fabric virtualenv pylint
   ruby rvm bundler
   systemadmin osx screen docker
   brew-cask brew
@@ -38,3 +41,11 @@ plugins=(
 
 
 [[ -s "/usr/local/opt/autoenv/activate.sh" ]] && source "/usr/local/opt/autoenv/activate.sh"
+
+
+function check() { ruby -e 'loop { sleep 600; puts Time.now; `open http://have-a-break` }' }
+alias gD="git diff --cached"
+alias kernprof="/usr/local/var/lib/pyenv/versions/2.7.5//bin/kernprof.py -l -v"
+export HADOOP_HOME="/usr/local/Cellar/hadoop/2.5.1/libexec/etc/hadoop"
+
+export GOPATH="$HOME/golang-workspace"
