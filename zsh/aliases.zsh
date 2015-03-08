@@ -1,3 +1,5 @@
+export MVJ3_UTILS="$HOME/github/mvj3/utils"
+
 # achive the same function on different platforms of the different procedures
 if [[ "Darwin" = "$(uname)" ]] ; then
   MVJ3_CLIPBOARD="pbcopy"
@@ -10,8 +12,8 @@ alias gwd="pwd | $MVJ3_CLIPBOARD"
 
 # git
 alias gx='open -a GitX'
-alias gi="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.clone'"
-alias gsearch="ruby -r $HOME/utils/ruby/irb.rb -e 'GitHub.search'"
+alias gi="ruby -r $MVJ3_UTILS/ruby/irb.rb -e 'GitHub.clone'"
+alias gsearch="ruby -r $MVJ3_UTILS/ruby/irb.rb -e 'GitHub.search'"
 alias 'git.log'="git log --author '$GIT_USERNAME' --no-merges --after={10.hour.ago} | cat | grep -v '^commit ' | grep -v '^Author: ' | grep -v '^Date: ' | grep -v '^$' | tail -r"
 
 # svn
