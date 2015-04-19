@@ -156,14 +156,13 @@ set go-=T
 set nocompatible               " be improved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
+" install => git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle.vim/
+" let Vundle manage Vundle
 call vundle#rc()
 
-" let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
-
-" My Bundles here:
 
 " original repos on github
 Bundle 'tpope/vim-fugitive'
@@ -175,23 +174,30 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-
-Bundle 'git@github.com:vim-scripts/maven-ide.git'
+Bundle 'vim-scripts/maven-ide'
 
 Bundle 'kchmck/vim-coffee-script'
 let coffee_compile_vert = 1
 
-Bundle 'https://github.com/fatih/vim-go.git'
+Bundle 'fatih/vim-go'
 
 Bundle "bronson/vim-trailing-whitespace"
 
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
+Bundle "majutsushi/tagbar"
 Bundle 'plasticboy/vim-markdown'
 
-Bunlde "kien/ctrlp"
+Bundle "kien/ctrlp"
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 " ...
 

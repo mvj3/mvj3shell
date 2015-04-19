@@ -1,11 +1,17 @@
-mvj3 的日常使用工具集
+mvj3 devkit
 ======================================
 
-
-编辑器 + 命令行
+Editor
 --------------------------------------
-* MacVim   使用 janus         来管理。
-* Zsh      使用 oh-my-zsh     来管理。
+Main     : MacVim
+Plugin   : janus
+Install  : cd ~/.vim; rake
+
+Shell
+--------------------------------------
+Main     : Zsh
+Plugin   : oh-my-zsh
+
 
 Homebrew (The missing package manager for OS X)
 --------------------------------------
@@ -37,6 +43,6 @@ brew install nvm pyenv pyenv-ccache autoenv
 brew install gradle
 ```
 
-管理后台进程服务
+Manager crons
 --------------------------------------
 [sudo] launchctl load/unload ~/Library/LaunchAgents/com.mvj3.alert.plist
