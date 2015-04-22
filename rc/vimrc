@@ -40,19 +40,11 @@ set smarttab
 set ai " Automatically set the indent of a new line (local to buffer)
 set si " smartindent	(local to buffer)
 
-" Searching *******************************************************************
-"set hlsearch  " highlight search
-"set incsearch  " incremental search, search as you type
-"set ignorecase " Ignore case when searching 
-"set smartcase " Ignore case when searching lowercase
-
 " Colors **********************************************************************
-set background=dark
 colorscheme vividchalk
 
 " Status Line *****************************************************************
 set showcmd
-set statusline=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %F%m%r%h%w
 
 " Line Wrapping ***************************************************************
 "set nowrap
@@ -86,12 +78,12 @@ behave xterm
 set selectmode=mouse
 
 " Omni Completion *************************************************************
-autocmd FileType html :set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require ruby compiled in
+autocmd FileType html           set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript     set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css            set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml            set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType c              set omnifunc=ccomplete#Complete
+autocmd FileType ruby,eruby     set omnifunc=rubycomplete#Complete " may require ruby compiled in
 
 let filetype_m='objc'
 
@@ -195,25 +187,12 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 
+Bundle "nvie/vim-flake8"
+
+autocmd BufWritePost *.py call Flake8()
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
-" ...
-
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-
-
 syntax on
 syntax enable
-
-" File Stuff ******************************************************************
-filetype plugin indent on
