@@ -180,7 +180,7 @@ Bundle 'godlygeek/tabular'
 Bundle "majutsushi/tagbar"
 Bundle 'plasticboy/vim-markdown'
 
-Bundle "kien/ctrlp"
+Bundle "kien/ctrlp.vim"
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -189,7 +189,21 @@ Bundle "honza/vim-snippets"
 
 Bundle "nvie/vim-flake8"
 
+Bundle "rtyler/ctags"
+
 autocmd BufWritePost *.py call Flake8()
+
+let g:tagbar_type_ruby = {
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'c:classes',
+        \ 'd:describes',
+        \ 'C:contexts',
+        \ 'f:methods',
+        \ 'F:singleton methods'
+    \ ]
+\ }
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
