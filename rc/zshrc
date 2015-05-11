@@ -24,6 +24,9 @@ export PYENV_VERSION=2.7.9
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# added by Miniconda 3.10.1 installer
+# export PATH="/Users/mvj3/miniconda/bin:$PATH"
+
 plugins=(
 # http://superuser.com/questions/236953/zsh-starts-incredibly-slowly
   git gitfast git-extras git-flow gitignore github
