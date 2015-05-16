@@ -1,4 +1,4 @@
-mvj3 devkit
+mvj3's devkit
 ======================================
 
 Editor
@@ -13,7 +13,7 @@ Main     : Zsh
 Plugin   : oh-my-zsh
 
 
-Homebrew (The missing package manager for OS X)
+Homebrew (The missing package manager for OSX)
 --------------------------------------
 ```zsh
 brew tap homebrew/science # a lot of cool formulae for scientific tools
