@@ -3,11 +3,13 @@ source $HOME/.bash_profile
 source $HOME/.bashrc
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
+export mvj3shell_home=$HOME/github/mvj3/mvj3shell
+
 # load zsh locale
-source $HOME/github/mvj3/utils/zsh/env.zsh
+source $mvj3shell_home/zsh/env.zsh
 
 # load zsh aliases
-source $HOME/github/mvj3/utils/zsh/aliases.zsh
+source $mvj3shell_home/zsh/aliases.zsh
 
 # terminal highlight
 # brew install grc # 用colourify包装了很多命令，比如 colourify gcc
