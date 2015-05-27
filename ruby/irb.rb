@@ -17,21 +17,6 @@ class Object
   end
 end
 
-module Music
-  def self.play
-    dirs = Dir.glob(ENV['HOME'] + '/Music/*')
-    dirs.delete_if {|s| s !~ Regexp.new(ARGV[0], 'i') } unless ARGV.size.zero?
-    count = 0
-    loop do
-      count += 1
-      dir = dirs[rand dirs.size]
-      puts "##{count} #{Time.now.strftime('%I:%M:%S')} #{dir.split('/')[-1]}"
-      FileUtils.chdir dir
-      `mplayer *ape`
-    end unless dirs.size.zero?
-  end
-end
-
 module GitHub
   def self.clone git_url = nil
     require 'fileutils'

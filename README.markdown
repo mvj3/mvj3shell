@@ -1,4 +1,4 @@
-mvj3's devkit
+mvj3's shell
 ======================================
 
 Editor
