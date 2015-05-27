@@ -1,4 +1,4 @@
-mvj3's shell
+mvj3's shell [![Build Status](https://travis-ci.org/mvj3/mvj3shell.png)](https://travis-ci.org/mvj3/mvj3shell)
 ======================================
 
 Editor

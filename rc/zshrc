@@ -13,7 +13,7 @@ source $mvj3shell_home/zsh/aliases.zsh
 
 # terminal highlight
 # brew install grc # 用colourify包装了很多命令，比如 colourify gcc
-source $(brew --prefix)/etc/grc.bashrc
+[ -f $BREW_PREFIX/etc/grc.bashrc ] && source $(brew --prefix)/etc/grc.bashrc
 
 # brew install nvm
 #source $(brew --prefix nvm)/nvm.sh

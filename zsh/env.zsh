@@ -38,3 +38,5 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 # /usr/local/bin rocks!
 export PATH="/usr/local/bin:$PATH"
+
+export BREW_PREFIX=$(brew --prefix)
