@@ -43,6 +43,6 @@ brew install nvm pyenv pyenv-ccache autoenv
 brew install gradle
 ```
 
-Manager crons
+Manage crons
 --------------------------------------
 [sudo] launchctl load/unload ~/Library/LaunchAgents/com.mvj3.alert.plist
