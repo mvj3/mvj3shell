@@ -196,7 +196,7 @@ let g:tagbar_type_ruby = {
     \ ]
 \ }
 
-let NERDTreeIgnore = ["build", "dist", "\.egg-info$"]  " Python related
+let NERDTreeIgnore = NERDTreeIgnore + ["build", "dist", "\.egg-info$"]  " Python related
 
 call vundle#end()            " required
 filetype plugin indent on    " required
