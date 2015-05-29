@@ -77,16 +77,6 @@ set mouse=a " Enable the mouse
 behave xterm
 set selectmode=mouse
 
-" Omni Completion *************************************************************
-autocmd FileType html           set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript     set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css            set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml            set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType c              set omnifunc=ccomplete#Complete
-autocmd FileType ruby,eruby     set omnifunc=rubycomplete#Complete " may require ruby compiled in
-
-let filetype_m='objc'
-
 " fuzzyfinder_textmate ********************************************************
 "map ,f :FuzzyFinderTextMate<CR>
 map ,f :FuzzyFinderFile<CR>
@@ -137,7 +127,7 @@ let g:snippetsEmu_key = "<S-Tab>"
 
 " Tab completion options
 " (only complete to the longest unambiguous match, and show a menu)
-set completeopt=longest,menu
+set completeopt=longest,menu,preview
 
 " remove gui menus
 set guioptions-=m
