@@ -38,7 +38,7 @@ plugins=(
   systemadmin osx screen docker
   brew-cask brew
   node nvm bower
-  last-working-dir per-directory-history
+  per-directory-history
   web-search
   vi-mode common-aliases terminalapp
   colorize colored-man
