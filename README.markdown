@@ -3,14 +3,14 @@ mvj3's shell [![Build Status](https://travis-ci.org/mvj3/mvj3shell.png)](https:/
 
 Editor
 --------------------------------------
-Main     : MacVim
-Plugin   : janus
-Install  : cd ~/.vim; rake
+* Main     : MacVim
+* Plugin   : [janus](https://github.com/carlhuda/janus)
+* Install  : cd ~/.vim; rake
 
 Shell
 --------------------------------------
-Main     : Zsh
-Plugin   : oh-my-zsh
+* Main     : Zsh
+* Plugin   : [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 
 Homebrew (The missing package manager for OSX)
