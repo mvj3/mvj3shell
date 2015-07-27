@@ -25,7 +25,7 @@
 	editor = mvim
 [github]
   user = mvj3
-  ;token = modify_me_with_real_API_Token
+  token = TODO
 [alias]
   st = status
   ci = commit
@@ -47,3 +47,5 @@
   whitespace = nowarn
 [merge]
 	tool = mvimdiff
+[push]
+	default = simple

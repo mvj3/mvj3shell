@@ -138,7 +138,6 @@ set go-=T
 set nocompatible               " be improved
 filetype off                   " required!
 
-" install => git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/vundle.vim/
 " let Vundle manage Vundle
 call vundle#rc()
