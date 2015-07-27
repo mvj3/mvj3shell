@@ -49,8 +49,5 @@ plugins=(
 
 
 function check() { ruby -e 'loop { sleep 600; puts Time.now; `open http://have-a-break` }' }
-alias gD="git diff --cached"
-alias kernprof="/usr/local/var/lib/pyenv/versions/2.7.5//bin/kernprof.py -l -v"
-export HADOOP_HOME="/usr/local/Cellar/hadoop/2.5.1/libexec/etc/hadoop"
 
 export GOPATH="$HOME/golang-workspace"

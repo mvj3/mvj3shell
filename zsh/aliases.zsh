@@ -9,14 +9,14 @@ fi
 alias gwd="pwd | $MVJ3_CLIPBOARD"
 
 # git
+alias gD="git diff --cached"
 alias gx='open -a GitX'
 alias gi="ruby -r $mvj3shell_home/ruby/irb.rb -e 'GitHub.clone'"
 alias gsearch="ruby -r $mvj3shell_home/ruby/irb.rb -e 'GitHub.search'"
 alias 'git.log'="git log --author '$GIT_USERNAME' --no-merges --after={10.hour.ago} | cat | grep -v '^commit ' | grep -v '^Author: ' | grep -v '^Date: ' | grep -v '^$' | tail -r"
 
 # hg
-alias hgs="hg status"
-alias hgd="hg diff"
+# Use oh-my-zsh plugin mercurial
 
 # program launch
 if [[ "Darwin" = "$(uname)" ]] ; then
