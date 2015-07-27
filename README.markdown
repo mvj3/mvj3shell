@@ -5,7 +5,11 @@ Editor
 --------------------------------------
 * Main     : MacVim
 * Plugin   : [janus](https://github.com/carlhuda/janus)
-* Install  : cd ~/.vim; rake
+* Install  :
+```bash
+cd ~/.vim; rake;
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
 Shell
 --------------------------------------
