@@ -182,6 +182,9 @@ Bundle "rtyler/ctags"
 
 Bundle "Valloric/YouCompleteMe"
 
+Bundle 'lambdatoast/elm.vim'
+
+
 autocmd BufWritePost *.py call Flake8()
 
 let g:tagbar_type_ruby = {
