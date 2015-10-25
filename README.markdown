@@ -29,7 +29,7 @@ brew tap staticfloat/julia
 brew tap phinze/homebrew-cask
 brew install brew-cask
 brew cask install google-chrome dropbox \
-                  alfred wireshark the-unarchiver evernote \
+                  wireshark the-unarchiver evernote \
                   gitx quicklook-csv quicklook-json java \
                   virtualbox vagrant macvim iterm2 robomongo \
                   sequel-pro rstudio r \
