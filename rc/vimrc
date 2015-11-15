@@ -184,6 +184,9 @@ Bundle "Valloric/YouCompleteMe"
 
 Bundle 'lambdatoast/elm.vim'
 
+let g:languagetool_jar='/usr/local/Cellar/languagetool/3.0/libexec/languagetool-commandline.jar'
+Bundle 'vim-scripts/LanguageTool'
+
 
 autocmd BufWritePost *.py call Flake8()
 
@@ -201,7 +204,7 @@ let g:tagbar_type_ruby = {
 let NERDTreeIgnore = NERDTreeIgnore + ["build$", "dist$", "\.egg-info$", "__pycache__"]  " Python related
 
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin on           " required
 
 syntax on
 syntax enable
