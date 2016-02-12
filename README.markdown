@@ -52,6 +52,6 @@ brew install gradle
 OSX utils
 --------------------------------------
 * tmutil
-* diskutil
+* diskutil gpt
 * sudo softwareupdate -irv
 * launchctl load/unload ~/Library/LaunchAgents/com.mvj3.alert.plist

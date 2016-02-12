@@ -1,4 +1,4 @@
 [flake8]
 ignore = E226,E302,E41
-max-line-length = 10000
+max-line-length = 79
 max-complexity = 10
