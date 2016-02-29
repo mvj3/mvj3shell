@@ -183,6 +183,8 @@ Bundle "rtyler/ctags"
 Bundle "Valloric/YouCompleteMe"
 
 Bundle 'lambdatoast/elm.vim'
+Bundle 'derekwyatt/vim-scala'
+
 
 let g:languagetool_jar='/usr/local/Cellar/languagetool/3.0/libexec/languagetool-commandline.jar'
 Bundle 'vim-scripts/LanguageTool'
