@@ -15,9 +15,6 @@ source $mvj3shell_home/zsh/aliases.zsh
 # brew install grc # 用colourify包装了很多命令，比如 colourify gcc
 [ -f $BREW_PREFIX/etc/grc.bashrc ] && source $(brew --prefix)/etc/grc.bashrc
 
-# brew install nvm
-#source $(brew --prefix nvm)/nvm.sh
-
 # pyenv
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
 export PYTHON_BUILD_CACHE_PATH=$HOME/.pyenv_download_cache
@@ -52,3 +49,7 @@ plugins=(
 function check() { ruby -e 'loop { sleep 600; puts Time.now; `open http://have-a-break` }' }
 
 export GOPATH="$HOME/golang-workspace"
+export GOPATH_BIN="$HOME/golang-workspace/bin"
+if [[ -d $GOPATH_BIN ]]; then
+  export PATH=$PATH:$HOME/golang-workspace/bin
+fi

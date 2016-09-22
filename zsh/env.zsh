@@ -27,11 +27,12 @@ elif [[ "Linux" = "$(uname)" ]] ; then
 fi
 
 # GIT
-export EMAIL=`git config --get user.email`
-export FULLNAME="`git config --get user.name`"
+export EMAIL=$(git config --get user.email)
+export FULLNAME=$(git config --get user.name)
+export GIT_USERNAME=$(git config --global --get user.name)
+
 export SVN_EDITOR="mvim"
 export VIM_APP_DIR="/Applications"
-export GIT_USERNAME="$(git config --global --get user.name)"
 
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home)
