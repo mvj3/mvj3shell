@@ -32,7 +32,7 @@ plugins=(
   git gitfast git-extras git-flow gitignore github
   mercurial
   pip fabric virtualenv pylint
-  ruby rvm bundler
+  ruby bundler
   systemadmin osx screen docker
   brew-cask brew
   node nvm bower
@@ -43,13 +43,18 @@ plugins=(
 )
 
 
+# autoenv
 [[ -s "/usr/local/opt/autoenv/activate.sh" ]] && source "/usr/local/opt/autoenv/activate.sh"
 
 
 function check() { ruby -e 'loop { sleep 600; puts Time.now; `open http://have-a-break` }' }
 
+# GoLang
 export GOPATH="$HOME/golang-workspace"
 export GOPATH_BIN="$HOME/golang-workspace/bin"
 if [[ -d $GOPATH_BIN ]]; then
   export PATH=$PATH:$HOME/golang-workspace/bin
 fi
+
+# anaconda3 & iPython & pandas/numpy
+export PATH=~/anaconda3/bin:"$PATH"
