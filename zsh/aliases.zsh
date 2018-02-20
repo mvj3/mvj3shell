@@ -21,3 +21,6 @@ if [[ "Darwin" = "$(uname)" ]] ; then
 elif [[ "Linux" = "$(uname)" ]] ; then
   alias lock='gnome-screensaver-command --lock'
 fi
+
+# Data Science
+alias notebook="export NOTEBOOK=$HOME/workspace/datascience-notebook; docker run -it --rm -p 8888:8888 -v \$NOTEBOOK:/home/jovyan/work jupyter/datascience-notebook"
