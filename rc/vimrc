@@ -48,9 +48,9 @@ colorscheme vividchalk
 set showcmd
 
 " Line Wrapping ***************************************************************
-"set nowrap
-set linebreak  " Wrap at word
-set wrap
+set nowrap
+" set linebreak  " Wrap at word
+" set wrap
 
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
